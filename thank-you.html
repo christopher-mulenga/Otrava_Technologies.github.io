@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You! | Otrava Technologies</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 600px;
+            padding: 2rem;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: #FF0002;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+        
+        .home-link {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: #FF0002;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .home-link:hover {
+            background-color: #D90002;
+        }
+        
+        .word-carousel {
+            margin: 2rem 0;
+            padding: 0.5rem 1rem;
+            background-color: #D3D3D3;
+            display: inline-block;
+            border-radius: 8px;
+            min-height: 60px;
+            position: relative;
+        }
+        
+        .word-carousel span {
+            display: block;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #FF0002;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            opacity: 0;
+            animation: wordSwitch 8s linear infinite 0s;
+        }
+        .word-carousel {
+            margin: 2rem 0;
+            margin-bottom: 3rem; /* ← Adds extra space below the rotating words */
+            padding: 0.5rem 1rem;
+            background-color: #D3D3D3;
+            display: inline-block;
+            border-radius: 8px;
+            min-height: 60px;
+            position: relative;
+        }
+        
+        .word-carousel span:nth-child(2) {
+            animation-delay: 2s;
+        }
+        .word-carousel span:nth-child(3) {
+            animation-delay: 4s;
+        }
+        .word-carousel span:nth-child(4) {
+            animation-delay: 6s;
+        }
+        
+        @keyframes wordSwitch {
+            0% { opacity: 0; transform: translateY(20px); }
+            5% { opacity: 1; transform: translateY(0px); }
+            20% { opacity: 1; transform: translateY(0px); }
+            25% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 0; transform: translateY(-20px); }
+        }
+        
+        .checkmark {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            animation: bounce 0.5s ease;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="checkmark">✅</div>
+        <h1>Thank You!</h1>
+        <p>Your message has been sent successfully. We'll get back to you soon.</p>
+        
+        <div class="word-carousel">
+            <span>Innovative</span>
+            <span>Design</span>
+            <span>Empower</span>
+            <span>With Technology</span>
+        </div>
+        
+        <a href="/" class="home-link">← Back to Home</a>
+    </div>
+</body>
+</html>

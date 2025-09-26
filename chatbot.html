@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Otrava AI Assistant</title>
+  <style>
+    /* Chatbot Container */
+    #chatbot-container {
+      position: fixed;
+      left: 20px;
+      bottom: 20px;
+      width: 350px;
+      height: 500px;
+      background: linear-gradient(135deg, #0056b3 0%, #003366 100%);
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      z-index: 10000;
+      transform: translateY(0);
+      transition: transform 0.3s ease;
+    }
+
+    /* Attention-grabbing animation */
+    #chatbot-container:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Header with pulse effect */
+    #chatbot-header {
+      background: rgba(0, 0, 0, 0.2);
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #chatbot-header img {
+      width: 30px;
+      margin-right: 10px;
+    }
+
+    /* Messages area */
+    #chatbot-messages {
+      flex: 1;
+      padding: 15px;
+      background: #f9f9f9;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+    }
+
+    /* Input area */
+    #chatbot-input {
+      display: flex;
+      padding: 10px;
+      background: white;
+      border-top: 1px solid #ddd;
+    }
+
+    #chatbot-input input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      margin-right: 10px;
+      outline: none;
+    }
+
+    #chatbot-input button {
+      padding: 10px 15px;
+      background: #0056b3;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    #chatbot-input button:hover {
+      background: #003d7a;
+    }
+
+    /* Message styling */
+    .message {
+      margin-bottom: 15px;
+      padding: 10px 15px;
+      border-radius: 18px;
+      max-width: 80%;
+      line-height: 1.4;
+      position: relative;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .bot-message {
+      background: white;
+      color: #333;
+      border: 1px solid #ddd;
+      align-self: flex-start;
+      margin-right: auto;
+    }
+
+    .user-message {
+      background: #0056b3;
+      color: white;
+      align-self: flex-end;
+      margin-left: auto;
+    }
+
+    /* Quick reply buttons */
+    .quick-replies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .quick-reply {
+      background: #e1f0ff;
+      color: #0056b3;
+      border: none;
+      border-radius: 15px;
+      padding: 5px 10px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .quick-reply:hover {
+      background: #0056b3;
+      color: white;
+    }
+
+    /* Typing indicator */
+    .typing-indicator {
+      display: flex;
+      padding: 10px 15px;
+      background: white;
+      border-radius: 18px;
+      width: fit-content;
+      margin-bottom: 15px;
+    }
+
+    .typing-dot {
+      width: 8px;
+      height: 8px;
+      background: #ccc;
+      border-radius: 50%;
+      margin: 0 2px;
+      animation: typingAnimation 1.4s infinite ease-in-out;
+    }
+
+    .typing-dot:nth-child(1) { animation-delay: 0s; }
+    .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes typingAnimation {
+      0%, 60%, 100% { transform: translateY(0); }
+      30% { transform: translateY(-5px); }
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0, 86, 179, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(0, 86, 179, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 86, 179, 0); }
+    }
+
+    /* Initial call-to-action bubble */
+    .cta-bubble {
+      position: fixed;
+      left: 30px;
+      bottom: 540px;
+      background: #0056b3;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      z-index: 10001;
+      animation: pulse 2s infinite;
+      display: flex;
+      align-items: center;
+    }
+
+    .cta-bubble::after {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 100%;
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid #0056b3;
+    }
+
+    /* Close button */
+    #close-chatbot {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      border: none;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      #chatbot-container {
+        width: 90%;
+        left: 5%;
+        bottom: 10px;
+      }
+      .cta-bubble {
+        left: 5%;
+        bottom: auto;
+        top: 100px;
+      }
+      .cta-bubble::after {
+        top: auto;
+        bottom: 100%;
+        border-top: none;
+        border-bottom: 10px solid #0056b3;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- CTA Bubble (floating) -->
+  <div class="cta-bubble" id="cta-bubble">
+    <span>Need help? Ask Otrava AI!</span>
+  </div>
+
+  <!-- Chatbot Container (initially hidden) -->
+  <div id="chatbot-container" style="display: none;">
+    <button id="close-chatbot">×</button>
+    <div id="chatbot-header">
+      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" alt="AI Icon">
+      <span>Otrava AI Assistant</span>
+    </div>
+    <div id="chatbot-messages">
+      <!-- Messages will appear here -->
+    </div>
+    <div id="chatbot-input">
+      <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+      <button id="send-button">Send</button>
+    </div>
+  </div>
+
+  <script>
+    // API Configuration
+    const OPENAI_API_KEY = "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";
+    
+    // Business information
+    const businessInfo = {
+      name: "Otrava Technologies",
+      website: "http://otrava.22web.org",
+      email: "otrava@mail.com",
+      whatsapp: "+260779955346",
+      portfolio: "https://otrava.carrd.co/",
+      services: {
+        "IT Support": "IT support, networking, computer repairs, server setup, maintenance, CCTV installation",
+        "Web Development": "WordPress development, custom websites for businesses/schools/NGOs, hosting setup, SEO",
+        "Graphic Design": "Logos, flyers, brochures, banners, social media kits (General: ZMW 200/design, Bulk: ZMW 100/design)",
+        "Resume Services": "CV/resume writing, cover letters, company profiles, proposals",
+        "Training": "Digital literacy, assistive tech for visually impaired (JAWS), ICT coaching",
+        "Assistive Tech": "Solutions for blind/visually impaired users, screen reader training",
+        "Retail": "Computer accessories, software packages",
+        "Data Recovery": "File recovery from drives, cloud backup solutions"
+      },
+      faqs: {
+        "What does Otrava mean?": "Otrava symbolizes innovation and empowerment through tech - a local brand with global vision.",
+        "Payment options?": "Bulk orders may qualify for installments. Contact us for arrangements.",
+        "Remote services?": "Yes! Most services (design, web dev, CV writing) are delivered remotely via email/WhatsApp.",
+        "Training for visually impaired?": "Yes! We specialize in JAWS screen reader training for education and daily tech use.",
+        "How to get a quote?": "Describe your needs and we'll prepare a custom quotation within 24 hours.",
+        "Turnaround times": "CV: 1-2 days | Logo: 2-4 days | Website: 7-14 days | Bulk designs: 3-5 days"
+      }
+    };
+
+    // DOM Elements
+    const chatbotContainer = document.getElementById('chatbot-container');
+    const ctaBubble = document.getElementById('cta-bubble');
+    const closeButton = document.getElementById('close-chatbot');
+    const messagesContainer = document.getElementById('chatbot-messages');
+    const userInput = document.getElementById('user-input');
+    const sendButton = document.getElementById('send-button');
+
+    // Toggle chatbot visibility
+    ctaBubble.addEventListener('click', () => {
+      chatbotContainer.style.display = 'flex';
+      ctaBubble.style.display = 'none';
+      addBotMessage(`Hello! I'm Otrava's AI assistant.  😊 How can I help you today? Here are some quick options:`, [
+        "Services & Pricing",
+        "Web Development",
+        "Graphic Design",
+        "CV/Resume Help",
+        "Assistive Tech"
+      ]);
+    });
+
+    closeButton.addEventListener('click', () => {
+      chatbotContainer.style.display = 'none';
+      ctaBubble.style.display = 'flex';
+    });
+
+    // Send message on button click or Enter key
+    sendButton.addEventListener('click', sendMessage);
+    userInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') sendMessage();
+    });
+
+    // Add a message to the chat
+    function addMessage(text, isUser = false) {
+      const messageDiv = document.createElement('div');
+      messageDiv.className = isUser ? 'message user-message' : 'message bot-message';
+      messageDiv.innerHTML = text;
+      messagesContainer.appendChild(messageDiv);
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+
+    // Add bot message with optional quick replies
+    function addBotMessage(text, quickReplies = []) {
+      addMessage(text, false);
+      
+      if (quickReplies.length > 0) {
+        const quickReplyContainer = document.createElement('div');
+        quickReplyContainer.className = 'quick-replies';
+        
+        quickReplies.forEach(reply => {
+          const button = document.createElement('button');
+          button.className = 'quick-reply';
+          button.textContent = reply;
+          button.addEventListener('click', () => {
+            userInput.value = reply;
+            sendMessage();
+          });
+          quickReplyContainer.appendChild(button);
+        });
+        
+        messagesContainer.appendChild(quickReplyContainer);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+      }
+    }
+
+    // Show typing indicator
+    function showTyping() {
+      const typingDiv = document.createElement('div');
+      typingDiv.className = 'typing-indicator';
+      typingDiv.innerHTML = `
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+      `;
+      messagesContainer.appendChild(typingDiv);
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+      return typingDiv;
+    }
+
+    // Hide typing indicator
+    function hideTyping(typingDiv) {
+      typingDiv.remove();
+    }
+
+    // Process user message and generate response
+    async function sendMessage() {
+      const message = userInput.value.trim();
+      if (!message) return;
+      
+      addMessage(message, true);
+      userInput.value = '';
+      
+      const typingIndicator = showTyping();
+      
+      try {
+        // First check for exact matches in FAQs or services
+        let response = checkForExactMatch(message.toLowerCase());
+        
+        if (!response) {
+          // If no exact match, use OpenAI API
+          response = await getAIResponse(message);
+        }
+        
+        hideTyping(typingIndicator);
+        addBotMessage(response, getQuickReplies(response));
+      } catch (error) {
+        hideTyping(typingIndicator);
+        addBotMessage("I'm having trouble connecting. Please contact us directly at " + businessInfo.whatsapp + " or " + businessInfo.email);
+        console.error("Error:", error);
+      }
+    }
+
+    // Check for exact matches in FAQs or services
+    function checkForExactMatch(message) {
+      // Check FAQs
+      for (const [question, answer] of Object.entries(businessInfo.faqs)) {
+        if (message.includes(question.toLowerCase()) || 
+            question.toLowerCase().includes(message)) {
+          return answer;
+        }
+      }
+      
+      // Check services
+      for (const [service, description] of Object.entries(businessInfo.services)) {
+        if (message.includes(service.toLowerCase()) || 
+            message.includes(description.toLowerCase())) {
+          return `Our ${service} service includes: ${description}. Would you like pricing details or to request a quote?`;
+        }
+      }
+      
+      // Check common keywords
+      if (message.includes("price") || message.includes("cost")) {
+        return `Our pricing varies by service. For example:\n\n` +
+               `- Graphic Design: ZMW 200 per design (ZMW 100 for bulk)\n` +
+               `- Websites: Starting from ZMW 1500\n` +
+               `Would you like a custom quote for a specific service?`;
+      }
+      
+      if (message.includes("contact") || message.includes("reach")) {
+        return `You can contact us via:\n\n` +
+               `📱 WhatsApp: ${businessInfo.whatsapp}\n` +
+               `📧 Email: ${businessInfo.email}\n` +
+               `🌐 Portfolio: ${businessInfo.portfolio}`;
+      }
+      
+      if (message.includes("website") || message.includes("web")) {
+        return `We offer complete web development services including:\n\n` +
+               `${businessInfo.services["Web Development"]}\n\n` +
+               `View our portfolio: ${businessInfo.portfolio}`;
+      }
+      
+      return null;
+    }
+
+    // Get AI response from OpenAI
+    async function getAIResponse(message) {
+      const prompt = `You are an AI assistant for Otrava Technologies (${businessInfo.website}), a Zambian tech company. 
+      Your responses should be friendly, professional, and based on this information:
+      
+      Services: ${JSON.stringify(businessInfo.services)}
+      FAQs: ${JSON.stringify(businessInfo.faqs)}
+      Contact: WhatsApp ${businessInfo.whatsapp}, Email ${businessInfo.email}
+      
+      User Question: "${message}"
+      
+      Response guidelines:
+      - Keep responses concise (1-2 paragraphs max)
+      - Always mention how to contact for more help
+      - For service inquiries, mention pricing if available
+      - For assistive tech questions, emphasize JAWS training
+      - Never make up information not in the provided data`;
+      
+      const response = await fetch('https://api.openai.com/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${OPENAI_API_KEY}`
+        },
+        body: JSON.stringify({
+          model: "gpt-3.5-turbo",
+          messages: [
+            {role: "system", content: prompt},
+            {role: "user", content: message}
+          ],
+          temperature: 0.7,
+          max_tokens: 150
+        })
+      });
+      
+      const data = await response.json();
+      return data.choices[0].message.content.trim();
+    }
+
+    // Generate context-aware quick replies
+    function getQuickReplies(response) {
+      if (response.includes("service")) {
+        return ["Web Development", "Graphic Design", "IT Support", "CV Help"];
+      }
+      if (response.includes("price") || response.includes("quote")) {
+        return ["Request Quote", "Payment Options", "See Portfolio"];
+      }
+      if (response.includes("contact")) {
+        return ["WhatsApp Now", "Send Email", "View Website"];
+      }
+      return ["Services", "Pricing", "Contact", "Assistive Tech"];
+    }
+  </script>
+</body>
+</html>

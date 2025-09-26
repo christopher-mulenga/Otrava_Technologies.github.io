@@ -1,0 +1,938 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="google-site-verification" content="EPSNGm-GJjbhgpMaHQ9D5OhN80CRHbhpQsg6LPJh1L8" />
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Otrava Technologies | Innovate. Design. Empower.</title>
+  <meta name="description" content="Otrava Technologies empowers businesses and individuals with innovative design, web solutions, IT consulting, and assistive technology in Zambia and beyond.">
+  <meta name="keywords" content="Otrava Technologies, Web Design Zambia, IT Consulting, Data Recovery, Accessibility, Assistive Technology, Lusaka">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Mukta:wght@200;300;400;500;600;700;800&family=Abel:wght@400&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Custom Otrava Colors */
+    :root {
+      --primary: #FF4C4C;
+      --primary-light: rgba(255, 0, 2, 0.1);
+      --secondary: #D3D3D3;
+    }
+    
+    .btn-primary, .bg-primary {
+      background-color: var(--primary) !important;
+      border-color: var(--primary) !important;
+    }
+    
+    .text-primary {
+      color: var(--primary) !important;
+    }
+    
+    .btn-outline-primary {
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+    
+    .btn-outline-primary:hover {
+      background-color: var(--primary);
+    }
+    
+    .section-title h2:after {
+      background-color: var(--primary);
+    }
+    
+    .navmenu a:hover, 
+    .navmenu .active,
+    .navmenu .active:focus {
+      color: var(--primary);
+    }
+  </style>
+  <link rel="stylesheet" href="chatbot.css">
+  <script src="chatbot.js"></script>
+  
+</head>
+<!-- WhatsApp Floating Button - Left Side Version -->
+<div class="whatsapp-container">
+  <a href="#" class="whatsapp-float" onclick="openWhatsApp()" aria-label="Chat on WhatsApp">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp Chat">
+  </a>
+</div>
+
+<style>
+  .whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    left: 20px; /* Changed from right to left */
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .whatsapp-float:hover {
+    background-color: #128C7E;
+    transform: scale(1.1);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  .whatsapp-float img {
+    width: 30px;
+    height: 30px;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.2));
+  }
+</style>
+
+<script>
+  function openWhatsApp() {
+    const phoneNumber = "260779955346";
+    const defaultMessage = "Hello! I have a question about your services.";
+    const encodedMessage = encodeURIComponent(defaultMessage);
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    try {
+      if (isMobile) {
+        window.location.href = `whatsapp://send?phone=${phoneNumber}&text=${encodedMessage}`;
+      } else {
+        window.open(`https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`, '_blank');
+      }
+    } catch (e) {
+      window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+    }
+  }
+
+  // Optional pulse animation
+  setInterval(() => {
+    const btn = document.querySelector('.whatsapp-float');
+    btn.style.transform = 'scale(1.15)';
+    setTimeout(() => {
+      btn.style.transform = 'scale(1)';
+    }, 600);
+  }, 10000);
+</script>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+    <!-- Add this to your existing website -->
+        <h1 class="text-2xl sm:text-4xl">OTRAVA TECHNOLOGIES</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#team">Profile</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <a href="#clients">Partners & Clients</a>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links">
+        <a href="https://x.com/mulenga2905" class="twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.facebook.com/otrava.technologies/" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/mulenga.ot/" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/christopher-mulenga/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://wa.me/260779955346" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://github.com/christopher-mulenga" class="github"><i class="bi bi-github"></i></a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-center content">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h2>INNOVATE. <span class="text-primary">DESIGN.</span> EMPOWER WITH TECHNOLOGY</h2>
+            <p class="lead">We craft powerful digital and tech-driven solutions designed to elevate individuals and empower businesses to thrive in a connected world.</p>
+            <div class="cta-buttons" data-aos="fade-up" data-aos-delay="300">
+              <a href="#services" class="btn btn-primary">Our Services</a>
+              <a href="#portfolio" class="btn btn-outline-primary">View Portfolio</a>
+            </div>
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+              <div class="stat-item">
+                <span class="stat-number">7+</span>
+                <span class="stat-label">Years Experience</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">750+</span>
+                <span class="stat-label">Happy Clients</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Projects Completed</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-image">
+              <img src="assets/img/misc/misc-square-16.png" alt="Otrava Technologies" class="img-fluid" data-aos="zoom-out" data-aos-delay="300">
+              <div class="shape-1"></div>
+              <div class="shape-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About Otrava Technologies</h2>
+        <div class="title-shape">
+          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+          </svg>
+        </div>
+        <p>Our mission is to tackle real-world challenges through intelligent design and inclusive technology—bridging gaps and driving meaningful impact.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-center">
+          <div class="col-lg-6 position-relative" data-aos="fade-right" data-aos-delay="200">
+            <div class="about-image">
+              <img src="assets/img/about/about-8.png" alt="About Otrava Technologies" class="img-fluid rounded-4">
+              <div class="mission-card">
+                <div class="mission-icon">
+                  <i class="bi bi-lightbulb"></i>
+                </div>
+                <div class="mission-content">
+                  <h4>Our Purpose</h4>
+                  <p>We focus on delivering innovative, design-led tech solutions that empower businesses to grow smarter, scale faster, and succeed with confidence.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="about-content">
+              <span class="subtitle">COMPANY OVERVIEW</span>
+              <h2 class="mb-4">Discover our journey and future aspirations towards innovation and success</h2>
+
+              <p class="lead mb-4">Otrava Technologies is a Zambian-owned ICT company committed to making technology more inclusive, accessible, and effective. We serve individuals, businesses, and organizations with a wide range of tech services.</p>
+
+              <div class="personal-info">
+                <div class="row g-4">
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Established</span>
+                      <span class="value">January 3, 2024</span>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Location</span>
+                      <span class="value">Lusaka, Zambia</span>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Registration</span>
+                      <span class="value">PACRA Certified</span>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Tax Status</span>
+                      <span class="value">Fully Compliant</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h4 class="values-title mt-4 mb-3">Fundamental Principles</h4>
+              <div class="values-list">
+                <div class="value-item">
+                  <div class="value-icon"><i class="bi bi-check2"></i></div>
+                  <span class="value-text text-primary">Trustworthiness</span>
+                </div>
+                <div class="value-item">
+                  <div class="value-icon"><i class="bi bi-check2"></i></div>
+                  <span class="value-text text-primary">Quality</span>
+                </div>
+                <div class="value-item">
+                  <div class="value-icon"><i class="bi bi-check2"></i></div>
+                  <span class="value-text text-primary">Creativity</span>
+                </div>
+                <div class="value-item">
+                  <div class="value-icon"><i class="bi bi-check2"></i></div>
+                  <span class="value-text text-primary">Collaboration</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /About Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Services</h2>
+        <div class="title-shape">
+          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+          </svg>
+        </div>
+        <p>We combine technical expertise with creative vision to deliver exceptional results across multiple disciplines</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4">
+          <!-- Creative Services -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-palette"></i>
+              </div>
+              <h3>Creative & Branding</h3>
+              <ul class="service-features">
+                <li>Graphic Design (logos, flyers, posters)</li>
+                <li>Resume Writing & Documentation</li>
+                <li>Company Profile Creation</li>
+                <li>Social Media Content Design</li>
+                <li>Page Optimization</li>
+              </ul>
+              <a href="#contact" class="btn btn-sm btn-outline-primary mt-3">Get Started</a>
+            </div>
+          </div>
+
+          <!-- Web & IT Solutions -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-code-square"></i>
+              </div>
+              <h3>Web & IT Solutions</h3>
+              <ul class="service-features">
+                <li>Web Design & Development</li>
+                <li>WordPress Development</li>
+                <li>Computer Repair & Maintenance</li>
+                <li>Networking Setup</li>
+                <li>CCTV Installation</li>
+                <li>BIOS Password Removal</li>
+              </ul>
+              <a href="#contact" class="btn btn-sm btn-outline-primary mt-3">Get Started</a>
+            </div>
+          </div>
+
+          <!-- Training Services -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-laptop"></i>
+              </div>
+              <h3>Training & Education</h3>
+              <ul class="service-features">
+                <li>Microsoft Office & Digital Literacy</li>
+                <li>Typing & Productivity Skills</li>
+                <li>Web Development Training</li>
+                <li>Branding & Social Media</li>
+                <li>Career Preparation</li>
+              </ul>
+              <a href="#contact" class="btn btn-sm btn-outline-primary mt-3">Get Started</a>
+            </div>
+          </div>
+
+          <!-- Assistive Technology -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-eye"></i>
+              </div>
+              <h3>Assistive Technology</h3>
+              <ul class="service-features">
+                <li>JAWS Screen Reader Training</li>
+                <li>NVDA & Windows Narrator</li>
+                <li>Mobile Accessibility (TalkBack)</li>
+                <li>Inclusive Tech Training</li>
+                <li>Custom Assistive Setup</li>
+              </ul>
+              <a href="#contact" class="btn btn-sm btn-outline-primary mt-3">Get Started</a>
+            </div>
+          </div>
+
+          <!-- Data Services -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-hdd"></i>
+              </div>
+              <h3>Data Solutions</h3>
+              <ul class="service-features">
+                <li>Data Recovery Services</li>
+                <li>File Retrieval from Damaged Devices</li>
+                <li>Backup Solutions</li>
+                <li>Encrypted Data Retrieval</li>
+              </ul>
+              <a href="#contact" class="btn btn-sm btn-outline-primary mt-3">Get Started</a>
+            </div>
+          </div>
+
+          <!-- Consulting -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-people"></i>
+              </div>
+              <h3>IT Consulting</h3>
+              <ul class="service-features">
+                <li>Technology Roadmap Development</li>
+                <li>Digital Transformation Strategy</li>
+                <li>Vendor Selection Assistance</li>
+                <li>Cost Optimization Analysis</li>
+              </ul>
+              <a href="#contact" class="btn btn-sm btn-outline-primary mt-3">Get Started</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Services Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Portfolio</h2>
+        <div class="title-shape">
+          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+          </svg>
+        </div>
+        <p>A showcase of our innovative solutions across different service categories</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+          <div class="portfolio-filters-container" data-aos="fade-up" data-aos-delay="200">
+            <ul class="portfolio-filters isotope-filters">
+              <li data-filter="*" class="filter-active">All Work</li>
+              <li data-filter=".filter-design">Graphic Design</li>
+              <li data-filter=".filter-web">Web Design</li>
+              <li data-filter=".filter-accessibility">Accessibility</li>
+              <li data-filter=".filter-resume">Resume Services</li>
+            </ul>
+          </div>
+
+          <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
+            <!-- Graphic Design -->
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-design">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="assets/img/portfolio/graphic.png" class="img-fluid" alt="Graphic Design Work" loading="lazy">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-actions">
+                      <a href="assets/img/portfolio/graphic.png" class="glightbox preview-link" data-gallery="portfolio-gallery-design"><i class="bi bi-eye"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-content">
+                  <span class="category">Graphic Design</span>
+                  <h3>Creative Branding Materials</h3>
+                  <p>Logos, posters, ads, and social media graphics that bring your ideas to life</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Web Design -->
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-web">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="assets/img/portfolio/web.png" class="img-fluid" alt="Web Design Project" loading="lazy">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-actions">
+                      <a href="assets/img/portfolio/web.png" class="glightbox preview-link" data-gallery="portfolio-gallery-web"><i class="bi bi-eye"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-content">
+                  <span class="category">Web Design</span>
+                  <h3>Business Website Development</h3>
+                  <p>Reliable web solutions for businesses, NGOs, and educational institutions</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Accessibility -->
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-accessibility">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="assets/img/portfolio/jaws.png" class="img-fluid" alt="Accessibility Training" loading="lazy">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-actions">
+                      <a href="assets/img/portfolio/jaws.png" class="glightbox preview-link" data-gallery="portfolio-gallery-accessibility"><i class="bi bi-eye"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-content">
+                  <span class="category">Assistive Technology</span>
+                  <h3>JAWS Training & Accessibility</h3>
+                  <p>Specialized support for visually impaired users including screen reader training</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Resume Services -->
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-resume">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="assets/img/portfolio/resume.png" class="img-fluid" alt="Resume Services" loading="lazy">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-actions">
+                      <a href="assets/img/portfolio/resume.png" class="glightbox preview-link" data-gallery="portfolio-gallery-resume"><i class="bi bi-eye"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-content">
+                  <span class="category">Career Services</span>
+                  <h3>Professional Resume Writing</h3>
+                  <p>We craft compelling resumes that make you stand out in the job market</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Data Recovery -->
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-data">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="assets/img/portfolio/data.png" class="img-fluid" alt="Data Recovery Service" loading="lazy">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-actions">
+                      <a href="assets/img/portfolio/data.png" class="glightbox preview-link" data-gallery="portfolio-gallery-data"><i class="bi bi-eye"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-content">
+                  <span class="category">Data Solutions</span>
+                  <h3>Data Recovery Services</h3>
+                  <p>We recover deleted or damaged files and provide safe backup solutions</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- IT Consulting -->
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-consulting">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="assets/img/portfolio/consulting.png" class="img-fluid" alt="IT Consulting Service" loading="lazy">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-actions">
+                      <a href="assets/img/portfolio/consulting.png" class="glightbox preview-link" data-gallery="portfolio-gallery-consulting"><i class="bi bi-eye"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-content">
+                  <span class="category">IT Consulting</span>
+                  <h3>Strategic Technology Guidance</h3>
+                  <p>Helping businesses optimize their digital infrastructure and workflows</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Portfolio Section -->
+
+   <!-- Clients Section -->
+<section id="clients" class="clients-section" style="background-color: #2a2a2a; color: #FFFFFF; padding: 80px 0; overflow: hidden;">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+      <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; color: #FF4C4C;">Partners & Clients</h2>
+      <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto; color: rgba(255, 255, 255, 0.9); line-height: 1.6;">
+        Over the years, I've collaborated with various companies and individuals across industries.
+      </p>
+    </div>
+  </div>
+
+  <!-- Logo Scroller -->
+  <div class="logo-scroller-wrapper" style="overflow: hidden; position: relative; width: 100%;">
+    <div class="logo-scroller" style="position: relative;">
+      <div class="logo-track" style="display: flex; width: max-content;">
+        <!-- Logo items will be duplicated by JavaScript -->
+        <div class="logo-item"><img src="assets/img/Clients/Client1.png" alt="Client 1"></div>
+        <div class="logo-item"><img src="assets/img/Clients/Client2.png" alt="Client 2"></div>
+        <div class="logo-item"><img src="assets/img/Clients/Client3.png" alt="Client 3"></div>
+        <div class="logo-item"><img src="assets/img/Clients/Client4.png" alt="Client 4"></div>
+        <div class="logo-item"><img src="assets/img/Clients/Client5.png" alt="Client 5"></div>
+        <div class="logo-item"><img src="assets/img/Clients/Client6.png" alt="Client 6"></div>
+        <div class="logo-item"><img src="assets/img/Clients/Client7.png" alt="Client 7"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonial Scroller -->
+  <div class="testimonial-scroller-wrapper" style="overflow: hidden; margin-top: 60px; position: relative;">
+    <div class="testimonial-scroller" style="position: relative;">
+      <div class="testimonial-track" style="display: flex; width: max-content;">
+        <!-- Testimonial items will be duplicated by JavaScript -->
+        <div class="testimonial-card"><h3>Proficient Enterprises Zambia</h3><p>"Strategic logo redesign and professional company profile that elevated our brand identity."</p></div>
+        <div class="testimonial-card"><h3>Digitobits Trading</h3><p>"Creative poster designs and reliable computer repair services for my business."</p></div>
+        <div class="testimonial-card"><h3>The Wrap Masters</h3><p>"We love the logo, its very nice! Thank you!"</p></div>
+        <div class="testimonial-card"><h3>Riseup Farm Enterprises</h3><p>"Comprehensive branding package including logo design and social media strategy."</p></div>
+        <div class="testimonial-card"><h3>Natolitech Solutions Limited</h3><p>"i love the work. Great company profile!"</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Smooth Scrolling Tracks */
+.logo-track, .testimonial-track {
+  display: flex;
+  width: max-content;
+}
+
+/* Items */
+.logo-item, .testimonial-card {
+  flex: 0 0 auto;
+  margin: 0 30px;
+}
+
+/* Logos */
+.logo-item {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-item img {
+  width: 100%;
+  height: auto;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+.logo-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Testimonials */
+.testimonial-card {
+  min-width: 300px;
+  max-width: 300px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 30px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.9);
+  transition: transform 0.3s ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+.testimonial-card h3 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  position: relative;
+}
+.testimonial-card h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 40px;
+  height: 2px;
+  background: #fff;
+  opacity: 0.3;
+}
+.testimonial-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .logo-item {
+    width: 100px;
+    height: 100px;
+    margin: 0 15px;
+  }
+  .testimonial-card {
+    min-width: 260px;
+    max-width: 260px;
+    padding: 20px;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Logo scroller setup
+  const logoScroller = document.querySelector('.logo-scroller');
+  const logoTrack = document.querySelector('.logo-track');
+  const logoItems = document.querySelectorAll('.logo-item');
+  
+  // Duplicate logo items for seamless looping
+  logoItems.forEach(item => {
+    const clone = item.cloneNode(true);
+    logoTrack.appendChild(clone);
+  });
+  
+  // Testimonial scroller setup
+  const testimonialScroller = document.querySelector('.testimonial-scroller');
+  const testimonialTrack = document.querySelector('.testimonial-track');
+  const testimonialCards = document.querySelectorAll('.testimonial-card');
+  
+  // Duplicate testimonial items for seamless looping
+  testimonialCards.forEach(card => {
+    const clone = card.cloneNode(true);
+    testimonialTrack.appendChild(clone);
+  });
+  
+  // Animation using GSAP for smoother performance
+  if (typeof gsap !== 'undefined') {
+    // Logo animation
+    gsap.to(logoTrack, {
+      x: () => -(logoTrack.scrollWidth / 2),
+      ease: 'none',
+      duration: 40,
+      repeat: -1
+    });
+    
+    // Testimonial animation (opposite direction)
+    gsap.to(testimonialTrack, {
+      x: () => -(testimonialTrack.scrollWidth / 2),
+      ease: 'none',
+      duration: 60,
+      repeat: -1
+    });
+  } else {
+    // Fallback CSS animation if GSAP not available
+    logoTrack.style.animation = 'scrollRight 40s linear infinite';
+    testimonialTrack.style.animation = 'scrollLeft 60s linear infinite';
+    
+    // Add keyframes for fallback
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes scrollRight {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      @keyframes scrollLeft {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+    `;
+    document.head.appendChild(style);
+  }
+});
+</script>
+</section>
+
+    <!-- Team Section -->
+    <section id="team" class="team section light-background">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="section-title text-center mb-5">
+          <h2>About the Founder</h2>
+          <div class="title-shape">
+            <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-6 text-center">
+            <img src="assets/img/me.jpg" class="img-fluid rounded-circle mb-3" alt="Christopher Mulenga" style="max-width: 200px;">
+            <h3>Christopher Mulenga</h3>
+            <p class="lead">Founder & Creative Technologist</p>
+            <p>With over 7 years of experience, I bring creative and technical expertise to help individuals and organizations leverage design and technology to their advantage. My focus is on accessibility, innovation, and delivering impactful solutions that empower people and businesses across Zambia.</p>
+            
+            <div class="founder-social-links mt-4">
+              <a href="https://www.linkedin.com/in/christopher-mulenga/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+              <a href="https://x.com/mulenga2905" class="twitter"><i class="bi bi-twitter-x"></i></a>
+              <a href="https://github.com/christopher-mulenga" class="github"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Team Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section light-background">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-5">
+          <div class="col-lg-6">
+            <div class="content" data-aos="fade-up" data-aos-delay="200">
+              <div class="section-category mb-3">Contact</div>
+              <h2 class="display-5 mb-4">Ready to start your project?</h2>
+              <p class="lead mb-4">Get in touch with us to discuss how we can help bring your ideas to life with our technology solutions.</p>
+
+              <div class="contact-info mt-5">
+                <div class="info-item d-flex mb-3">
+                  <i class="bi bi-envelope-at me-3"></i>
+                  <span>otrava@mail.com</span>
+                </div>
+
+                <div class="info-item d-flex mb-3">
+                  <i class="bi bi-telephone me-3"></i>
+                  <span>+260 77 995 5346</span>
+                </div>
+
+                <div class="info-item d-flex mb-4">
+                  <i class="bi bi-geo-alt me-3"></i>
+                  <span>46 Kaaze St, Libala Stage 3, Lusaka, Zambia</span>
+                </div>
+
+                <div class="map-link d-inline-flex align-items-center">
+                  <a href="https://maps.google.com/?q=46+Kaaze+St,+Libala+Stage+3,+Lusaka,+Zambia" target="_blank">
+                    Open Map <i class="bi bi-arrow-right ms-2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="contact-form card" data-aos="fade-up" data-aos-delay="300">
+              <div class="card-body p-4 p-lg-5">
+                <form action="https://formsubmit.co/otrava@mail.com" method="POST" class="php-email-form">
+                    <!-- Anti-Spam & Email Settings -->
+                    <input type="text" name="_honey" style="display: none;">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_subject" value="New Message from Otrava Website">
+                    <input type="hidden" name="_captcha" value="false">
+                    
+                    <!-- Fallback: Use a working thank-you page (GitHub Pages, Netlify, etc.) -->
+                    <input type="hidden" name="_next" value="http://otrava.22web.org/thank-you.html"> 
+                    <div class="row gy-4">
+                        <div class="col-12">
+                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="col-12">
+                            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                        </div>
+                        <div class="col-12">
+                            <textarea name="message" class="form-control" rows="6" placeholder="Message" required></textarea>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-submit w-100">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">OTRAVA TECHNOLOGIES</span>
+          </a>
+          <p>Empowering businesses and individuals through innovative technology solutions in Zambia and beyond.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="https://x.com/mulenga2905"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/otrava.technologies/"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/mulenga.ot/"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/christopher-mulenga/"><i class="bi bi-linkedin"></i></a>
+            <a href="https://wa.me/260779955346"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#services">Graphic Design</a></li>
+            <li><a href="#services">Web Development</a></li>
+            <li><a href="#services">IT Consulting</a></li>
+            <li><a href="#services">JAWS Training</a></li>
+            <li><a href="#services">Resume Writing</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact">
+          <h4>Contact Us</h4>
+          <p>
+            46 Kaaze St, Libala Stage 3<br>
+            Lusaka, Zambia<br><br>
+            <strong>Phone:</strong> +260 77 995 5346<br>
+            <strong>Email:</strong> otrava@mail.com<br>
+          </p>
+        </div>
+      </div>
+
+      <div class="copyright text-center mt-4">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Otrava Technologies</strong> <span>All Rights Reserved</span></p>
+        <div class="credits">
+          Designed with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://otrava.carrd.co">Otrava Technologies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+ 
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html
