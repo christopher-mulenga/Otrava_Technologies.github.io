@@ -3,7 +3,11 @@
 
 <head>
   <meta name="color-scheme" content="light">
-
+<style>
+          @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+          }
 <style>
 html, body {
   background-color: #FFFFFF !important;
@@ -1348,34 +1352,165 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </section>
 
+
+
+
+
+   
     <!-- Team Section -->
-    <section id="team" class="team section light-background">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="section-title text-center mb-5">
-          <h2>About the Founder</h2>
-          <div class="title-shape">
-            <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
-              <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
-            </svg>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-lg-6 text-center">
-            <img src="assets/img/me.jpg" class="img-fluid rounded-circle mb-3" alt="Christopher Mulenga" style="max-width: 200px;">
-            <h3>Christopher Mulenga</h3>
-            <p class="lead">Founder & Creative Technologist</p>
-            <p>With over 7 years of experience, I bring creative and technical expertise to help individuals and organizations leverage design and technology to their advantage. My focus is on accessibility, innovation, and delivering impactful solutions that empower people and businesses across Zambia.</p>
+    <!-- /About Me Section -->
+<section id="team" class="team section" style="background: linear-gradient(135deg, #f5f5f7 0%, #ffffff 100%); padding: 100px 0; position: relative; overflow: hidden;">
+  
+  <!-- Soft Decorative Elements -->
+  <div style="position: absolute; top: -50px; right: -50px; width: 250px; height: 250px; background: rgba(42, 42, 42, 0.02); border-radius: 50%;"></div>
+  <div style="position: absolute; bottom: -50px; left: -50px; width: 350px; height: 350px; background: rgba(255, 76, 76, 0.02); border-radius: 50%;"></div>
+  
+  <div class="container" data-aos="fade-up" data-aos-delay="100" style="position: relative; z-index: 2;">
+    
+    <!-- Section Title -->
+    <div class="section-title text-center mb-5">
+      <h2 style="font-size: 2.8rem; font-weight: 700; color: #2a2a2a; margin-bottom: 15px;">About the Founder</h2>
+      <div class="title-shape" style="color: #FF4C4C;">
+        <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg" style="width: 150px; height: 20px; margin: 0 auto;">
+          <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+        </svg>
+      </div>
+    </div>
+    
+    <div class="row justify-content-center">
+      <div class="col-lg-6 text-center">
+        
+        <!-- Profile Card Container -->
+        <div style="background: white; border-radius: 30px; box-shadow: 0 20px 40px rgba(42,42,42,0.05); padding: 50px 40px; transition: all 0.3s ease; border: 1px solid rgba(42,42,42,0.05);"
+             onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 25px 50px rgba(42,42,42,0.08)';" 
+             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 20px 40px rgba(42,42,42,0.05)';">
+          
+          <!-- Image with tech-inspired border effect -->
+          <div style="position: relative; display: inline-block; margin-bottom: 20px;">
+            <!-- Circuit-like border effect -->
+            <div style="position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px; border: 3px dashed #FF4C4C; border-radius: 50%; opacity: 0.2; animation: spin 20s linear infinite;"></div>
+            <div style="position: absolute; top: -5px; left: -5px; right: -5px; bottom: -5px; border: 2px solid #FF4C4C; border-radius: 50%; opacity: 0.4;"></div>
+            <img src="assets/img/me.jpg" class="img-fluid rounded-circle" alt="Christopher Mulenga" 
+                 style="max-width: 200px; border: 5px solid white; box-shadow: 0 10px 30px rgba(42,42,42,0.1); position: relative; z-index: 2;">
             
-            <div class="founder-social-links mt-4">
-              <a href="https://www.linkedin.com/in/christopher-mulenga/" class="linkedin"><i class="bi bi-linkedin"></i></a>
-              <a href="https://x.com/mulenga2905" class="twitter"><i class="bi bi-twitter-x"></i></a>
-              <a href="https://github.com/christopher-mulenga" class="github"><i class="bi bi-github"></i></a>
+            <!-- Tech Location Badge -->
+            <div style="position: absolute; bottom: 20px; right: 0; background: #2a2a2a; color: white; padding: 8px 16px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; box-shadow: 0 5px 15px rgba(42,42,42,0.2); z-index: 3; white-space: nowrap;">
+              <i class="bi bi-cpu" style="margin-right: 5px;"></i> Zambia
             </div>
           </div>
+          
+          <!-- Name -->
+          <h3 style="font-size: 2rem; font-weight: 700; color: #2a2a2a; margin-bottom: 5px;">Christopher Mulenga</h3>
+          
+          <!-- Role with tech accent -->
+          <p class="lead" style="font-size: 1.2rem; color: #FF4C4C; font-weight: 500; margin-bottom: 25px; position: relative; padding-bottom: 15px; display: inline-block;">
+            Founder & Creative Technologist
+            <span style="content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 70px; height: 2px; background: linear-gradient(90deg, transparent, #FF4C4C, #2a2a2a, #FF4C4C, transparent);"></span>
+          </p>
+          
+          <!-- Bio with tech/creativity focus -->
+          <div style="max-width: 540px; margin: 0 auto 25px;">
+            <p style="font-size: 1rem; line-height: 1.8; color: #4a4a4a; margin-bottom: 20px;">
+              <span style="font-size: 2rem; color: #2a2a2a; float: left; line-height: 0.8; margin-right: 8px; font-family: monospace;">{</span>
+              With over 7 years bridging <span style="color: #FF4C4C; font-weight: 500;">technology</span> and <span style="color: #FF4C4C; font-weight: 500;">creative expression</span>, I help individuals and organizations harness the full potential of digital innovation. From elegant code to intuitive design, every project is an opportunity to build something meaningful.
+            </p>
+            <p style="font-size: 1rem; line-height: 1.8; color: #4a4a4a;">
+              My approach combines <span style="color: #FF4C4C; font-weight: 500;">technical depth</span> with <span style="color: #FF4C4C; font-weight: 500;">creative vision</span> — building systems that don't just work, but inspire. Whether it's Web Development, Repair & Data Management, or Graphic, I craft solutions at the intersection of logic and imagination.
+            </p>
+          </div>
+          
+          <!-- Social Links -->
+          <div class="founder-social-links mt-4" style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+            
+            <a href="https://www.linkedin.com/in/christopher-mulenga/" class="linkedin" 
+               style="display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; background: #0077b5; color: white; border-radius: 50%; transition: all 0.3s ease; text-decoration: none;"
+               onmouseover="this.style.transform='translateY(-5px) scale(1.08)'; this.style.boxShadow='0 10px 20px rgba(0,119,181,0.2)';" 
+               onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none';">
+              <i class="bi bi-linkedin" style="font-size: 1.2rem;"></i>
+            </a>
+            
+            <a href="https://x.com/mulenga2905" class="twitter" 
+               style="display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; background: #000000; color: white; border-radius: 50%; transition: all 0.3s ease; text-decoration: none;"
+               onmouseover="this.style.transform='translateY(-5px) scale(1.08)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.2)';" 
+               onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none';">
+              <i class="bi bi-twitter-x" style="font-size: 1.2rem;"></i>
+            </a>
+            
+            <a href="https://github.com/christopher-mulenga" class="github" 
+               style="display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; background: #333; color: white; border-radius: 50%; transition: all 0.3s ease; text-decoration: none;"
+               onmouseover="this.style.transform='translateY(-5px) scale(1.08)'; this.style.boxShadow='0 10px 20px rgba(51,51,51,0.2)';" 
+               onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none';">
+              <i class="bi bi-github" style="font-size: 1.2rem;"></i>
+            </a>
+            
+            <a href="mailto:christopher@example.com" 
+               style="display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; background: #FF4C4C; color: white; border-radius: 50%; transition: all 0.3s ease; text-decoration: none;"
+               onmouseover="this.style.transform='translateY(-5px) scale(1.08)'; this.style.boxShadow='0 10px 20px rgba(255,76,76,0.2)';" 
+               onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none';">
+              <i class="bi bi-envelope-fill" style="font-size: 1.2rem;"></i>
+            </a>
+            
+          </div>
+          
+        </div><!-- End Profile Card -->
+        
+        <!-- Tech Stats Row -->
+        <div style="display: flex; justify-content: center; gap: 30px; margin-top: 40px; flex-wrap: wrap;">
+          
+          <div style="text-align: center; background: white; border-radius: 20px; padding: 15px 25px; box-shadow: 0 10px 30px rgba(42,42,42,0.03); min-width: 100px; border: 1px solid rgba(42,42,42,0.03);">
+            <div style="font-size: 2rem; font-weight: 700; color: #FF4C4C; line-height: 1;">7+</div>
+            <div style="font-size: 0.8rem; font-weight: 500; color: #666;">Years Building</div>
+          </div>
+          
+          <div style="text-align: center; background: white; border-radius: 20px; padding: 15px 25px; box-shadow: 0 10px 30px rgba(42,42,42,0.03); min-width: 100px; border: 1px solid rgba(42,42,42,0.03);">
+            <div style="font-size: 2rem; font-weight: 700; color: #FF4C4C; line-height: 1;">500+</div>
+            <div style="font-size: 0.8rem; font-weight: 500; color: #666;">Tech Projects</div>
+          </div>
+          
+          <div style="text-align: center; background: white; border-radius: 20px; padding: 15px 25px; box-shadow: 0 10px 30px rgba(42,42,42,0.03); min-width: 100px; border: 1px solid rgba(42,42,42,0.03);">
+            <div style="font-size: 2rem; font-weight: 700; color: #FF4C4C; line-height: 1;">300+</div>
+            <div style="font-size: 0.8rem; font-weight: 500; color: #666;">Happy Clients</div>
+          </div>
+          
         </div>
+        
+        <!-- Tech & Creativity Tags -->
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 30px;">
+          <span style="background: rgba(42, 42, 42, 0.05); color: #2a2a2a; padding: 6px 18px; border-radius: 50px; font-size: 0.85rem; font-weight: 500; border: 1px solid rgba(255,76,76,0.1);">Web Development</span>
+          <span style="background: rgba(42, 42, 42, 0.05); color: #2a2a2a; padding: 6px 18px; border-radius: 50px; font-size: 0.85rem; font-weight: 500; border: 1px solid rgba(255,76,76,0.1);">Creative Coding</span>
+          <span style="background: rgba(42, 42, 42, 0.05); color: #2a2a2a; padding: 6px 18px; border-radius: 50px; font-size: 0.85rem; font-weight: 500; border: 1px solid rgba(255,76,76,0.1);">UI/UX Design</span>
+          <span style="background: rgba(42, 42, 42, 0.05); color: #2a2a2a; padding: 6px 18px; border-radius: 50px; font-size: 0.85rem; font-weight: 500; border: 1px solid rgba(255,76,76,0.1);">Digital Innovation</span>
+          <span style="background: rgba(42, 42, 42, 0.05); color: #2a2a2a; padding: 6px 18px; border-radius: 50px; font-size: 0.85rem; font-weight: 500; border: 1px solid rgba(255,76,76,0.1);">Interactive Systems</span>
+        </div>
+        
+        <!-- Call to Action -->
+        <div style="margin-top: 40px;">
+          <a href="https://wa.me/c/260779955346" target="_blank" style="display: inline-block; padding: 12px 35px; background: #2a2a2a; color: white; text-decoration: none; border-radius: 50px; font-weight: 600; border: 2px solid #2a2a2a; transition: all 0.3s ease;"
+             onmouseover="this.style.background='#FF4C4C'; this.style.borderColor='#FF4C4C';" 
+             onmouseout="this.style.background='#2a2a2a'; this.style.borderColor='#2a2a2a';">
+            <i class="bi bi-whatsapp" style="margin-right: 8px;"></i> Chat on WhatsApp
+          </a>
+        </div>
+        
+        <!-- Add this animation keyframes to your stylesheet or head -->
+        <style>
+          @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+          }
+        </style>
+        
       </div>
+    </div>
+  </div>
+</section><!-- /About Me Section -->
     </section><!-- /Team Section -->
 
+
+
+
+
+   
     <!-- Contact Section -->
     <section id="contact" class="contact section light-background">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
