@@ -1361,151 +1361,514 @@ document.addEventListener('DOMContentLoaded', function() {
    
     <!-- Team Section -->
     <!-- /About Me Section -->
-<section id="team" class="team section" style="background: linear-gradient(135deg, #f5f5f7 0%, #ffffff 100%); padding: 100px 0; position: relative; overflow: hidden;">
-  
-  <!-- Soft Decorative Elements -->
-  <div style="position: absolute; top: -50px; right: -50px; width: 250px; height: 250px; background: rgba(42, 42, 42, 0.02); border-radius: 50%;"></div>
-  <div style="position: absolute; bottom: -50px; left: -50px; width: 350px; height: 350px; background: rgba(255, 76, 76, 0.02); border-radius: 50%;"></div>
-  
-  <div class="container" data-aos="fade-up" data-aos-delay="100" style="position: relative; z-index: 2;">
+<!-- ================================================
+     ABOUT ME SECTION - Otrava Technologies
+     ================================================ -->
+
+<section class="about-me-section">
+  <div class="about-me-container">
     
-    <!-- Section Title -->
-    <div class="section-title text-center mb-5">
-      <h2 style="font-size: 2.8rem; font-weight: 700; color: #2a2a2a; margin-bottom: 15px;">About the Founder</h2>
-      <div class="title-shape" style="color: #FF4C4C;">
-        <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg" style="width: 150px; height: 20px; margin: 0 auto;">
-          <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
-        </svg>
+    <!-- LEFT COLUMN - Profile Image with Animation -->
+    <div class="about-me-image">
+      <div class="image-wrapper">
+        <!-- Animated tech rings -->
+        <div class="ring-outer">
+          <div class="tech-dot dot-1"></div>
+          <div class="tech-dot dot-2"></div>
+          <div class="tech-dot dot-3"></div>
+          <div class="tech-dot dot-4"></div>
+        </div>
+        <div class="ring-middle"></div>
+        <div class="ring-inner"></div>
+        
+        <!-- Your Profile Image -->
+        <img src="assets/img/me.jpg" class="profile-image" alt="Christopher Mulenga">
+        
+        <!-- Location Badge -->
+        <div class="location-badge">
+          <div class="live-dot"></div>
+          <span>Zambia · Remote</span>
+        </div>
       </div>
     </div>
     
-    <div class="row justify-content-center">
-      <div class="col-lg-6 text-center">
-        
-        <!-- Profile Card Container -->
-        <div style="background: white; border-radius: 30px; box-shadow: 0 20px 40px rgba(42,42,42,0.05); padding: 50px 40px; transition: all 0.3s ease; border: 1px solid rgba(42,42,42,0.05);"
-             onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 25px 50px rgba(42,42,42,0.08)';" 
-             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 20px 40px rgba(42,42,42,0.05)';">
-          
-          <!-- Image with tech-inspired border effect -->
-          <div style="position: relative; display: inline-block; margin-bottom: 20px;">
-            <!-- Circuit-like border effect -->
-            <div style="position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px; border: 3px dashed #FF4C4C; border-radius: 50%; opacity: 0.2; animation: spin 20s linear infinite;"></div>
-            <div style="position: absolute; top: -5px; left: -5px; right: -5px; bottom: -5px; border: 2px solid #FF4C4C; border-radius: 50%; opacity: 0.4;"></div>
-            <img src="assets/img/me.jpg" class="img-fluid rounded-circle" alt="Christopher Mulenga" 
-                 style="max-width: 200px; border: 5px solid white; box-shadow: 0 10px 30px rgba(42,42,42,0.1); position: relative; z-index: 2;">
-            
-            <!-- Tech Location Badge -->
-            <div style="position: absolute; bottom: 20px; right: 0; background: #2a2a2a; color: white; padding: 8px 16px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; box-shadow: 0 5px 15px rgba(42,42,42,0.2); z-index: 3; white-space: nowrap;">
-              <i class="bi bi-cpu" style="margin-right: 5px;"></i> Zambia
-            </div>
-          </div>
-          
-          <!-- Name -->
-          <h3 style="font-size: 2rem; font-weight: 700; color: #2a2a2a; margin-bottom: 5px;">Christopher Mulenga</h3>
-          
-          <!-- Role with tech accent -->
-          <p class="lead" style="font-size: 1.2rem; color: #FF4C4C; font-weight: 500; margin-bottom: 25px; position: relative; padding-bottom: 15px; display: inline-block;">
-            Founder & Creative Technologist
-            <span style="content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 70px; height: 2px; background: linear-gradient(90deg, transparent, #FF4C4C, #2a2a2a, #FF4C4C, transparent);"></span>
-          </p>
-          
-          <!-- Bio with tech/creativity focus -->
-          <div style="max-width: 540px; margin: 0 auto 25px;">
-            <p style="font-size: 1rem; line-height: 1.8; color: #4a4a4a; margin-bottom: 20px;">
-              <span style="font-size: 2rem; color: #2a2a2a; float: left; line-height: 0.8; margin-right: 8px; font-family: monospace;"></span>
-              With over 7 years bridging <span style="color: #FF4C4C; font-weight: 500;">technology</span> and <span style="color: #FF4C4C; font-weight: 500;">creative expression</span>, I help individuals and organizations harness the full potential of digital innovation. From elegant code to intuitive design, every project is an opportunity to build something meaningful.
-            </p>
-            <p style="font-size: 1rem; line-height: 1.8; color: #4a4a4a;">
-              My approach combines <span style="color: #FF4C4C; font-weight: 500;">technical depth</span> with <span style="color: #FF4C4C; font-weight: 500;">creative vision</span> — building systems that don't just work, but inspire. Whether it's Web Development, Repair & Data Management, or Graphic, I craft solutions at the intersection of logic and imagination.
-            </p>
-          </div>
-          
-          <!-- Social Links -->
-          <div class="founder-social-links mt-4" style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-            
-            <a href="https://www.linkedin.com/in/christopher-mulenga/" class="linkedin" 
-               style="display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; background: #0077b5; color: white; border-radius: 50%; transition: all 0.3s ease; text-decoration: none;"
-               onmouseover="this.style.transform='translateY(-5px) scale(1.08)'; this.style.boxShadow='0 10px 20px rgba(0,119,181,0.2)';" 
-               onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none';">
-              <i class="bi bi-linkedin" style="font-size: 1.2rem;"></i>
-            </a>
-            
-            <a href="https://x.com/mulenga2905" class="twitter" 
-               style="display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; background: #000000; color: white; border-radius: 50%; transition: all 0.3s ease; text-decoration: none;"
-               onmouseover="this.style.transform='translateY(-5px) scale(1.08)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.2)';" 
-               onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none';">
-              <i class="bi bi-twitter-x" style="font-size: 1.2rem;"></i>
-            </a>
-            
-            <a href="https://github.com/christopher-mulenga" class="github" 
-               style="display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; background: #333; color: white; border-radius: 50%; transition: all 0.3s ease; text-decoration: none;"
-               onmouseover="this.style.transform='translateY(-5px) scale(1.08)'; this.style.boxShadow='0 10px 20px rgba(51,51,51,0.2)';" 
-               onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none';">
-              <i class="bi bi-github" style="font-size: 1.2rem;"></i>
-            </a>
-            
-            <a href="mailto:christopher@example.com" 
-               style="display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; background: #FF4C4C; color: white; border-radius: 50%; transition: all 0.3s ease; text-decoration: none;"
-               onmouseover="this.style.transform='translateY(-5px) scale(1.08)'; this.style.boxShadow='0 10px 20px rgba(255,76,76,0.2)';" 
-               onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none';">
-              <i class="bi bi-envelope-fill" style="font-size: 1.2rem;"></i>
-            </a>
-            
-          </div>
-          
-        </div><!-- End Profile Card -->
-        
-        <!-- Tech Stats Row -->
-        <div style="display: flex; justify-content: center; gap: 30px; margin-top: 40px; flex-wrap: wrap;">
-          
-          <div style="text-align: center; background: white; border-radius: 20px; padding: 15px 25px; box-shadow: 0 10px 30px rgba(42,42,42,0.03); min-width: 100px; border: 1px solid rgba(42,42,42,0.03);">
-            <div style="font-size: 2rem; font-weight: 700; color: #FF4C4C; line-height: 1;">7+</div>
-            <div style="font-size: 0.8rem; font-weight: 500; color: #666;">Years Building</div>
-          </div>
-          
-          <div style="text-align: center; background: white; border-radius: 20px; padding: 15px 25px; box-shadow: 0 10px 30px rgba(42,42,42,0.03); min-width: 100px; border: 1px solid rgba(42,42,42,0.03);">
-            <div style="font-size: 2rem; font-weight: 700; color: #FF4C4C; line-height: 1;">500+</div>
-            <div style="font-size: 0.8rem; font-weight: 500; color: #666;">Tech Projects</div>
-          </div>
-          
-          <div style="text-align: center; background: white; border-radius: 20px; padding: 15px 25px; box-shadow: 0 10px 30px rgba(42,42,42,0.03); min-width: 100px; border: 1px solid rgba(42,42,42,0.03);">
-            <div style="font-size: 2rem; font-weight: 700; color: #FF4C4C; line-height: 1;">300+</div>
-            <div style="font-size: 0.8rem; font-weight: 500; color: #666;">Happy Clients</div>
-          </div>
-          
-        </div>
-        
-        <!-- Tech & Creativity Tags -->
-        <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 30px;">
-          <span style="background: rgba(42, 42, 42, 0.05); color: #2a2a2a; padding: 6px 18px; border-radius: 50px; font-size: 0.85rem; font-weight: 500; border: 1px solid rgba(255,76,76,0.1);">Web Development</span>
-          <span style="background: rgba(42, 42, 42, 0.05); color: #2a2a2a; padding: 6px 18px; border-radius: 50px; font-size: 0.85rem; font-weight: 500; border: 1px solid rgba(255,76,76,0.1);">Creative Coding</span>
-          <span style="background: rgba(42, 42, 42, 0.05); color: #2a2a2a; padding: 6px 18px; border-radius: 50px; font-size: 0.85rem; font-weight: 500; border: 1px solid rgba(255,76,76,0.1);">UI/UX Design</span>
-          <span style="background: rgba(42, 42, 42, 0.05); color: #2a2a2a; padding: 6px 18px; border-radius: 50px; font-size: 0.85rem; font-weight: 500; border: 1px solid rgba(255,76,76,0.1);">Digital Innovation</span>
-          <span style="background: rgba(42, 42, 42, 0.05); color: #2a2a2a; padding: 6px 18px; border-radius: 50px; font-size: 0.85rem; font-weight: 500; border: 1px solid rgba(255,76,76,0.1);">Interactive Systems</span>
-        </div>
-        
-        <!-- Call to Action -->
-        <div style="margin-top: 40px;">
-          <a href="https://wa.me/c/260779955346" target="_blank" style="display: inline-block; padding: 12px 35px; background: #2a2a2a; color: white; text-decoration: none; border-radius: 50px; font-weight: 600; border: 2px solid #2a2a2a; transition: all 0.3s ease;"
-             onmouseover="this.style.background='#FF4C4C'; this.style.borderColor='#FF4C4C';" 
-             onmouseout="this.style.background='#2a2a2a'; this.style.borderColor='#2a2a2a';">
-            <i class="bi bi-whatsapp" style="margin-right: 8px;"></i> Chat on WhatsApp
-          </a>
-        </div>
-        
-        <!-- Add this animation keyframes to your stylesheet or head -->
-        <style>
-          @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-          }
-        </style>
-        
+    <!-- RIGHT COLUMN - Content -->
+    <div class="about-me-content">
+      
+      <div class="section-badge">
+        <i class="bi bi-cpu"></i> / ABOUT ME
       </div>
+      
+      <h1>Christopher<br>Mulenga</h1>
+      
+      <div class="role-tag">
+        Founder & Creative Technologist
+      </div>
+      
+      <div class="bio-text">
+        <p>I bridge the gap between <span class="highlight">technology</span> and <span class="highlight">human experience</span>. With over 7 years of building digital products, I focus on creating systems that don't just work — they feel intuitive and purposeful.</p>
+        <p>Based in Zambia, I collaborate with global brands and creators to turn complex ideas into elegant, high-performance solutions. My approach combines clean architecture with thoughtful design — because great technology should also feel good to use.</p>
+      </div>
+      
+      <!-- Stats -->
+      <div class="stats-row">
+        <div class="stat-item">
+          <div class="stat-number">7+</div>
+          <div class="stat-label">Years</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">120+</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">98%</div>
+          <div class="stat-label">Success</div>
+        </div>
+      </div>
+      
+      <!-- Tech Tags -->
+      <div class="tech-stack">
+        <span class="tech-tag">Full-Stack Dev</span>
+        <span class="tech-tag">UI/UX Design</span>
+        <span class="tech-tag">Technical Consulting</span>
+        <span class="tech-tag">Creative Direction</span>
+      </div>
+      
+      <!-- Social Links -->
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/christopher-mulenga/" class="social-link" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://x.com/mulenga2905" class="social-link" target="_blank"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://github.com/christopher-mulenga" class="social-link" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="mailto:hello@otrava.com" class="social-link" target="_blank"><i class="bi bi-envelope-fill"></i></a>
+      </div>
+      
+      <!-- CTA Button -->
+      <a href="https://wa.me/c/260779955346" class="cta-button" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+        Let's connect
+      </a>
+      
     </div>
   </div>
-</section><!-- /About Me Section -->
+</section>
+
+<!-- ================================================
+     STYLES - Copy these into your CSS file
+     ================================================ -->
+
+<style>
+/* About Me Section - Professional & Relaxed */
+.about-me-section {
+  background: linear-gradient(135deg, #FAFAFC 0%, #FFFFFF 100%);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background texture */
+.about-me-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(#0D0D0D 1px, transparent 1px),
+                    linear-gradient(90deg, #0D0D0D 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.02;
+  pointer-events: none;
+}
+
+.about-me-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* ========== IMAGE SECTION ========== */
+.about-me-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animated Rings */
+.ring-outer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(255,76,76,0.3);
+  animation: rotateSlow 20s linear infinite;
+}
+
+.ring-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,76,76,0.12);
+  animation: rotateReverse 15s linear infinite;
+}
+
+.ring-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,76,76,0.05);
+}
+
+/* Tech Dots */
+.tech-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #FF4C4C;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+.dot-1 { top: 0; left: 50%; transform: translateX(-50%); }
+.dot-2 { bottom: 0; left: 50%; transform: translateX(-50%); }
+.dot-3 { left: 0; top: 50%; transform: translateY(-50%); }
+.dot-4 { right: 0; top: 50%; transform: translateY(-50%); }
+
+@keyframes rotateSlow {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes rotateReverse {
+  from { transform: translate(-50%, -50%) rotate(360deg); }
+  to { transform: translate(-50%, -50%) rotate(0deg); }
+}
+
+.profile-image {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #FFFFFF;
+  box-shadow: 0 25px 45px -12px rgba(13,13,13,0.2);
+  transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  position: relative;
+  z-index: 5;
+}
+
+.image-wrapper:hover .profile-image {
+  transform: scale(1.02);
+  box-shadow: 0 30px 55px -15px rgba(255,76,76,0.2);
+}
+
+.image-wrapper:hover .ring-outer {
+  animation-duration: 10s;
+  border-color: rgba(255,76,76,0.5);
+}
+
+/* Location Badge */
+.location-badge {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(13,13,13,0.9);
+  backdrop-filter: blur(8px);
+  padding: 8px 18px;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+  border: 1px solid rgba(255,76,76,0.3);
+  box-shadow: 0 8px 20px rgba(13,13,13,0.15);
+}
+
+.location-badge span {
+  color: #EAEAEA;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  background: #4ade80;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #4ade80;
+  animation: pulsePing 1.5s ease-in-out infinite;
+}
+
+@keyframes pulsePing {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+/* ========== CONTENT SECTION ========== */
+.about-me-content {
+  text-align: left;
+}
+
+.section-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #FF4C4C;
+  font-weight: 600;
+  margin-bottom: 20px;
+  background: rgba(255,76,76,0.08);
+  padding: 6px 16px;
+  border-radius: 40px;
+}
+
+.section-badge i {
+  margin-right: 6px;
+  font-size: 0.8rem;
+}
+
+.about-me-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0D0D0D;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.role-tag {
+  display: inline-block;
+  background: rgba(13,13,13,0.05);
+  color: #FF4C4C;
+  padding: 8px 24px;
+  border-radius: 40px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+
+.bio-text {
+  color: #4A4A4A;
+  line-height: 1.7;
+  margin-bottom: 28px;
+  font-size: 1rem;
+}
+
+.bio-text p {
+  margin-bottom: 18px;
+}
+
+.highlight {
+  color: #FF4C4C;
+  font-weight: 500;
+}
+
+/* Stats Row */
+.stats-row {
+  display: flex;
+  gap: 32px;
+  margin: 32px 0;
+  padding: 24px 0;
+  border-top: 1px solid rgba(13,13,13,0.06);
+  border-bottom: 1px solid rgba(13,13,13,0.06);
+}
+
+.stat-item {
+  text-align: left;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #FF4C4C;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #4A4A4A;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Tech Stack Tags */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 28px 0;
+}
+
+.tech-tag {
+  background: rgba(13,13,13,0.04);
+  color: #0D0D0D;
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.tech-tag:hover {
+  background: rgba(255,76,76,0.08);
+  color: #FF4C4C;
+  transform: translateY(-2px);
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 12px;
+  margin: 28px 0 24px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: #F0F0F2;
+  color: #0D0D0D;
+  border-radius: 50%;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.social-link:hover {
+  background: #FF4C4C;
+  color: #FFFFFF;
+  transform: translateY(-4px);
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #0D0D0D;
+  color: #EAEAEA;
+  padding: 14px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.25s ease;
+  border: 1px solid rgba(255,76,76,0.2);
+  margin-top: 8px;
+}
+
+.cta-button i {
+  font-size: 1.1rem;
+}
+
+.cta-button:hover {
+  background: #FF4C4C;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px -10px rgba(255,76,76,0.3);
+  color: #FFFFFF;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 968px) {
+  .about-me-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 0 24px;
+    text-align: center;
+  }
+  
+  .about-me-content {
+    text-align: center;
+  }
+  
+  .stats-row {
+    justify-content: center;
+  }
+  
+  .stat-item {
+    text-align: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  .tech-stack {
+    justify-content: center;
+  }
+  
+  .ring-outer,
+  .ring-middle,
+  .ring-inner {
+    display: none;
+  }
+  
+  .profile-image {
+    width: 260px;
+    height: 260px;
+  }
+  
+  .location-badge {
+    bottom: 10px;
+    right: 10px;
+    padding: 6px 14px;
+  }
+  
+  .location-badge span {
+    font-size: 0.7rem;
+  }
+  
+  .about-me-content h1 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-me-section {
+    padding: 60px 0;
+  }
+  
+  .stats-row {
+    gap: 20px;
+  }
+  
+  .stat-number {
+    font-size: 1.6rem;
+  }
+  
+  .profile-image {
+    width: 220px;
+    height: 220px;
+  }
+}
+</style>
+   <!-- /About Me Section -->
     </section><!-- /Team Section -->
 
 
