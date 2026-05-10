@@ -579,11 +579,21 @@ html {
   }
 </style>
 
-  <!-- Logo Scroller -->
+  <!-- Clients & Testimonials Section -->
+<section id="clients" class="clients-section" style="background: #ffffff; padding: 80px 0; overflow: hidden;">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; color: #FF4C4C;">Partners & Clients</h2>
+      <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto; color: #5A5A6E; line-height: 1.6;">
+        Over the years, I've collaborated with various companies and individuals across industries.
+      </p>
+    </div>
+  </div>
+
+  <!-- Logo Scroller – now with dark background inside each logo box -->
   <div class="logo-scroller-wrapper" style="overflow: hidden; position: relative; width: 100%;">
     <div class="logo-scroller" style="position: relative;">
       <div class="logo-track" style="display: flex; width: max-content;">
-        <!-- Logo items will be duplicated by JavaScript -->
         <div class="logo-item"><img src="assets/img/Clients/Client1.png" alt="Client 1"></div>
         <div class="logo-item"><img src="assets/img/Clients/Client2.png" alt="Client 2"></div>
         <div class="logo-item"><img src="assets/img/Clients/Client3.png" alt="Client 3"></div>
@@ -595,170 +605,201 @@ html {
     </div>
   </div>
 
-  <!-- Testimonial Scroller -->
+  <!-- Testimonial Scroller (light cards) -->
   <div class="testimonial-scroller-wrapper" style="overflow: hidden; margin-top: 60px; position: relative;">
     <div class="testimonial-scroller" style="position: relative;">
       <div class="testimonial-track" style="display: flex; width: max-content;">
-        <!-- Testimonial items will be duplicated by JavaScript -->
-        <div class="testimonial-card"><h3>Proficient Enterprises Zambia</h3><p>"Strategic logo redesign and professional company profile that elevated our brand identity."</p></div>
-        <div class="testimonial-card"><h3>Digitobits Trading</h3><p>"Creative poster designs and reliable computer repair services for my business."</p></div>
-        <div class="testimonial-card"><h3>The Wrap Masters</h3><p>"We love the logo, its very nice! Thank you!"</p></div>
-        <div class="testimonial-card"><h3>Riseup Farm Enterprises</h3><p>"Comprehensive branding package including logo design and social media strategy."</p></div>
-        <div class="testimonial-card"><h3>Natolitech Solutions Limited</h3><p>"i love the work. Great company profile!"</p></div>
+        <div class="testimonial-card">
+          <h3>Proficient Enterprises Zambia</h3>
+          <p>"Strategic logo redesign and professional company profile that elevated our brand identity."</p>
+        </div>
+        <div class="testimonial-card">
+          <h3>Digitobits Trading</h3>
+          <p>"Creative poster designs and reliable computer repair services for my business."</p>
+        </div>
+        <div class="testimonial-card">
+          <h3>The Wrap Masters</h3>
+          <p>"We love the logo, its very nice! Thank you!"</p>
+        </div>
+        <div class="testimonial-card">
+          <h3>Riseup Farm Enterprises</h3>
+          <p>"Comprehensive branding package including logo design and social media strategy."</p>
+        </div>
+        <div class="testimonial-card">
+          <h3>Natolitech Solutions Limited</h3>
+          <p>"i love the work. Great company profile!"</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <style>
-/* Smooth Scrolling Tracks */
-.logo-track, .testimonial-track {
-  display: flex;
-  width: max-content;
-}
+  /* Logo track animation */
+  .logo-track, .testimonial-track {
+    display: flex;
+    width: max-content;
+  }
 
-/* Items */
-.logo-item, .testimonial-card {
-  flex: 0 0 auto;
-  margin: 0 30px;
-}
+  .logo-item, .testimonial-card {
+    flex: 0 0 auto;
+    margin: 0 30px;
+  }
 
-/* Logos */
-.logo-item {
-  width: 150px;
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.logo-item img {
-  width: 100%;
-  height: auto;
-  filter: brightness(0) invert(1);
-  transition: transform 0.3s ease;
-}
-.logo-item:hover img {
-  transform: scale(1.1);
-}
-
-/* Testimonials */
-.testimonial-card {
-  min-width: 300px;
-  max-width: 300px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 10px;
-  padding: 30px;
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255,255,255,0.1);
-  color: rgba(255,255,255,0.9);
-  transition: transform 0.3s ease;
-}
-.testimonial-card:hover {
-  transform: translateY(-5px);
-}
-.testimonial-card h3 {
-  color: #fff;
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-  position: relative;
-}
-.testimonial-card h3::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 40px;
-  height: 2px;
-  background: #fff;
-  opacity: 0.3;
-}
-.testimonial-card p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* Responsive Tweaks */
-@media (max-width: 768px) {
+  /* Logo items – DARK BACKGROUND so white/transparent logos pop */
   .logo-item {
-    width: 100px;
-    height: 100px;
-    margin: 0 15px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1a1a2e;  /* near-black dark background */
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border: 1px solid rgba(255,255,255,0.08);
   }
+
+  .logo-item img {
+    width: 80%;
+    height: auto;
+    filter: brightness(0) invert(1);  /* makes white logos pop on dark bg */
+    transition: transform 0.3s ease;
+  }
+
+  .logo-item:hover {
+    transform: translateY(-6px);
+    background: #2a2a3e;
+    border-color: rgba(255,76,76,0.3);
+    box-shadow: 0 16px 24px -10px rgba(0,0,0,0.2);
+  }
+
+  .logo-item:hover img {
+    transform: scale(1.1);
+  }
+
+  /* Testimonial cards – light, readable, with gradient border on hover */
   .testimonial-card {
-    min-width: 260px;
-    max-width: 260px;
-    padding: 20px;
+    min-width: 320px;
+    max-width: 320px;
+    background: #EAEAEA;
+    border-radius: 20px;
+    padding: 28px 24px;
+    margin: 0 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.06);
   }
-}
+
+  .testimonial-card:hover {
+    transform: translateY(-6px);
+    background: #ffffff;
+    border-image: linear-gradient(135deg, #FF4C4C, #FF8A4F) 1;
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 0 20px 30px -12px rgba(255,76,76,0.2);
+  }
+
+  .testimonial-card h3 {
+    color: #1A1A2E;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    position: relative;
+    padding-bottom: 10px;
+  }
+
+  .testimonial-card h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 45px;
+    height: 3px;
+    background: linear-gradient(90deg, #FF4C4C, #FF8A4F);
+    border-radius: 2px;
+  }
+
+  .testimonial-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #2C2C3A;
+    margin: 0;
+    font-style: normal;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .logo-item {
+      width: 100px;
+      height: 100px;
+      margin: 0 15px;
+    }
+    .testimonial-card {
+      min-width: 260px;
+      max-width: 260px;
+      padding: 20px;
+      margin: 0 20px;
+    }
+    .testimonial-card h3 {
+      font-size: 1.1rem;
+    }
+    .testimonial-card p {
+      font-size: 0.85rem;
+    }
+  }
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Logo scroller setup
-  const logoScroller = document.querySelector('.logo-scroller');
+  // Logo scroller duplication
   const logoTrack = document.querySelector('.logo-track');
-  const logoItems = document.querySelectorAll('.logo-item');
-  
-  // Duplicate logo items for seamless looping
-  logoItems.forEach(item => {
-    const clone = item.cloneNode(true);
-    logoTrack.appendChild(clone);
-  });
-  
-  // Testimonial scroller setup
-  const testimonialScroller = document.querySelector('.testimonial-scroller');
+  if (logoTrack) {
+    const logoItems = Array.from(logoTrack.children);
+    logoItems.forEach(item => {
+      const clone = item.cloneNode(true);
+      logoTrack.appendChild(clone);
+    });
+  }
+
+  // Testimonial scroller duplication
   const testimonialTrack = document.querySelector('.testimonial-track');
-  const testimonialCards = document.querySelectorAll('.testimonial-card');
-  
-  // Duplicate testimonial items for seamless looping
-  testimonialCards.forEach(card => {
-    const clone = card.cloneNode(true);
-    testimonialTrack.appendChild(clone);
-  });
-  
-  // Animation using GSAP for smoother performance
+  if (testimonialTrack) {
+    const testimonialCards = Array.from(testimonialTrack.children);
+    testimonialCards.forEach(card => {
+      const clone = card.cloneNode(true);
+      testimonialTrack.appendChild(clone);
+    });
+  }
+
+  // Animation (GSAP or CSS fallback)
   if (typeof gsap !== 'undefined') {
-    // Logo animation
-    gsap.to(logoTrack, {
+    gsap.to('.logo-track', {
       x: () => -(logoTrack.scrollWidth / 2),
       ease: 'none',
       duration: 40,
       repeat: -1
     });
-    
-    // Testimonial animation (opposite direction)
-    gsap.to(testimonialTrack, {
+    gsap.to('.testimonial-track', {
       x: () => -(testimonialTrack.scrollWidth / 2),
       ease: 'none',
       duration: 60,
       repeat: -1
     });
   } else {
-    // Fallback CSS animation if GSAP not available
-    logoTrack.style.animation = 'scrollRight 40s linear infinite';
-    testimonialTrack.style.animation = 'scrollLeft 60s linear infinite';
-    
-    // Add keyframes for fallback
+    // CSS fallback
     const style = document.createElement('style');
     style.textContent = `
-      @keyframes scrollRight {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
-      }
-      @keyframes scrollLeft {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
-      }
+      @keyframes scrollRight { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+      @keyframes scrollLeft { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+      .logo-track { animation: scrollRight 40s linear infinite; }
+      .testimonial-track { animation: scrollLeft 60s linear infinite; }
     `;
     document.head.appendChild(style);
   }
 });
 </script>
-</section>
-
-
-
+ <!-- /Testimonial Section -->
 
 
    
