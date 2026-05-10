@@ -1390,64 +1390,100 @@ document.addEventListener('DOMContentLoaded', function() {
 
   </main>
   <!-- Footer Section -->
-  <footer id="footer" class="footer">
-    <div class="container">
-      <div class="row gy-4">
-        <div class="col-lg-5 col-md-12 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">OTRAVA TECHNOLOGIES</span>
-          </a>
-          <p>Empowering businesses and individuals through innovative technology solutions in Zambia and beyond.</p>
-          <div class="social-links d-flex mt-4">
-            <a href="https://x.com/mulenga2905"><i class="bi bi-twitter-x"></i></a>
-            <a href="https://www.facebook.com/otrava.technologies/"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/mulenga.ot/"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/christopher-mulenga/"><i class="bi bi-linkedin"></i></a>
-            <a href="https://wa.me/260779955346"><i class="bi bi-whatsapp"></i></a>
-          </div>
-        </div>
+  <!-- Footer Section – Compact Grid, No Scroll Needed -->
+<footer id="footer" class="footer" style="position: relative; background: #0A0A14; color: #EAEAEA; padding: 40px 0 20px; font-family: 'Inter', sans-serif; overflow: hidden;">
+  
+  <!-- Animated Background blobs (soft, no extra height) -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: 0;">
+    <div class="blob blob-1" style="position: absolute; width: 200px; height: 200px; background: rgba(255,76,76,0.12); border-radius: 50%; filter: blur(50px);"></div>
+    <div class="blob blob-2" style="position: absolute; width: 240px; height: 240px; background: rgba(255,120,80,0.1); border-radius: 50%; filter: blur(55px);"></div>
+  </div>
 
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#services">Graphic Design</a></li>
-            <li><a href="#services">Web Development</a></li>
-            <li><a href="#services">IT Consulting</a></li>
-            <li><a href="#services">JAWS Training</a></li>
-            <li><a href="#services">Resume Writing</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-3 col-md-12 footer-contact">
-          <h4>Contact Us</h4>
-          <p>
-            46 Kaaze St, Libala Stage 3<br>
-            Lusaka, Zambia<br><br>
-            <strong>Phone:</strong> +260 77 995 5346<br>
-            <strong>Email:</strong> otravatechnologies@gmail.com<br>
-          </p>
+  <div class="container" style="position: relative; z-index: 2;">
+    <!-- One row with three columns using grid -->
+    <div class="row" style="display: grid; grid-template-columns: 1.2fr 0.8fr 0.8fr 1fr; gap: 1.5rem;">
+      
+      <!-- Column 1: About & Social -->
+      <div>
+        <a href="index.html" class="logo d-inline-block mb-2" style="font-size: 1.2rem; font-weight: 800; letter-spacing: -0.3px; background: linear-gradient(135deg, #FF4C4C, #FFAA66); background-clip: text; -webkit-background-clip: text; color: transparent;">
+          OTRAVA TECHNOLOGIES
+        </a>
+        <p style="color: #B0B0C0; font-size: 0.8rem; line-height: 1.4; margin: 0.5rem 0 0.8rem; max-width: 90%;">Empowering businesses and individuals through innovative tech solutions.</p>
+        <div class="social-links d-flex gap-2">
+          <a href="https://x.com/mulenga2905" class="social-icon" target="_blank" style="width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.08); border-radius: 50%; color: #EAEAEA; transition: 0.25s; font-size: 0.8rem;"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://www.facebook.com/otrava.technologies/" class="social-icon" target="_blank" style="width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.08); border-radius: 50%; color: #EAEAEA; transition: 0.25s; font-size: 0.8rem;"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/mulenga.ot/" class="social-icon" target="_blank" style="width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.08); border-radius: 50%; color: #EAEAEA; transition: 0.25s; font-size: 0.8rem;"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/christopher-mulenga/" class="social-icon" target="_blank" style="width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.08); border-radius: 50%; color: #EAEAEA; transition: 0.25s; font-size: 0.8rem;"><i class="bi bi-linkedin"></i></a>
+          <a href="https://wa.me/260779955346" class="social-icon" target="_blank" style="width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.08); border-radius: 50%; color: #EAEAEA; transition: 0.25s; font-size: 0.8rem;"><i class="bi bi-whatsapp"></i></a>
         </div>
       </div>
 
-      <div class="copyright text-center mt-4">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Otrava Technologies</strong> <span>All Rights Reserved</span></p>
-        <div class="credits">
-          Designed by <a href="https://www.linkedin.com/company/otrava-technologies/">Otrava Technologies</a>
-        </div>
+      <!-- Column 2: Quick Links -->
+      <div>
+        <h4 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 0.8rem; color: #FFFFFF;">Quick Links</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.75rem;">
+          <li style="margin-bottom: 0.4rem;"><a href="#hero" style="color: #B0B0C0; text-decoration: none;">Home</a></li>
+          <li style="margin-bottom: 0.4rem;"><a href="#about" style="color: #B0B0C0; text-decoration: none;">About</a></li>
+          <li style="margin-bottom: 0.4rem;"><a href="#services" style="color: #B0B0C0; text-decoration: none;">Services</a></li>
+          <li style="margin-bottom: 0.4rem;"><a href="#portfolio" style="color: #B0B0C0; text-decoration: none;">Portfolio</a></li>
+          <li><a href="#contact" style="color: #B0B0C0; text-decoration: none;">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Our Services -->
+      <div>
+        <h4 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 0.8rem; color: #FFFFFF;">Our Services</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.75rem;">
+          <li style="margin-bottom: 0.4rem;"><a href="#services" style="color: #B0B0C0; text-decoration: none;">Graphic Design</a></li>
+          <li style="margin-bottom: 0.4rem;"><a href="#services" style="color: #B0B0C0; text-decoration: none;">Web Development</a></li>
+          <li style="margin-bottom: 0.4rem;"><a href="#services" style="color: #B0B0C0; text-decoration: none;">IT Consulting</a></li>
+          <li style="margin-bottom: 0.4rem;"><a href="#services" style="color: #B0B0C0; text-decoration: none;">JAWS Training</a></li>
+          <li><a href="#services" style="color: #B0B0C0; text-decoration: none;">Resume Writing</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Contact -->
+      <div>
+        <h4 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 0.8rem; color: #FFFFFF;">Contact</h4>
+        <address style="font-style: normal; color: #B0B0C0; line-height: 1.5; font-size: 0.75rem;">
+          <p style="margin-bottom: 0.3rem;"><i class="bi bi-geo-alt-fill me-1" style="color: #FF4C4C; font-size: 0.7rem;"></i> 46 Kaaze St, Lusaka, Zambia</p>
+          <p style="margin-bottom: 0.3rem;"><i class="bi bi-telephone-fill me-1" style="color: #FF4C4C; font-size: 0.7rem;"></i> +260 77 995 5346</p>
+          <p><i class="bi bi-envelope-fill me-1" style="color: #FF4C4C; font-size: 0.7rem;"></i> otravatechnologies@gmail.com</p>
+        </address>
       </div>
     </div>
-  </footer>
+
+    <!-- Copyright – one slim line -->
+    <div class="copyright text-center mt-3 pt-2" style="border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.7rem; color: #8A8A9A;">
+      © <strong style="color: #FF4C4C;">Otrava Technologies</strong> All Rights Reserved. Designed with <i class="bi bi-heart-fill" style="color: #FF4C4C;"></i> by <a href="https://www.linkedin.com/company/otrava-technologies/" style="color: #FF4C4C; text-decoration: none;">Otrava Technologies</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  /* Smaller blobs, smoother movement */
+  .blob-1 { animation: moveBlob1 18s ease-in-out infinite; top: 5%; left: -5%; }
+  .blob-2 { animation: moveBlob2 22s ease-in-out infinite; bottom: 5%; right: -5%; }
+  @keyframes moveBlob1 {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(8%, 5%) scale(1.1); }
+    100% { transform: translate(0, 0) scale(1); }
+  }
+  @keyframes moveBlob2 {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-6%, -8%) scale(1.15); }
+    100% { transform: translate(0, 0) scale(1); }
+  }
+  .footer a:not(.social-icon):hover { color: #FF4C4C !important; text-decoration: underline; }
+  .social-icon:hover { background: #FF4C4C !important; color: white !important; transform: translateY(-2px); }
+  @media (max-width: 992px) {
+    .footer .row { grid-template-columns: repeat(2, 1fr) !important; gap: 1rem; }
+  }
+  @media (max-width: 576px) {
+    .footer .row { grid-template-columns: 1fr !important; text-align: center; }
+    .social-links { justify-content: center; }
+  }
+</style>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
