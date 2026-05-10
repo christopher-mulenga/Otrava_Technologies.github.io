@@ -265,8 +265,6 @@ html {
     <div class="about-card">
       <div class="terminal-top">
         <div class="anim-panel">
-          <span class="corner corner-tl"></span>
-          <span class="corner corner-br"></span>
           <div class="anim-topbar">
             <span class="dot dot-red"></span>
             <span class="dot dot-yellow"></span>
@@ -274,7 +272,7 @@ html {
             <span>⚡ OTRV::TERMINAL // ACTIVE</span>
           </div>
           <div class="anim-stage">
-            <div id="about-hero"></div>
+            <div id="about-hero">⚡ LOADING...</div>
           </div>
           <div class="anim-footer">
             <span class="badge-label">⟫⟫ LIVE DYNAMIC SEQUENCE</span>
@@ -322,78 +320,297 @@ html {
   </div>
 </section>
 
-<script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typeit@8.7.1/dist/index.umd.js"></script>
 <script>
   (function() {
-    const targetElement = document.getElementById("about-hero");
-    if (!targetElement) return;
-    targetElement.innerHTML = "";
-    const typeInstance = new TypeIt("#about-hero", {
-      speed: 58, deleteSpeed: 40, lifeLike: true, loop: true,
-      breakLines: false, waitUntilVisible: true, cursorChar: "▮",
-      nextStringDelay: 190, loopDelay: 1400,
-    });
-    typeInstance
-      .type("INNOVATE.", { delay: 620 }).pause(1200).delete(9, { speed: 42 })
-      .type("DESIGN.", { delay: 500 }).pause(1250).delete(7, { speed: 43 })
-      .type('EMPOWER WITH <span class="hl">TECHNOLOGY.</span>', { delay: 480 }).pause(1550).delete(22, { speed: 46 })
-      .type('OTRAVA <span class="lgt">TECHNOLOGIES</span>', { delay: 540 }).pause(1650).delete(21, { speed: 45 })
-      .type('<span class="hl">BOLD</span> • FUTURE-READY', { delay: 520 }).pause(1400).delete(20, { speed: 44 })
-      .type('ZAMBIA <span class="lgt">BUILT</span>', { delay: 400 }).pause(1300).delete(13, { speed: 42 })
-      .type('OTRAVA', { delay: 300 }).pause(1000).delete(6, { speed: 38 })
-      .type('CYBER RESILIENCE', { delay: 560 }).pause(1400).delete(19, { speed: 47 })
-      .type('TECH FOR <span class="hl">GOOD!</span>', { delay: 500 }).pause(1500).delete(13, { speed: 40 })
-      .type('OTRAVA TECHNOLOGIES', { delay: 480 }).pause(1800).delete(18, { speed: 44 })
-      .type("READY.", { delay: 500 }).pause(1200).delete(6, { speed: 40 })
-      .type("INNOVATE UNBOUND.", { delay: 540 }).pause(1600).delete(18, { speed: 48 })
-      .type("OTRAVA", { delay: 420 }).pause(1300).delete(8, { speed: 40 })
-      .type("BORDERLESS ▲", { delay: 500 }).pause(1500).delete(14, { speed: 42 })
-      .type("WE BUILD.", { delay: 380 }).pause(1300).delete(9, { speed: 40 })
-      .type("OTRAVA TECHNOLOGIES!", { delay: 460 }).pause(1400).delete(11, { speed: 42 })
-      .type("DEVOTED TO IMPACT", { delay: 540 }).pause(1500).delete(17, { speed: 44 })
-      .go();
+    function initTerminal() {
+      const target = document.getElementById('about-hero');
+      if (!target) return;
+      if (typeof TypeIt === 'undefined') {
+        target.innerHTML = '⚡ OTRAVA // READY ⚡';
+        return;
+      }
+      target.innerHTML = '';
+      new TypeIt('#about-hero', {
+        speed: 58,
+        deleteSpeed: 40,
+        lifeLike: true,
+        loop: true,
+        breakLines: false,
+        waitUntilVisible: true,
+        cursorChar: '▮',
+        nextStringDelay: 190,
+        loopDelay: 1400,
+      })
+        .type('INNOVATE.', { delay: 620 }).pause(1200).delete(9, { speed: 42 })
+        .type('DESIGN.', { delay: 500 }).pause(1250).delete(7, { speed: 43 })
+        .type('EMPOWER WITH <span class="hl">TECHNOLOGY</span>', { delay: 480 }).pause(1550).delete(22, { speed: 46 })
+        .type('OTRAVA <span class="lgt">TECHNOLOGIES</span>', { delay: 540 }).pause(1650).delete(21, { speed: 45 })
+        .type('<span class="hl">BOLD</span> • FUTURE-READY', { delay: 520 }).pause(1400).delete(20, { speed: 44 })
+        .type('ZAMBIA <span class="lgt">BUILT</span>', { delay: 400 }).pause(1300).delete(13, { speed: 42 })
+        .type('OTRAVA', { delay: 300 }).pause(1000).delete(6, { speed: 38 })
+        .type('CYBER RESILIENCE', { delay: 560 }).pause(1400).delete(19, { speed: 47 })
+        .type('TECH FOR <span class="hl">GOOD</span>', { delay: 500 }).pause(1500).delete(13, { speed: 40 })
+        .type('OTRAVA TECHNOLOGIES', { delay: 480 }).pause(1800).delete(18, { speed: 44 })
+        .type('READY.', { delay: 500 }).pause(1200).delete(6, { speed: 40 })
+        .type('INNOVATE UNBOUND', { delay: 540 }).pause(1600).delete(18, { speed: 48 })
+        .type('OTRAVA ✓', { delay: 420 }).pause(1300).delete(8, { speed: 40 })
+        .type('BORDERLESS ▲', { delay: 500 }).pause(1500).delete(14, { speed: 42 })
+        .type('WE BUILD.', { delay: 380 }).pause(1300).delete(9, { speed: 40 })
+        .type('OTRAVA TECH', { delay: 460 }).pause(1400).delete(11, { speed: 42 })
+        .type('DEVOTED TO IMPACT', { delay: 540 }).pause(1500).delete(17, { speed: 44 })
+        .go();
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initTerminal);
+    } else {
+      initTerminal();
+    }
   })();
 </script>
+
 <style>
-  @keyframes blinkCursor { 0%,100% { opacity: 1; text-shadow: 0 0 6px #FFAA44; } 50% { opacity: 0.3; text-shadow: 0 0 0px #FFAA44; } }
-  .ti-cursor { animation: blinkCursor 0.85s step-end infinite; font-weight: 900; font-size: 1.4rem !important; }
-  .status-dot { animation: pulseGreen 1.4s infinite alternate; }
-  @keyframes pulseGreen { 0% { opacity: 0.5; transform: scale(0.95); } 100% { opacity: 1; transform: scale(1.2); } }
-  .about-card { transition: transform 0.2s; }
-  .about-card:hover { transform: translateY(-2px); }
-  @media (max-width: 550px) { .anim-stage { padding: 1rem 0.8rem; } #about-hero { font-size: 1rem; white-space: normal; word-break: break-word; } }
-  .info-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; margin: 1.5rem 0; }
-  .info-item { background: #F9F9FF; border-radius: 18px; padding: 0.9rem 1.1rem; border: 1px solid #EDEDF2; }
-  .info-item .label { font-size: 0.7rem; font-weight: 700; color: #8A8AA3; text-transform: uppercase; display: block; }
-  .info-item .value { font-weight: 700; font-size: 0.95rem; color: #1E1E2C; }
-  .company-mission { background: #FEFAF5; border-radius: 1.2rem; padding: 1.2rem 1.4rem; border-left: 4px solid #FF4C4C; margin-bottom: 1.5rem; }
-  .values-title { font-family: 'Montserrat', sans-serif; font-size: 1.1rem; font-weight: 800; margin: 0.8rem 0 1rem; }
-  .values-grid { display: flex; flex-wrap: wrap; gap: 0.8rem; }
-  .value-item { background: #F7F7FD; border-radius: 60px; padding: 0.45rem 1.2rem; display: inline-flex; align-items: center; gap: 10px; border: 1px solid #EBEBF0; }
-  .value-icon { background: #FF4C4C; width: 26px; height: 26px; border-radius: 30px; display: inline-flex; align-items: center; justify-content: center; color: white; font-size: 13px; }
-  .about-wrapper { max-width: 1100px; margin: 0 auto; }
-  .terminal-top { width: 100%; background: #0A0A0F; border-bottom: 2px solid rgba(255,76,76,0.4); }
-  .anim-panel { background: #0A0A0F; position: relative; }
-  .anim-topbar { display: flex; align-items: center; gap: 8px; padding: 0.8rem 1.5rem; background: rgba(20,20,28,0.98); border-bottom: 1px solid rgba(255,255,255,0.08); }
-  .dot { width: 12px; height: 12px; border-radius: 50%; }
+  /* Main container – adds side spacing and centers the card */
+  .about-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Card styling – no dark overlay, clean white */
+  .about-card {
+    background: #FFFFFF;
+    border-radius: 2rem;
+    box-shadow: 0 25px 40px -14px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+  .about-card:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Terminal panel – no dark gradient, fresh look */
+  .terminal-top {
+    width: 100%;
+    background: #0F0F14;
+    border-bottom: 2px solid rgba(255, 76, 76, 0.5);
+  }
+  .anim-panel {
+    background: #0F0F14;
+    position: relative;
+  }
+  .anim-topbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.8rem 1.5rem;
+    background: #1A1A24;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
   .dot-red { background: #FF5F5A; }
   .dot-yellow { background: #FFBD2E; }
   .dot-green { background: #2AC940; }
-  .anim-topbar span { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; margin-left: 0.6rem; color: rgba(255,255,255,0.55); }
-  .anim-stage { padding: 2rem 1.5rem; min-height: 200px; display: flex; align-items: center; justify-content: center; background: radial-gradient(ellipse at 30% 40%, rgba(255,76,76,0.03) 0%, #050508 100%); }
-  #about-hero { font-family: 'JetBrains Mono', monospace; font-size: clamp(1.6rem,6vw,2.5rem); font-weight: 800; text-transform: uppercase; color: #FF4C4C; text-align: center; white-space: nowrap; }
-  .hl { color: #FFAA44; }
-  .lgt { color: #ECECEC; }
-  .anim-footer { display: flex; justify-content: space-between; padding: 0.6rem 1.5rem; background: rgba(10,10,15,0.9); border-top: 1px solid rgba(255,76,76,0.2); font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; }
-  .badge-label { color: #9B9BB3; }
-  .corner { position: absolute; width: 20px; height: 20px; pointer-events: none; z-index: 5; }
-  .corner-tl { top: 12px; left: 12px; border-top: 2px solid #FF4C4C; border-left: 2px solid #FF4C4C; }
-  .corner-br { bottom: 12px; right: 12px; border-bottom: 2px solid #FFAA44; border-right: 2px solid #FFAA44; }
-  .about-text-content { padding: 2.2rem 2rem; background: #FFFFFF; }
-  .section-title { text-align: center; margin-bottom: 1.8rem; }
-  .section-title h2 { font-family: 'Montserrat', sans-serif; font-size: 1.9rem; font-weight: 800; background: linear-gradient(135deg, #0D0D0D 0%, #1F1F2F 100%); background-clip: text; -webkit-background-clip: text; color: transparent; }
-  .title-shape { width: 70px; margin: 0 auto; }
-  @media (max-width: 750px) { .about-text-content { padding: 1.6rem; } #about-hero { white-space: normal; font-size: 1.3rem; } .info-grid { grid-template-columns: 1fr; } }
+  .anim-topbar span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    margin-left: 0.6rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  /* Stage – no dark radial gradient, just subtle glow */
+  .anim-stage {
+    padding: 2rem 1.5rem;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0F0F14;
+    position: relative;
+  }
+  /* optional: a very faint grid pattern for interest */
+  .anim-stage::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(#FF4C4C 1px, transparent 1px),
+                      linear-gradient(90deg, #FF4C4C 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.05;
+    pointer-events: none;
+  }
+
+  #about-hero {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: clamp(1.6rem, 6vw, 2.5rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #FF4C4C;
+    text-align: center;
+    white-space: nowrap;
+    text-shadow: 0 0 8px rgba(255, 68, 68, 0.3);
+    position: relative;
+    z-index: 2;
+  }
+
+  .hl {
+    color: #FFAA44;
+    text-shadow: 0 0 5px #FFAA44;
+  }
+  .lgt {
+    color: #ECECEC;
+    text-shadow: 0 0 3px rgba(255,255,200,0.7);
+  }
+
+  .anim-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 1.5rem;
+    background: #1A1A24;
+    border-top: 1px solid rgba(255, 76, 76, 0.2);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+  }
+  .badge-label {
+    color: #9B9BB3;
+    letter-spacing: 1px;
+  }
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    background: #2AC940;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #2AC940;
+    animation: pulseGreen 1.4s infinite alternate;
+  }
+
+  @keyframes pulseGreen {
+    0% { opacity: 0.5; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1.2); }
+  }
+  @keyframes blinkCursor {
+    0%, 100% { opacity: 1; text-shadow: 0 0 6px #FFAA44; }
+    50% { opacity: 0.3; text-shadow: 0 0 0px #FFAA44; }
+  }
+  .ti-cursor {
+    animation: blinkCursor 0.85s step-end infinite;
+    font-weight: 900;
+    font-size: 1.4rem !important;
+  }
+
+  /* Text content below terminal */
+  .about-text-content {
+    padding: 2.2rem 2rem;
+    background: #FFFFFF;
+  }
+  .section-title {
+    text-align: center;
+    margin-bottom: 1.8rem;
+  }
+  .section-title h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.9rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #0D0D0D 0%, #1F1F2F 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .title-shape {
+    width: 70px;
+    margin: 0 auto;
+  }
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  .info-item {
+    background: #F9F9FF;
+    border-radius: 18px;
+    padding: 0.9rem 1.1rem;
+    border: 1px solid #EDEDF2;
+  }
+  .info-item .label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #8A8AA3;
+    text-transform: uppercase;
+    display: block;
+  }
+  .info-item .value {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #1E1E2C;
+  }
+  .company-mission {
+    background: #FEFAF5;
+    border-radius: 1.2rem;
+    padding: 1.2rem 1.4rem;
+    border-left: 4px solid #FF4C4C;
+    margin-bottom: 1.5rem;
+  }
+  .values-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin: 0.8rem 0 1rem;
+  }
+  .values-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+  .value-item {
+    background: #F7F7FD;
+    border-radius: 60px;
+    padding: 0.45rem 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #EBEBF0;
+    transition: all 0.2s;
+  }
+  .value-item:hover {
+    background: rgba(255,76,76,0.05);
+    border-color: #FF8A8A;
+    transform: translateY(-2px);
+  }
+  .value-icon {
+    background: #FF4C4C;
+    width: 26px;
+    height: 26px;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 13px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-wrapper { padding: 0 16px; }
+  }
+  @media (max-width: 550px) {
+    .anim-stage { padding: 1rem; min-height: 130px; }
+    #about-hero { font-size: 1rem; white-space: normal; word-break: break-word; }
+  }
+  @media (max-width: 480px) {
+    .about-wrapper { padding: 0 12px; }
+    .info-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 750px) {
+    .about-text-content { padding: 1.6rem; }
+    #about-hero { white-space: normal; font-size: 1.3rem; }
+  }
 </style>
 <!-- /About Section -->
 
