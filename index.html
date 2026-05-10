@@ -320,15 +320,15 @@ html {
       .type('<span class="hl">BOLD</span> • FUTURE-READY', { delay: 520 }).pause(1400).delete(20, { speed: 44 })
       .type('ZAMBIA <span class="lgt">BUILT</span>', { delay: 400 }).pause(1300).delete(13, { speed: 42 })
       .type('OTRAVA', { delay: 300 }).pause(1000).delete(6, { speed: 38 })
-      .type('/// CYBER RESILIENCE', { delay: 560 }).pause(1400).delete(19, { speed: 47 })
-      .type('TECH FOR <span class="hl">GOOD</span>', { delay: 500 }).pause(1500).delete(13, { speed: 40 })
+      .type('CYBER RESILIENCE', { delay: 560 }).pause(1400).delete(19, { speed: 47 })
+      .type('TECH FOR <span class="hl">GOOD!</span>', { delay: 500 }).pause(1500).delete(13, { speed: 40 })
       .type('OTRAVA TECHNOLOGIES', { delay: 480 }).pause(1800).delete(18, { speed: 44 })
       .type("READY.", { delay: 500 }).pause(1200).delete(6, { speed: 40 })
-      .type("⚡ INNOVATE UNBOUND.", { delay: 540 }).pause(1600).delete(18, { speed: 48 })
-      .type("OTRAVA ✓", { delay: 420 }).pause(1300).delete(8, { speed: 40 })
-      .type("▲ BORDERLESS ▲", { delay: 500 }).pause(1500).delete(14, { speed: 42 })
+      .type("INNOVATE UNBOUND.", { delay: 540 }).pause(1600).delete(18, { speed: 48 })
+      .type("OTRAVA", { delay: 420 }).pause(1300).delete(8, { speed: 40 })
+      .type("BORDERLESS ▲", { delay: 500 }).pause(1500).delete(14, { speed: 42 })
       .type("WE BUILD.", { delay: 380 }).pause(1300).delete(9, { speed: 40 })
-      .type("OTRAVA TECH", { delay: 460 }).pause(1400).delete(11, { speed: 42 })
+      .type("OTRAVA TECHNOLOGIES!", { delay: 460 }).pause(1400).delete(11, { speed: 42 })
       .type("DEVOTED TO IMPACT", { delay: 540 }).pause(1500).delete(17, { speed: 44 })
       .go();
   })();
@@ -376,517 +376,67 @@ html {
 </style>
 <!-- /About Section -->
 
-    <!-- Company Profile Section -->
-  
-    <section class="company-profile-section">
-   <div class="section-container">
-   
-    </h2>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Company Profile | Otrava Technologies — Clean Tech Section</title>
-    <!-- Fonts (Montserrat & Inter for clean modern tech look) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+   <!-- Company Profile Section -->
+<section class="company-profile-section" style="background: #ffffff; padding: 40px 0;">
+  <div class="container">
+    <div class="text-center mb-4" data-aos="fade-up">
+      <h2 class="section-heading" style="font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 2rem; color: #1a1a1a;">Company Profile</h2>
+      <div class="heading-accent" style="width: 60px; height: 3px; background: #FF4C4C; margin: 10px auto 15px;"></div>
+      <p style="color: #666; max-width: 600px; margin: 0 auto;">Explore our complete corporate overview — mission, capabilities, and transformative solutions.</p>
+    </div>
 
-        /* demo body style — can be adapted to any page */
-        body {
-            background: #F6F7FC;
-            font-family: 'Inter', sans-serif;
-        }
-
-        /* preview wrapper to match modern tech vibe (optional) */
-        .preview-container {
-            background: #F6F7FC;
-            padding: 2rem 0;
-        }
-
-        /* ========== COMPANY PROFILE SECTION (refined, clean, tech-beauty) ========== */
-        .company-profile-section {
-            background: linear-gradient(145deg, #0A0A10 0%, #0F0F17 100%);
-            width: 100%;
-            padding: 80px 24px;
-            margin: 0;
-            position: relative;
-            isolation: isolate;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-        }
-
-        /* animated gradient ambient glow (tech aura) */
-        .company-profile-section::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 20% 30%, rgba(255, 76, 76, 0.08), transparent 60%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .company-profile-section::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 85% 70%, rgba(255, 111, 0, 0.05), transparent 70%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .section-container {
-            position: relative;
-            z-index: 2;
-            max-width: 880px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        /* modern heading with micro-underline */
-        .section-heading {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
-            font-size: 2.4rem;
-            letter-spacing: -0.02em;
-            margin-bottom: 24px;
-            background: linear-gradient(135deg, #FFFFFF 30%, #FFCFB0 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            display: inline-block;
-            position: relative;
-        }
-
-        .heading-accent {
-            display: block;
-            width: 72px;
-            height: 3px;
-            background: linear-gradient(90deg, #FF4C4C, #FF8A4F);
-            border-radius: 6px;
-            margin: 12px auto 0;
-        }
-
-        .description {
-            font-family: 'Inter', sans-serif;
-            font-weight: 400;
-            font-size: 1.08rem;
-            line-height: 1.6;
-            color: #C9CFE6;
-            max-width: 620px;
-            margin: 20px auto 36px auto;
-            opacity: 0.9;
-        }
-
-        /* Glassmorphic card – clean, minimal, tech-precision */
-        .document-card {
-            background: rgba(20, 22, 36, 0.75);
-            backdrop-filter: blur(8px);
-            border-radius: 32px;
-            padding: 32px 28px;
-            margin: 24px auto 28px;
-            max-width: 540px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.4), 0 0 0 0.5px rgba(255, 76, 76, 0.15);
-            transition: transform 0.25s ease, box-shadow 0.3s ease;
-        }
-
-        .document-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 28px 40px -16px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 76, 76, 0.3);
-            background: rgba(24, 26, 42, 0.85);
-        }
-
-        /* modern icon container with gradient */
-        .document-icon {
-            width: 72px;
-            height: 72px;
-            background: linear-gradient(145deg, #FF4C4C, #FF7A32);
-            border-radius: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            box-shadow: 0 12px 20px -8px rgba(255, 76, 76, 0.35);
-            transition: transform 0.2s;
-        }
-
-        .document-icon svg {
-            width: 34px;
-            height: 34px;
-            fill: white;
-            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-        }
-
-        .document-card:hover .document-icon {
-            transform: scale(1.02);
-        }
-
-        .document-title {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 1.5rem;
-            letter-spacing: -0.3px;
-            color: #FEFEFE;
-            margin-bottom: 10px;
-        }
-
-        .document-details {
-            font-family: 'Inter', monospace;
-            font-size: 0.8rem;
-            font-weight: 500;
-            letter-spacing: 0.3px;
-            color: #A9B2E0;
-            background: rgba(255, 255, 255, 0.05);
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 60px;
-            margin-bottom: 24px;
-            backdrop-filter: blur(2px);
-        }
-
-        /* refined download button – sleek & modern */
-        .download-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(95deg, #FF4C4C 0%, #FF6B2C 100%);
-            border: none;
-            border-radius: 48px;
-            padding: 0;
-            cursor: pointer;
-            transition: all 0.25s ease;
-            box-shadow: 0 8px 18px -6px rgba(255, 76, 76, 0.4);
-            text-decoration: none;
-        }
-
-        .btn-content {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 0.95rem;
-            letter-spacing: 0.3px;
-            color: white;
-            padding: 12px 28px;
-            border-radius: 48px;
-            background: transparent;
-            transition: all 0.2s;
-        }
-
-        .download-icon {
-            width: 18px;
-            height: 18px;
-            fill: white;
-            transition: transform 0.2s ease;
-        }
-
-        .download-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 14px 26px -10px rgba(255, 76, 76, 0.6);
-            background: linear-gradient(95deg, #FF5C5C 0%, #FF7E40 100%);
-        }
-
-        .download-btn:active {
-            transform: translateY(1px);
-        }
-
-        .download-btn:hover .download-icon {
-            transform: translateY(2px);
-        }
-
-        /* subtle note */
-        .download-note {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.75rem;
-            color: #8F95B5;
-            margin-top: 20px;
-            letter-spacing: 0.2px;
-            border-top: 1px dashed rgba(255,255,255,0.1);
-            display: inline-block;
-            padding-top: 14px;
-        }
-
-        /* Responsiveness – fluid and modern */
-        @media (max-width: 768px) {
-            .company-profile-section {
-                padding: 64px 20px;
-            }
-            .section-heading {
-                font-size: 2rem;
-            }
-            .description {
-                font-size: 0.98rem;
-                padding: 0 6px;
-            }
-            .document-card {
-                padding: 28px 20px;
-                max-width: 94%;
-            }
-            .document-title {
-                font-size: 1.3rem;
-            }
-            .btn-content {
-                padding: 10px 24px;
-                font-size: 0.9rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .company-profile-section {
-                padding: 48px 16px;
-            }
-            .section-heading {
-                font-size: 1.7rem;
-            }
-            .description {
-                font-size: 0.9rem;
-                margin-bottom: 28px;
-            }
-            .document-icon {
-                width: 60px;
-                height: 60px;
-                border-radius: 20px;
-            }
-            .document-icon svg {
-                width: 28px;
-                height: 28px;
-            }
-            .document-title {
-                font-size: 1.2rem;
-            }
-            .btn-content {
-                padding: 10px 20px;
-                gap: 8px;
-            }
-            .download-note {
-                font-size: 0.7rem;
-            }
-        }
-
-        /* optional micro-interaction for focus */
-        .download-btn:focus-visible {
-            outline: 2px solid #FFAA88;
-            outline-offset: 3px;
-        }
-    </style>
-
-<div class="preview-container">
-    <!-- REFINED COMPANY PROFILE SECTION – clean, simple, tech beauty & fully responsive -->
-    <section class="company-profile-section">
-        <div class="section-container">
-            <h2 class="section-heading">
-                Company Profile
-                <span class="heading-accent"></span>
-            </h2>
-            
-            <p class="description">
-                Explore our complete corporate overview — mission, core capabilities, 
-                and transformative tech solutions. Instant access, beautifully crafted.
-            </p>
-            
-            <div class="document-card">
-                <div class="document-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11zm-5-7v5.5l2.5-2.5 2.5 2.5 1.5-1.5L16.5 16l2.5-2.5-1.5-1.5-2.5 2.5-2.5-2.5-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5z"/>
-                    </svg>
-                </div>
-                
-                <h3 class="document-title">Otrava Technologies Corporate Profile</h3>
-                
-                <div class="document-details">
-                    PDF Document · 24 Pages · Updated: March 2026
-                </div>
-                
-                <a href="#" class="download-btn" id="smartDownloadBtn" download>
-                    <span class="btn-content">
-                        <svg class="download-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-                        </svg>
-                        Download PDF
-                    </span>
-                </a>
-            </div>
-            
-            <p class="download-note">
-                ⚡ Secure PDF · No email required · Instant download
-            </p>
+    <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-md-8 col-lg-6">
+        <div class="card border-0 shadow-sm text-center p-4" style="border-radius: 24px; background: #f8f9fa;">
+          <div class="document-icon mb-3" style="width: 70px; height: 70px; background: linear-gradient(145deg, #FF4C4C, #FF7A32); border-radius: 20px; display: inline-flex; align-items: center; justify-content: center; margin: 0 auto;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="32" height="32">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11zm-5-7v5.5l2.5-2.5 2.5 2.5 1.5-1.5L16.5 16l2.5-2.5-1.5-1.5-2.5 2.5-2.5-2.5-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5z"/>
+            </svg>
+          </div>
+          <h3 class="h5 fw-bold mb-2">Otrava Technologies Corporate Profile</h3>
+          <p class="text-muted small mb-3">PDF Document · 24 Pages · Updated: March 2026</p>
+          <a href="#" class="btn btn-primary rounded-pill px-4 py-2" id="smartDownloadBtn" style="background: #FF4C4C; border: none;">
+            <i class="bi bi-download me-2"></i>Download PDF
+          </a>
+          <p class="text-muted small mt-3 mb-0">⚡ Secure PDF · No email required · Instant download</p>
         </div>
-    </section>
-</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <script>
-    (function() {
-        // Clean interactive simulation – demo download trigger (since actual PDF path is missing)
-        // BUT we keep the exact visual behavior, plus feedback as per original request.
-        // For real-world usage, replace href with "/assets/img/OurCompanyProfile.pdf" or your real file link.
-        const downloadBtn = document.querySelector('#smartDownloadBtn');
-        if (!downloadBtn) return;
-
-        // If you want to actually test download with generated dummy PDF you can, but we just 
-        // replicate the polished loading animation and smart fallback for demonstration.
-        // The design remains ultra clean and tech-forward.
-        
-        // Original expected file path (if present in actual project). For demo, we provide a downloadable simulation.
-        // To make the demo functional and consistent, we'll set the href to a dummy blob? 
-        // But respecting the clean "Company Profile" style, we keep the button with loading state & then trigger.
-        // Also we block default empty link but provide smooth UX.
-        
-        const originalHref = "/assets/img/OurCompanyProfile.pdf"; // placeholder – can be updated later.
-        
-        // Improved download simulation: if actual file doesn't exist, we show a toast message or simply provide demo
-        // BUT per requirement: make the section beautiful + interactive feedback remains.
-        // We add a polished simulated download indicator and also allow actual download if URL is valid.
-        
-        let isProcessing = false;
-        
-        const resetButton = (btn, originalSpan) => {
-            const contentSpan = btn.querySelector('.btn-content');
-            if (contentSpan) {
-                contentSpan.innerHTML = originalSpan;
-            }
-            isProcessing = false;
-            btn.style.pointerEvents = 'auto';
-        };
-        
-        const showDownloadingState = (btn, originalHTML) => {
-            const contentSpan = btn.querySelector('.btn-content');
-            if (!contentSpan) return;
-            contentSpan.innerHTML = `
-                <svg class="download-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="animation: pulse 0.8s infinite;">
-                    <path d="M10 20h4v-4h3l-5-5-5 5h3zm11-9v-2h-3V5h-2v4h-4V5h-2v4H7V5H5v4H2v2h3v4h2v-4h4v4h2v-4h4v4h2v-4h3z"/>
-                </svg>
-                Preparing...
-                `;
-            btn.style.pointerEvents = 'none';
-            setTimeout(() => {
-                if (isProcessing) {
-                    resetButton(btn, originalHTML);
-                }
-            }, 1500);
-        };
-        
-        // Function to handle download with smart feedback
-        const handleDownload = (e) => {
-            e.preventDefault();
-            if (isProcessing) return;
-            
-            const btn = e.currentTarget;
-            const contentSpan = btn.querySelector('.btn-content');
-            if (!contentSpan) return;
-            const originalContent = contentSpan.innerHTML;
-            
-            isProcessing = true;
-            showDownloadingState(btn, originalContent);
-            
-            // check if we have a valid simulation or actual download
-            // If you want true download simulation, we can create a sample PDF data.
-            // To keep elegance, we simulate download successful (or actual path)
-            setTimeout(() => {
-                // create a dummy pdf download (to showcase seamless experience)
-                // but we also respect genuine download if the company URL is active later.
-                // since original path may not exist yet, we provide a nice data blob for testing – will download informative PDF
-                try {
-                    // For demo purposes, this creates and triggers a sample text PDF? Not needed — if real URL is there it will work, else we do informative simulation.
-                    // But we avoid breaking expectation: Actually we check if the href points to valid resource? Not necessary – we offer beautiful feedback only.
-                    // But to give a full "clean tech" professional feel: If actual URL is missing, we simulate download generation (a sample note)
-                    // This does not break anything, just showcases the download interaction.
-                    const testUrl = btn.getAttribute('href');
-                    if (testUrl && testUrl !== '#' && !testUrl.includes('javascript')) {
-                        // trigger actual download attempt if the href points to something else.
-                        window.location.href = testUrl;
-                    } else {
-                        // Simulate an elegant "info" download (create sample text file or show notification)
-                        // Since it's a company profile showcase, we give a nice generated text explaining.
-                        const blob = new Blob(["Otrava Technologies - Corporate Profile Demo\n\nThis is a simulated download to demonstrate the download interaction.\nReplace '/assets/img/OurCompanyProfile.pdf' with the actual PDF path.\n\n© Otrava Technologies — Innovation-first, human-centric & tech-driven."], {type: "application/pdf"});
-                        // Actually rename to .pdf? but for smoothness we create .txt? But design expects PDF.
-                        // For a proper professional demo, we will trigger an actual PDF download placeholder (to mimic behaviour).
-                        const link = document.createElement('a');
-                        const url = URL.createObjectURL(blob);
-                        link.href = url;
-                        link.download = "Otrava_Technologies_Corporate_Profile.pdf";
-                        document.body.appendChild(link);
-                        link.click();
-                        document.body.removeChild(link);
-                        URL.revokeObjectURL(url);
-                    }
-                } catch (err) {
-                    console.warn("download simulation");
-                }
-                
-                // revert button after short delay
-                setTimeout(() => {
-                    if (isProcessing) {
-                        resetButton(btn, originalContent);
-                    }
-                }, 800);
-            }, 800);
-        };
-        
-        downloadBtn.addEventListener('click', handleDownload);
-        
-        // inject additional pulse keyframe (for downloading icon)
-        const styleSheet = document.createElement("style");
-        styleSheet.textContent = `
-            @keyframes pulse {
-                0% { opacity: 0.7; transform: scale(1); }
-                50% { opacity: 1; transform: scale(1.1); }
-                100% { opacity: 0.7; transform: scale(1); }
-            }
-            .download-icon {
-                transition: transform 0.2s;
-            }
-        `;
-        document.head.appendChild(styleSheet);
-        
-        // For customers: make sure section heading spacing works fine
-        // Also make hover slick.
-    })();
+  (function() {
+    const downloadBtn = document.querySelector('#smartDownloadBtn');
+    if (!downloadBtn) return;
+    let isProcessing = false;
+    const resetButton = (btn, originalText) => {
+      btn.innerHTML = originalText;
+      isProcessing = false;
+      btn.style.pointerEvents = 'auto';
+    };
+    downloadBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      if (isProcessing) return;
+      const originalHTML = this.innerHTML;
+      isProcessing = true;
+      this.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Preparing...';
+      this.style.pointerEvents = 'none';
+      setTimeout(() => {
+        const blob = new Blob(["Otrava Technologies - Corporate Profile Demo\n\nReplace with actual PDF path.\n\n© Otrava Technologies"], {type: "application/pdf"});
+        const link = document.createElement('a');
+        const url = URL.createObjectURL(blob);
+        link.href = url;
+        link.download = "Otrava_Technologies_Corporate_Profile.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+        setTimeout(() => resetButton(downloadBtn, originalHTML), 800);
+      }, 800);
+    });
+  })();
 </script>
-
-<!-- Additional micro-optimizations for readability: ensure container width on smaller devices -->
-<style>
-    /* polish card & terminal-like simplicity */
-    .document-card {
-        transition: all 0.25s cubic-bezier(0.2, 0, 0, 1);
-    }
-    .section-heading {
-        text-shadow: 0 2px 3px rgba(0,0,0,0.2);
-    }
-    .company-profile-section .btn-content svg {
-        transition: transform 0.2s;
-    }
-    /* tech beauty border glow */
-    .document-card:focus-within {
-        border-color: rgba(255, 100, 60, 0.5);
-        box-shadow: 0 0 0 2px rgba(255, 76, 76, 0.2);
-    }
-    @media (prefers-reduced-motion: reduce) {
-        .document-card, .download-btn, .document-icon {
-            transition: none;
-        }
-    }
-    /* ensure no overflow */
-    .btn-content {
-        white-space: nowrap;
-    }
-    @media (max-width: 440px) {
-        .btn-content {
-            white-space: normal;
-            gap: 6px;
-        }
-        .download-btn {
-            width: auto;
-            min-width: 180px;
-        }
-    }
-</style>
-
-</body>
-</html>
 ``` <!-- Company Profile Section -->
 
     <!-- Services Section -->
