@@ -624,117 +624,254 @@ html {
       </div>
 
       <!-- Portfolio Items Grid -->
-      <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-        <!-- Graphic Design -->
-        <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-design">
-          <div class="portfolio-card h-100 rounded-4 overflow-hidden shadow-sm" style="background: #fff; transition: transform 0.3s, box-shadow 0.3s;">
-            <div class="portfolio-image position-relative overflow-hidden">
-              <img src="assets/img/portfolio/graphic.png" class="img-fluid w-100" alt="Graphic Design Work" loading="lazy" style="height: 240px; object-fit: cover; transition: transform 0.5s;">
-              <div class="portfolio-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-30 opacity-0 transition" style="transition: opacity 0.3s;">
-                <a href="assets/img/portfolio/graphic.png" class="glightbox preview-link btn btn-light rounded-circle d-flex align-items-center justify-content-center" data-gallery="portfolio-gallery-design" style="width: 50px; height: 50px;">
+      <section id="portfolio" class="portfolio section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Our Portfolio</h2>
+    <div class="title-shape">
+      <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+      </svg>
+    </div>
+    <p>A showcase of our innovative solutions across different service categories</p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+      <div class="portfolio-filters-container" data-aos="fade-up" data-aos-delay="200">
+        <ul class="portfolio-filters isotope-filters">
+          <li data-filter="*" class="filter-active">All Work</li>
+          <li data-filter=".filter-design">Graphic Design</li>
+          <li data-filter=".filter-web">Web Design</li>
+          <li data-filter=".filter-accessibility">Accessibility</li>
+          <li data-filter=".filter-resume">Resume Services</li>
+        </ul>
+      </div>
+
+      <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
+        <!-- Graphic Design 1 -->
+        <div class="col-lg-6 col-md-6 col-12 portfolio-item isotope-item filter-design">
+          <div class="portfolio-card">
+            <div class="portfolio-image">
+              <img src="assets/img/mockups.png" alt="Brand Mockup &amp; Presentation">
+              <div class="portfolio-overlay">
+                <a href="assets/img/mockups.png" class="glightbox preview-link" data-gallery="portfolio-gallery-design">
                   <i class="bi bi-eye"></i>
                 </a>
               </div>
             </div>
-            <div class="portfolio-content p-4">
-              <span class="category d-block text-uppercase small fw-semibold mb-2" style="color: #FF4C4C;">Graphic Design</span>
-              <h3 class="h5 fw-bold mb-2">Creative Branding Materials</h3>
-              <p class="text-muted mb-0">Logos, posters, ads, and social media graphics that bring your ideas to life</p>
+            <div class="portfolio-content">
+              <span class="category">Graphic Design</span>
+              <h3>Strategic Brand Mockups</h3>
+              <p>High-fidelity visual presentations that bring brand identities to life</p>
             </div>
           </div>
         </div>
 
-        <!-- Web Design -->
-        <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-web">
-          <div class="portfolio-card h-100 rounded-4 overflow-hidden shadow-sm" style="background: #fff;">
-            <div class="portfolio-image position-relative overflow-hidden">
-              <img src="assets/img/portfolio/web.png" class="img-fluid w-100" alt="Web Design Project" loading="lazy" style="height: 240px; object-fit: cover;">
-              <div class="portfolio-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-30 opacity-0 transition">
-                <a href="assets/img/portfolio/web.png" class="glightbox preview-link btn btn-light rounded-circle d-flex align-items-center justify-content-center" data-gallery="portfolio-gallery-web" style="width: 50px; height: 50px;">
+        <!-- Graphic Design 2 -->
+        <div class="col-lg-6 col-md-6 col-12 portfolio-item isotope-item filter-design">
+          <div class="portfolio-card">
+            <div class="portfolio-image">
+              <img src="assets/img/brand.png" alt="Business Card Design">
+              <div class="portfolio-overlay">
+                <a href="assets/img/brand.png" class="glightbox preview-link" data-gallery="portfolio-gallery-design">
                   <i class="bi bi-eye"></i>
                 </a>
               </div>
             </div>
-            <div class="portfolio-content p-4">
-              <span class="category d-block text-uppercase small fw-semibold mb-2" style="color: #FF4C4C;">Web Design</span>
-              <h3 class="h5 fw-bold mb-2">Business Website Development</h3>
-              <p class="text-muted mb-0">Reliable web solutions for businesses, NGOs, and educational institutions</p>
+            <div class="portfolio-content">
+              <span class="category">Graphic Design</span>
+              <h3>Visual Identity Systems</h3>
+              <p>Comprehensive design environments for consistent brand assets</p>
             </div>
           </div>
         </div>
 
-        <!-- Accessibility -->
-        <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-accessibility">
-          <div class="portfolio-card h-100 rounded-4 overflow-hidden shadow-sm" style="background: #fff;">
-            <div class="portfolio-image position-relative overflow-hidden">
-              <img src="assets/img/portfolio/jaws.png" class="img-fluid w-100" alt="Accessibility Training" loading="lazy" style="height: 240px; object-fit: cover;">
-              <div class="portfolio-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-30 opacity-0 transition">
-                <a href="assets/img/portfolio/jaws.png" class="glightbox preview-link btn btn-light rounded-circle d-flex align-items-center justify-content-center" data-gallery="portfolio-gallery-accessibility" style="width: 50px; height: 50px;">
+        <!-- Graphic Design 3 -->
+        <div class="col-lg-6 col-md-6 col-12 portfolio-item isotope-item filter-design">
+          <div class="portfolio-card">
+            <div class="portfolio-image">
+              <img src="https://graphypix.s3.amazonaws.com/wp-content/uploads/2025/04/20125230/minimal-brand-guidelines-presentation-1.jpg" alt="Brand Guidelines Design">
+              <div class="portfolio-overlay">
+                <a href="https://graphypix.s3.amazonaws.com/wp-content/uploads/2025/04/20125230/minimal-brand-guidelines-presentation-1.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-design">
                   <i class="bi bi-eye"></i>
                 </a>
               </div>
             </div>
-            <div class="portfolio-content p-4">
-              <span class="category d-block text-uppercase small fw-semibold mb-2" style="color: #FF4C4C;">Assistive Technology</span>
-              <h3 class="h5 fw-bold mb-2">JAWS Training & Accessibility</h3>
-              <p class="text-muted mb-0">Specialized support for visually impaired users including screen reader training</p>
+            <div class="portfolio-content">
+              <span class="category">Graphic Design</span>
+              <h3>Minimal Brand Guidelines</h3>
+              <p>Clean style guides for visual consistency across all touchpoints</p>
             </div>
           </div>
         </div>
 
-        <!-- Resume Services -->
-        <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-resume">
-          <div class="portfolio-card h-100 rounded-4 overflow-hidden shadow-sm" style="background: #fff;">
-            <div class="portfolio-image position-relative overflow-hidden">
-              <img src="assets/img/portfolio/resume.png" class="img-fluid w-100" alt="Resume Services" loading="lazy" style="height: 240px; object-fit: cover;">
-              <div class="portfolio-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-30 opacity-0 transition">
-                <a href="assets/img/portfolio/resume.png" class="glightbox preview-link btn btn-light rounded-circle d-flex align-items-center justify-content-center" data-gallery="portfolio-gallery-resume" style="width: 50px; height: 50px;">
+        <!-- Web Design 1 -->
+        <div class="col-lg-6 col-md-6 col-12 portfolio-item isotope-item filter-web">
+          <div class="portfolio-card">
+            <div class="portfolio-image">
+              <img src="https://s3-alpha.figma.com/hub/file/5004362326/d11b405b-e38b-4f99-a76f-99288e513849-cover.png" alt="Modern UI/UX Design">
+              <div class="portfolio-overlay">
+                <a href="https://s3-alpha.figma.com/hub/file/5004362326/d11b405b-e38b-4f99-a76f-99288e513849-cover.png" class="glightbox preview-link" data-gallery="portfolio-gallery-web">
                   <i class="bi bi-eye"></i>
                 </a>
               </div>
             </div>
-            <div class="portfolio-content p-4">
-              <span class="category d-block text-uppercase small fw-semibold mb-2" style="color: #FF4C4C;">Career Services</span>
-              <h3 class="h5 fw-bold mb-2">Professional Resume Writing</h3>
-              <p class="text-muted mb-0">We craft compelling resumes that make you stand out in the job market</p>
+            <div class="portfolio-content">
+              <span class="category">Web Design</span>
+              <h3>Contemporary UI/UX Systems</h3>
+              <p>Figma-based design systems for seamless digital experiences</p>
             </div>
           </div>
         </div>
 
-        <!-- Data Recovery -->
-        <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-data">
-          <div class="portfolio-card h-100 rounded-4 overflow-hidden shadow-sm" style="background: #fff;">
-            <div class="portfolio-image position-relative overflow-hidden">
-              <img src="assets/img/portfolio/data.png" class="img-fluid w-100" alt="Data Recovery Service" loading="lazy" style="height: 240px; object-fit: cover;">
-              <div class="portfolio-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-30 opacity-0 transition">
-                <a href="assets/img/portfolio/data.png" class="glightbox preview-link btn btn-light rounded-circle d-flex align-items-center justify-content-center" data-gallery="portfolio-gallery-data" style="width: 50px; height: 50px;">
+        <!-- Web Design 2 -->
+        <div class="col-lg-6 col-md-6 col-12 portfolio-item isotope-item filter-web">
+          <div class="portfolio-card">
+            <div class="portfolio-image">
+              <img src="https://designshack.net/wp-content/uploads/responsive-website-app-templates.jpg" alt="Responsive Web Templates">
+              <div class="portfolio-overlay">
+                <a href="https://designshack.net/wp-content/uploads/responsive-website-app-templates.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-web">
                   <i class="bi bi-eye"></i>
                 </a>
               </div>
             </div>
-            <div class="portfolio-content p-4">
-              <span class="category d-block text-uppercase small fw-semibold mb-2" style="color: #FF4C4C;">Data Solutions</span>
-              <h3 class="h5 fw-bold mb-2">Data Recovery Services</h3>
-              <p class="text-muted mb-0">We recover deleted or damaged files and provide safe backup solutions</p>
+            <div class="portfolio-content">
+              <span class="category">Web Design</span>
+              <h3>Adaptive Web Solutions</h3>
+              <p>Fully responsive website templates for all devices</p>
             </div>
           </div>
         </div>
 
-        <!-- IT Consulting -->
-        <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-consulting">
-          <div class="portfolio-card h-100 rounded-4 overflow-hidden shadow-sm" style="background: #fff;">
-            <div class="portfolio-image position-relative overflow-hidden">
-              <img src="assets/img/portfolio/consulting.png" class="img-fluid w-100" alt="IT Consulting Service" loading="lazy" style="height: 240px; object-fit: cover;">
-              <div class="portfolio-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-30 opacity-0 transition">
-                <a href="assets/img/portfolio/consulting.png" class="glightbox preview-link btn btn-light rounded-circle d-flex align-items-center justify-content-center" data-gallery="portfolio-gallery-consulting" style="width: 50px; height: 50px;">
+        <!-- Web Design 3 -->
+        <div class="col-lg-6 col-md-6 col-12 portfolio-item isotope-item filter-web">
+          <div class="portfolio-card">
+            <div class="portfolio-image">
+              <img src="https://miro.medium.com/1%2AI3PbDMBEsJcYB-lgK6_YBg.jpeg" alt="Dashboard Interface Design">
+              <div class="portfolio-overlay">
+                <a href="https://miro.medium.com/1%2AI3PbDMBEsJcYB-lgK6_YBg.jpeg" class="glightbox preview-link" data-gallery="portfolio-gallery-web">
                   <i class="bi bi-eye"></i>
                 </a>
               </div>
             </div>
-            <div class="portfolio-content p-4">
-              <span class="category d-block text-uppercase small fw-semibold mb-2" style="color: #FF4C4C;">IT Consulting</span>
-              <h3 class="h5 fw-bold mb-2">Strategic Technology Guidance</h3>
-              <p class="text-muted mb-0">Helping businesses optimize their digital infrastructure and workflows</p>
+            <div class="portfolio-content">
+              <span class="category">Web Design</span>
+              <h3>Data Dashboard Interfaces</h3>
+              <p>Intuitive admin dashboards for actionable insights</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accessibility 1 -->
+        <div class="col-lg-6 col-md-6 col-12 portfolio-item isotope-item filter-accessibility">
+          <div class="portfolio-card">
+            <div class="portfolio-image">
+              <img src="https://equalentry.com/wp-content/uploads/2017/10/JAWS-User.jpg" alt="JAWS Screen Reader Training">
+              <div class="portfolio-overlay">
+                <a href="https://equalentry.com/wp-content/uploads/2017/10/JAWS-User.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-accessibility">
+                  <i class="bi bi-eye"></i>
+                </a>
+              </div>
+            </div>
+            <div class="portfolio-content">
+              <span class="category">Assistive Technology</span>
+              <h3>Professional JAWS Training</h3>
+              <p>Personalized screen reader instruction for digital independence</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accessibility 2 -->
+        <div class="col-lg-6 col-md-6 col-12 portfolio-item isotope-item filter-accessibility">
+          <div class="portfolio-card">
+            <div class="portfolio-image">
+              <img src="https://adasitecompliance.com/wp-content/uploads/2021/06/Blind-Use-The-Internet-With-Assistive-Technology.jpg" alt="Assistive Technology Setup">
+              <div class="portfolio-overlay">
+                <a href="https://adasitecompliance.com/wp-content/uploads/2021/06/Blind-Use-The-Internet-With-Assistive-Technology.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-accessibility">
+                  <i class="bi bi-eye"></i>
+                </a>
+              </div>
+            </div>
+            <div class="portfolio-content">
+              <span class="category">Assistive Technology</span>
+              <h3>Digital Accessibility Solutions</h3>
+              <p>Technology configurations for an accessible digital world</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accessibility 3 -->
+        <div class="col-lg-6 col-md-6 col-12 portfolio-item isotope-item filter-accessibility">
+          <div class="portfolio-card">
+            <div class="portfolio-image">
+              <img src="https://b611016.smushcdn.com/611016/wp-content/uploads/2023/09/b.note_lifestyle_40.png" alt="Braille Technology Integration">
+              <div class="portfolio-overlay">
+                <a href="https://b611016.smushcdn.com/611016/wp-content/uploads/2023/09/b.note_lifestyle_40.png" class="glightbox preview-link" data-gallery="portfolio-gallery-accessibility">
+                  <i class="bi bi-eye"></i>
+                </a>
+              </div>
+            </div>
+            <div class="portfolio-content">
+              <span class="category">Assistive Technology</span>
+              <h3>Modern Braille Integration</h3>
+              <p>Refreshable braille displays for digital workflows</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resume Services 1 -->
+        <div class="col-lg-6 col-md-6 col-12 portfolio-item isotope-item filter-resume">
+          <div class="portfolio-card">
+            <div class="portfolio-image">
+              <img src="https://i.etsystatic.com/33435224/r/il/b1f15c/4074975863/il_fullxfull.4074975863_4osw.jpg" alt="Professional Resume Template">
+              <div class="portfolio-overlay">
+                <a href="https://i.etsystatic.com/33435224/r/il/b1f15c/4074975863/il_fullxfull.4074975863_4osw.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-resume">
+                  <i class="bi bi-eye"></i>
+                </a>
+              </div>
+            </div>
+            <div class="portfolio-content">
+              <span class="category">Career Services</span>
+              <h3>Executive Resume Design</h3>
+              <p>Premium, ATS-friendly resume templates for senior-level expertise</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resume Services 2 -->
+        <div class="col-lg-6 col-md-6 col-12 portfolio-item isotope-item filter-resume">
+          <div class="portfolio-card">
+            <div class="portfolio-image">
+              <img src="https://marketplace.canva.com/EAFRuCp3DcY/3/0/1131w/canva-black-white-minimalist-cv-resume-fbJ3nW9XufE.jpg" alt="Minimalist Resume Design">
+              <div class="portfolio-overlay">
+                <a href="https://marketplace.canva.com/EAFRuCp3DcY/3/0/1131w/canva-black-white-minimalist-cv-resume-fbJ3nW9XufE.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-resume">
+                  <i class="bi bi-eye"></i>
+                </a>
+              </div>
+            </div>
+            <div class="portfolio-content">
+              <span class="category">Career Services</span>
+              <h3>Minimalist CV Crafting</h3>
+              <p>Elegant, clean resume designs for professional presence</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resume Services 3 -->
+        <div class="col-lg-6 col-md-6 col-12 portfolio-item isotope-item filter-resume">
+          <div class="portfolio-card">
+            <div class="portfolio-image">
+              <img src="https://www.innovaresume.com/wp-content/uploads/2019/12/resume-template-26-1.jpg" alt="Modern Resume Layout">
+              <div class="portfolio-overlay">
+                <a href="https://www.innovaresume.com/wp-content/uploads/2019/12/resume-template-26-1.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-resume">
+                  <i class="bi bi-eye"></i>
+                </a>
+              </div>
+            </div>
+            <div class="portfolio-content">
+              <span class="category">Career Services</span>
+              <h3>Strategic Resume Development</h3>
+              <p>Modern layouts to highlight skills for competitive advantage</p>
             </div>
           </div>
         </div>
@@ -744,33 +881,140 @@ html {
 </section>
 
 <style>
-  .portfolio-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 30px -12px rgba(255,76,76,0.15) !important;
+/* Ensure consistent image size and aspect ratio */
+.portfolio-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3; /* fixed 4:3 aspect ratio */
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cover the area without distortion */
+  transition: transform 0.5s ease;
+}
+
+/* Keep cards equal height (optional, if content heights differ) */
+.portfolio-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-content {
+  flex: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .portfolio-image {
+    aspect-ratio: 16 / 9; /* slightly wider on smaller screens */
   }
-  .portfolio-card:hover .portfolio-image img {
-    transform: scale(1.08);
+}
+
+@media (max-width: 576px) {
+  .portfolio-image {
+    aspect-ratio: 1 / 1; /* square on very small screens */
   }
-  .portfolio-card:hover .portfolio-overlay {
-    opacity: 1 !important;
+}
+
+/* Existing card styles (keep as is) */
+.portfolio-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-overlay a {
+  background: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.portfolio-overlay a:hover {
+  background: #f8f9fa;
+  transform: scale(1.1);
+}
+
+.portfolio-content {
+  padding: 20px;
+  background: white;
+}
+
+.portfolio-content .category {
+  color: #6c757d;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.portfolio-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #212529;
+}
+
+.portfolio-content p {
+  color: #6c757d;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .portfolio-overlay a {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
   }
-  .portfolio-filters .filter-active {
-    background: #FF4C4C !important;
-    color: white !important;
+}
+
+@media (max-width: 576px) {
+  .portfolio-content {
+    padding: 15px;
   }
-  .portfolio-filters li:not(.filter-active):hover {
-    background: #e2e2ea !important;
-    transform: translateY(-2px);
+  .portfolio-content h3 {
+    font-size: 1.1rem;
   }
-  .transition {
-    transition: all 0.3s ease;
-  }
-  @media (max-width: 768px) {
-    .portfolio-filters li {
-      font-size: 0.8rem;
-      padding: 4px 14px;
-    }
-  }
+}
 </style>
    <!-- /Portfolio Section -->
 
