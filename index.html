@@ -238,605 +238,142 @@ html {
     </section><!-- /Hero Section -->
 
    <!-- About Section -->
-   <section>
-  <section id="about" class="about section">
-   <div class="about-wrapper">
-     <div class="about-card">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>About | Otrava Technologies — Terminal Vibe</title>
-  
-  <!-- Bootstrap Icons + minimal grid only -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" />
-  <!-- Modern fonts: Montserrat for headings, JetBrains Mono for terminal, Source Sans for text -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  
-  <!-- TypeIt library -->
-  <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background: #F6F7FC;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      font-family: 'Source Sans 3', sans-serif;
-      padding: 2rem 1.5rem;
-    }
-
-    .about-wrapper {
-      max-width: 1100px;
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    /* MAIN ABOUT CARD — Terminal ON TOP, text below */
-    .about-card {
-      background: #FFFFFF;
-      border-radius: 2rem;
-      box-shadow: 0 25px 40px -14px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.02);
-      overflow: hidden;
-      transition: all 0.2s;
-    }
-
-    /* Terminal panel now sits at the top (no longer side by side) */
-    .terminal-top {
-      width: 100%;
-      background: #0A0A0F;
-      border-bottom: 2px solid rgba(255, 76, 76, 0.4);
-    }
-
-    .anim-panel {
-      background: #0A0A0F;
-      border-radius: 0;
-      overflow: hidden;
-      box-shadow: none;
-      transition: all 0.2s;
-      position: relative;
-    }
-
-    .anim-topbar {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 0.8rem 1.5rem;
-      background: rgba(20, 20, 28, 0.98);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-    .dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-    }
-    .dot-red { background: #FF5F5A; }
-    .dot-yellow { background: #FFBD2E; }
-    .dot-green { background: #2AC940; }
-    .anim-topbar span {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
-      margin-left: 0.6rem;
-      color: rgba(255, 255, 255, 0.55);
-      letter-spacing: 0.8px;
-      font-weight: 500;
-    }
-
-    /* Stage area — compact but bold */
-    .anim-stage {
-      padding: 2rem 1.5rem;
-      min-height: 200px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      background: radial-gradient(ellipse at 30% 40%, rgba(255, 76, 76, 0.03) 0%, #050508 100%);
-    }
-    .anim-stage::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: 
-        linear-gradient(rgba(255, 76, 76, 0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 76, 76, 0.04) 1px, transparent 1px);
-      background-size: 28px 28px;
-      pointer-events: none;
-    }
-    
-    #about-hero {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: clamp(1.6rem, 6vw, 2.5rem);
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      line-height: 1.3;
-      color: #FF4C4C;
-      text-align: center;
-      background: linear-gradient(145deg, #FF4C4C, #FF8A5C);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: #FF4C4C;
-      text-shadow: 0 0 8px rgba(255, 68, 68, 0.5);
-      position: relative;
-      z-index: 2;
-      white-space: nowrap;
-    }
-    
-    .ti-cursor {
-      color: #FFAA44 !important;
-      font-weight: 900 !important;
-      font-size: 1.2em;
-      text-shadow: 0 0 6px #FFAA44;
-      animation: blinkCursor 0.85s step-end infinite;
-    }
-    @keyframes blinkCursor {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-    }
-    
-    .hl {
-      color: #FFAA44;
-      text-shadow: 0 0 5px #FFAA44;
-      font-weight: 800;
-    }
-    .lgt {
-      color: #ECECEC;
-      text-shadow: 0 0 3px rgba(255,255,200,0.7);
-    }
-
-    .anim-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.6rem 1.5rem;
-      background: rgba(10, 10, 15, 0.9);
-      border-top: 1px solid rgba(255, 76, 76, 0.2);
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.65rem;
-    }
-    .badge-label {
-      color: #9B9BB3;
-      letter-spacing: 1px;
-      font-weight: 500;
-    }
-    .status-dot {
-      width: 8px;
-      height: 8px;
-      background: #2AC940;
-      border-radius: 50%;
-      box-shadow: 0 0 6px #2AC940;
-      animation: pulseGreen 1.8s infinite;
-    }
-    @keyframes pulseGreen {
-      0% { opacity: 0.5; transform: scale(0.95);}
-      100% { opacity: 1; transform: scale(1.2);}
-    }
-    
-    /* Corner decorations (only for the terminal top block) */
-    .corner {
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      pointer-events: none;
-      z-index: 5;
-    }
-    .corner-tl {
-      top: 12px;
-      left: 12px;
-      border-top: 2px solid #FF4C4C;
-      border-left: 2px solid #FF4C4C;
-      border-radius: 4px 0 0 0;
-    }
-    .corner-br {
-      bottom: 12px;
-      right: 12px;
-      border-bottom: 2px solid #FFAA44;
-      border-right: 2px solid #FFAA44;
-      border-radius: 0 0 4px 0;
-    }
-    .anim-panel {
-      position: relative;
-    }
-
-    /* ----- TEXT CONTENT (BELOW TERMINAL) ----- */
-    .about-text-content {
-      padding: 2.2rem 2rem 2.5rem 2rem;
-      background: #FFFFFF;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 1.8rem;
-    }
-    .section-title h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.9rem;
-      font-weight: 800;
-      letter-spacing: -0.3px;
-      background: linear-gradient(135deg, #0D0D0D 0%, #1F1F2F 100%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      margin-bottom: 0.5rem;
-    }
-    .title-shape {
-      color: #FF4C4C;
-      margin: 0.6rem auto;
-      width: 70px;
-    }
-    .section-title p {
-      font-size: 0.95rem;
-      color: #5A5A6E;
-      max-width: 620px;
-      margin: 0 auto;
-      line-height: 1.5;
-    }
-
-    /* Grid & info layout (fully below terminal) */
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-      margin: 1.5rem 0 1.8rem 0;
-    }
-    .info-item {
-      background: #F9F9FF;
-      border-radius: 18px;
-      padding: 0.9rem 1.1rem;
-      border: 1px solid #EDEDF2;
-      transition: all 0.2s;
-    }
-    .info-item:hover {
-      border-color: #FFACAC;
-      background: white;
-      box-shadow: 0 8px 16px -10px rgba(255, 76, 76, 0.15);
-    }
-    .info-item .label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      color: #8A8AA3;
-      text-transform: uppercase;
-      display: block;
-      margin-bottom: 4px;
-    }
-    .info-item .value {
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: #1E1E2C;
-    }
-
-    .company-mission {
-      background: #FEFAF5;
-      border-radius: 1.2rem;
-      padding: 1.2rem 1.4rem;
-      margin: 1.5rem 0 1.5rem 0;
-      border-left: 4px solid #FF4C4C;
-    }
-    .company-mission p {
-      font-weight: 500;
-      color: #232335;
-      line-height: 1.5;
-      font-size: 0.9rem;
-    }
-    .values-title {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 800;
-      margin: 0.8rem 0 1rem 0;
-      color: #0A0A12;
-      letter-spacing: -0.2px;
-    }
-    .values-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-      margin-bottom: 0.5rem;
-    }
-    .value-item {
-      background: #F7F7FD;
-      border-radius: 60px;
-      padding: 0.45rem 1.2rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      border: 1px solid #EBEBF0;
-      transition: all 0.2s;
-      cursor: default;
-    }
-    .value-item:hover {
-      background: rgba(255, 76, 76, 0.05);
-      border-color: #FF8A8A;
-      transform: translateY(-2px);
-    }
-    .value-icon {
-      background: #FF4C4C;
-      width: 26px;
-      height: 26px;
-      border-radius: 30px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 13px;
-    }
-    .value-text {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #13131F;
-    }
-
-    /* Responsive: On smaller screens, terminal text wraps */
-    @media (max-width: 750px) {
-      .about-text-content {
-        padding: 1.6rem;
-      }
-      .anim-stage {
-        padding: 1.4rem;
-        min-height: 160px;
-      }
-      #about-hero {
-        white-space: normal;
-        word-break: keep-all;
-        font-size: 1.3rem;
-      }
-      .info-grid {
-        grid-template-columns: 1fr;
-        gap: 0.8rem;
-      }
-      .section-title h2 {
-        font-size: 1.6rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      #about-hero {
-        font-size: 1rem;
-        letter-spacing: 1px;
-      }
-      .anim-stage {
-        min-height: 130px;
-        padding: 1rem;
-      }
-      .values-grid {
-        gap: 0.6rem;
-      }
-      .value-item {
-        padding: 0.3rem 1rem;
-      }
-    }
-
-    /* Force cursor style */
-    .ti-cursor {
-      display: inline-block;
-      font-size: 1.3rem !important;
-      font-weight: 900 !important;
-      line-height: 1;
-      background: transparent;
-      text-shadow: 0 0 8px #FFAA44;
-      color: #FFAA44;
-      font-family: 'JetBrains Mono', monospace;
-      margin-left: 2px;
-    }
-    #about-hero {
-      letter-spacing: 1.5px;
-      font-weight: 800;
-    }
-  </style>
-
-<div class="about-wrapper">
-  <div class="about-card">
-    
-    <!-- TERMINAL PANEL ON TOP (fully above text) -->
-    <div class="terminal-top">
-      <div class="anim-panel">
-        <span class="corner corner-tl"></span>
-        <span class="corner corner-br"></span>
-        <div class="anim-topbar">
-          <span class="dot dot-red"></span>
-          <span class="dot dot-yellow"></span>
-          <span class="dot dot-green"></span>
-          <span>⚡ OTRV::TERMINAL // ACTIVE</span>
-        </div>
-        <div class="anim-stage">
-          <div id="about-hero"></div>
-        </div>
-        <div class="anim-footer">
-          <span class="badge-label">⟫⟫ LIVE DYNAMIC SEQUENCE</span>
-          <span class="status-dot"></span>
+   <!-- About Section -->
+<section id="about" class="about section">
+  <div class="about-wrapper">
+    <div class="about-card">
+      <div class="terminal-top">
+        <div class="anim-panel">
+          <span class="corner corner-tl"></span>
+          <span class="corner corner-br"></span>
+          <div class="anim-topbar">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span>⚡ OTRV::TERMINAL // ACTIVE</span>
+          </div>
+          <div class="anim-stage">
+            <div id="about-hero"></div>
+          </div>
+          <div class="anim-footer">
+            <span class="badge-label">⟫⟫ LIVE DYNAMIC SEQUENCE</span>
+            <span class="status-dot"></span>
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- TEXT CONTENT AREA (positioned directly below terminal) -->
-    <div class="about-text-content">
-      <div class="section-title">
-        <h2>About Otrava Technologies</h2>
-        <div class="title-shape">
-          <svg width="60" height="6" viewBox="0 0 60 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 3 L15 1 L30 5 L45 1 L60 3" stroke="#FF4C4C" stroke-width="2" stroke-linecap="round"/>
-          </svg>
+      <div class="about-text-content">
+        <div class="section-title">
+          <h2>About Otrava Technologies</h2>
+          <div class="title-shape">
+            <svg width="60" height="6" viewBox="0 0 60 6" fill="none">
+              <path d="M0 3 L15 1 L30 5 L45 1 L60 3" stroke="#FF4C4C" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <p>Real-world transformation through intelligent design & inclusive technology — bridging gaps, empowering communities.</p>
         </div>
-        <p>Real-world transformation through intelligent design & inclusive technology — bridging gaps, empowering communities.</p>
-      </div>
-
-      <!-- Core intro with tag and strong statement -->
-      <div style="margin-bottom: 1rem;">
-        <span style="display: inline-block; font-size: 0.7rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #FF4C4C; background: rgba(255, 76, 76, 0.08); border-left: 3px solid #FF4C4C; padding: 0.2rem 0.9rem; border-radius: 0 8px 8px 0;">Company DNA</span>
-        <h2 style="font-family: 'Montserrat', sans-serif; font-size: 1.6rem; font-weight: 800; line-height: 1.3; color: #101018; margin: 0.8rem 0 0.4rem 0;">Innovation-first, human-centric & relentlessly resilient</h2>
-        <p class="lead-text" style="font-size: 1rem; color: #2E2E42; line-height: 1.5; margin-bottom: 0.6rem;">Otrava Technologies is a Zambian-owned ICT company committed to delivering future-ready solutions — from software development to digital transformation. We serve businesses, startups, and public sectors with integrity and velocity.</p>
-      </div>
-
-      <!-- info grid (company details) -->
-      <div class="info-grid">
-        <div class="info-item">
-          <span class="label">Established</span>
-          <span class="value">January 3, 2024</span>
+        <div style="margin-bottom: 1rem;">
+          <span style="display: inline-block; font-size: 0.7rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #FF4C4C; background: rgba(255,76,76,0.08); border-left: 3px solid #FF4C4C; padding: 0.2rem 0.9rem; border-radius: 0 8px 8px 0;">Company DNA</span>
+          <h2 style="font-family: 'Montserrat', sans-serif; font-size: 1.6rem; font-weight: 800; line-height: 1.3; color: #101018; margin: 0.8rem 0 0.4rem 0;">Innovation-first, human-centric & relentlessly resilient</h2>
+          <p class="lead-text" style="font-size: 1rem; color: #2E2E42; line-height: 1.5; margin-bottom: 0.6rem;">Otrava Technologies is a Zambian-owned ICT company committed to delivering future-ready solutions — from software development to digital transformation. We serve businesses, startups, and public sectors with integrity and velocity.</p>
         </div>
-        <div class="info-item">
-          <span class="label">HQ</span>
-          <span class="value">Lusaka, Zambia</span>
+        <div class="info-grid">
+          <div class="info-item"><span class="label">Established</span><span class="value">January 3, 2024</span></div>
+          <div class="info-item"><span class="label">HQ</span><span class="value">Lusaka, Zambia</span></div>
+          <div class="info-item"><span class="label">Reg. Body</span><span class="value">PACRA Certified</span></div>
+          <div class="info-item"><span class="label">Tax Status</span><span class="value">100% Compliant</span></div>
         </div>
-        <div class="info-item">
-          <span class="label">Reg. Body</span>
-          <span class="value">PACRA Certified</span>
+        <div class="company-mission">
+          <p>🚀 <strong>Our mission:</strong> To engineer intelligent systems and inclusive digital ecosystems that unlock Africa's potential — delivering measurable impact with radical transparency and craft.</p>
         </div>
-        <div class="info-item">
-          <span class="label">Tax Status</span>
-          <span class="value">100% Compliant</span>
+        <div class="values-title">✦ Core Pillars</div>
+        <div class="values-grid">
+          <div class="value-item"><div class="value-icon"><i class="bi bi-shield-check"></i></div><span class="value-text">Trust</span></div>
+          <div class="value-item"><div class="value-icon"><i class="bi bi-stars"></i></div><span class="value-text">Excellence</span></div>
+          <div class="value-item"><div class="value-icon"><i class="bi bi-lightbulb"></i></div><span class="value-text">Creativity</span></div>
+          <div class="value-item"><div class="value-icon"><i class="bi bi-people"></i></div><span class="value-text">Synergy</span></div>
+          <div class="value-item"><div class="value-icon"><i class="bi bi-code-slash"></i></div><span class="value-text">Resilience</span></div>
         </div>
-      </div>
-
-      <!-- Mission / vision block -->
-      <div class="company-mission">
-        <p>🚀 <strong>Our mission:</strong> To engineer intelligent systems and inclusive digital ecosystems that unlock Africa’s potential — delivering measurable impact with radical transparency and craft.</p>
-      </div>
-
-      <!-- Core pillars / values -->
-      <div class="values-title">✦ Core Pillars</div>
-      <div class="values-grid">
-        <div class="value-item"><div class="value-icon"><i class="bi bi-shield-check"></i></div><span class="value-text">Trust</span></div>
-        <div class="value-item"><div class="value-icon"><i class="bi bi-stars"></i></div><span class="value-text">Excellence</span></div>
-        <div class="value-item"><div class="value-icon"><i class="bi bi-lightbulb"></i></div><span class="value-text">Creativity</span></div>
-        <div class="value-item"><div class="value-icon"><i class="bi bi-people"></i></div><span class="value-text">Synergy</span></div>
-        <div class="value-item"><div class="value-icon"><i class="bi bi-code-slash"></i></div><span class="value-text">Resilience</span></div>
-      </div>
-      
-      <!-- subtle additional note -->
-      <div style="margin-top: 1.8rem; font-size: 0.75rem; border-top: 1px solid #EFEFF4; padding-top: 1rem; text-align: center; color: #7B7B93;">
-        <i class="bi bi-globe2"></i> Driving digital sovereignty · Member of Zambia ICT Association
+        <div style="margin-top: 1.8rem; font-size: 0.75rem; border-top: 1px solid #EFEFF4; padding-top: 1rem; text-align: center; color: #7B7B93;">
+          <i class="bi bi-globe2"></i> Driving digital sovereignty · Member of Zambia ICT Association
+        </div>
       </div>
     </div>
   </div>
-</div>
 </section>
-      
+
+<script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
 <script>
   (function() {
-    // Ensure the terminal animation (TypeIt) runs flawlessly with terminal on top layout
     const targetElement = document.getElementById("about-hero");
     if (!targetElement) return;
-
-    // Clear any existing inner HTML for a clean start
     targetElement.innerHTML = "";
-
-    // Initialize TypeIt with loop, blocky cursor, and bold terminal aesthetic
     const typeInstance = new TypeIt("#about-hero", {
-      speed: 58,
-      deleteSpeed: 40,
-      lifeLike: true,
-      loop: true,
-      breakLines: false,
-      waitUntilVisible: true,
-      cursorChar: "▮",         // big blocky cursor
-      nextStringDelay: 190,
-      loopDelay: 1400,
+      speed: 58, deleteSpeed: 40, lifeLike: true, loop: true,
+      breakLines: false, waitUntilVisible: true, cursorChar: "▮",
+      nextStringDelay: 190, loopDelay: 1400,
     });
-
-    // Build the engaging sequence
     typeInstance
-      .type("INNOVATE.", { delay: 620 })
-      .pause(1200)
-      .delete(9, { speed: 42 })   // removes "INNOVATE."
-      .type("DESIGN.", { delay: 500 })
-      .pause(1250)
-      .delete(7, { speed: 43 })    // removes "DESIGN."
-      .type('EMPOWER WITH <span class="hl">TECHNOLOGY.</span>', { delay: 480 })
-      .pause(1550)
-      .delete(22, { speed: 46 })    // removes whole string ('EMPOWER WITH TECHNOLOGY.')
-      .type('OTRAVA <span class="lgt">TECHNOLOGIES</span>', { delay: 540 })
-      .pause(1650)
-      .delete(21, { speed: 45 })    // removes previous
-      .type('<span class="hl">BOLD</span> • FUTURE-READY', { delay: 520 })
-      .pause(1400)
-      .delete(20, { speed: 44 })
-      .type('ZAMBIA <span class="lgt">BUILT</span>', { delay: 400 })
-      .pause(1300)
-      .delete(13, { speed: 42 })
-      .type('OTRAVA', { delay: 300 })
-      .pause(1000)
-      .delete(6, { speed: 38 })
-      .type('/// CYBER RESILIENCE', { delay: 560 })
-      .pause(1400)
-      .delete(19, { speed: 47 })
-      .type('TECH FOR <span class="hl">GOOD</span>', { delay: 500 })
-      .pause(1500)
-      .delete(13, { speed: 40 })
-      .type('OTRAVA TECHNOLOGIES', { delay: 480 })
-      .pause(1800)
-      .delete(18, { speed: 44 })
-      .type("READY.", { delay: 500 })
-      .pause(1200)
-      .delete(6, { speed: 40 })
-      .type("⚡ INNOVATE UNBOUND.", { delay: 540 })
-      .pause(1600)
-      .delete(18, { speed: 48 })
-      .type("OTRAVA ✓", { delay: 420 })
-      .pause(1300)
-      .delete(8, { speed: 40 })
-      .type("▲ BORDERLESS ▲", { delay: 500 })
-      .pause(1500)
-      .delete(14, { speed: 42 })
-      .type("WE BUILD.", { delay: 380 })
-      .pause(1300)
-      .delete(9, { speed: 40 })
-      .type("OTRAVA TECH", { delay: 460 })
-      .pause(1400)
-      .delete(11, { speed: 42 })
-      .type("DEVOTED TO IMPACT", { delay: 540 })
-      .pause(1500)
-      .delete(17, { speed: 44 })
+      .type("INNOVATE.", { delay: 620 }).pause(1200).delete(9, { speed: 42 })
+      .type("DESIGN.", { delay: 500 }).pause(1250).delete(7, { speed: 43 })
+      .type('EMPOWER WITH <span class="hl">TECHNOLOGY.</span>', { delay: 480 }).pause(1550).delete(22, { speed: 46 })
+      .type('OTRAVA <span class="lgt">TECHNOLOGIES</span>', { delay: 540 }).pause(1650).delete(21, { speed: 45 })
+      .type('<span class="hl">BOLD</span> • FUTURE-READY', { delay: 520 }).pause(1400).delete(20, { speed: 44 })
+      .type('ZAMBIA <span class="lgt">BUILT</span>', { delay: 400 }).pause(1300).delete(13, { speed: 42 })
+      .type('OTRAVA', { delay: 300 }).pause(1000).delete(6, { speed: 38 })
+      .type('/// CYBER RESILIENCE', { delay: 560 }).pause(1400).delete(19, { speed: 47 })
+      .type('TECH FOR <span class="hl">GOOD</span>', { delay: 500 }).pause(1500).delete(13, { speed: 40 })
+      .type('OTRAVA TECHNOLOGIES', { delay: 480 }).pause(1800).delete(18, { speed: 44 })
+      .type("READY.", { delay: 500 }).pause(1200).delete(6, { speed: 40 })
+      .type("⚡ INNOVATE UNBOUND.", { delay: 540 }).pause(1600).delete(18, { speed: 48 })
+      .type("OTRAVA ✓", { delay: 420 }).pause(1300).delete(8, { speed: 40 })
+      .type("▲ BORDERLESS ▲", { delay: 500 }).pause(1500).delete(14, { speed: 42 })
+      .type("WE BUILD.", { delay: 380 }).pause(1300).delete(9, { speed: 40 })
+      .type("OTRAVA TECH", { delay: 460 }).pause(1400).delete(11, { speed: 42 })
+      .type("DEVOTED TO IMPACT", { delay: 540 }).pause(1500).delete(17, { speed: 44 })
       .go();
-
-    // Double-check no overlapping issues: target element exists, TypeIt handles
-    // Additional fix to ensure cursor is always blocky and visible
-    document.querySelectorAll('.ti-cursor').forEach(cursor => {
-      if(cursor) cursor.style.fontWeight = '900';
-    });
   })();
 </script>
 <style>
-  /* Extra safety for cursor blink & large blocky style */
-  @keyframes blinkCursor {
-    0%, 100% { opacity: 1; text-shadow: 0 0 6px #FFAA44; }
-    50% { opacity: 0.3; text-shadow: 0 0 0px #FFAA44; }
-  }
-  .ti-cursor {
-    animation: blinkCursor 0.85s step-end infinite;
-    font-weight: 900;
-    font-size: 1.4rem !important;
-  }
-  .status-dot {
-    animation: pulseGreen 1.4s infinite alternate;
-  }
-  .about-card {
-    transition: transform 0.2s;
-  }
-  .about-card:hover {
-    transform: translateY(-2px);
-  }
-  /* Ensure terminal-top text has consistent font */
-  .anim-topbar span {
-    user-select: none;
-  }
-  /* Better responsiveness for narrow devices: terminal stage text */
-  @media (max-width: 550px) {
-    .anim-stage {
-      padding: 1rem 0.8rem;
-    }
-    #about-hero {
-      font-size: 1rem;
-      white-space: normal;
-      word-break: break-word;
-    }
-  }
+  @keyframes blinkCursor { 0%,100% { opacity: 1; text-shadow: 0 0 6px #FFAA44; } 50% { opacity: 0.3; text-shadow: 0 0 0px #FFAA44; } }
+  .ti-cursor { animation: blinkCursor 0.85s step-end infinite; font-weight: 900; font-size: 1.4rem !important; }
+  .status-dot { animation: pulseGreen 1.4s infinite alternate; }
+  @keyframes pulseGreen { 0% { opacity: 0.5; transform: scale(0.95); } 100% { opacity: 1; transform: scale(1.2); } }
+  .about-card { transition: transform 0.2s; }
+  .about-card:hover { transform: translateY(-2px); }
+  @media (max-width: 550px) { .anim-stage { padding: 1rem 0.8rem; } #about-hero { font-size: 1rem; white-space: normal; word-break: break-word; } }
+  .info-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; margin: 1.5rem 0; }
+  .info-item { background: #F9F9FF; border-radius: 18px; padding: 0.9rem 1.1rem; border: 1px solid #EDEDF2; }
+  .info-item .label { font-size: 0.7rem; font-weight: 700; color: #8A8AA3; text-transform: uppercase; display: block; }
+  .info-item .value { font-weight: 700; font-size: 0.95rem; color: #1E1E2C; }
+  .company-mission { background: #FEFAF5; border-radius: 1.2rem; padding: 1.2rem 1.4rem; border-left: 4px solid #FF4C4C; margin-bottom: 1.5rem; }
+  .values-title { font-family: 'Montserrat', sans-serif; font-size: 1.1rem; font-weight: 800; margin: 0.8rem 0 1rem; }
+  .values-grid { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+  .value-item { background: #F7F7FD; border-radius: 60px; padding: 0.45rem 1.2rem; display: inline-flex; align-items: center; gap: 10px; border: 1px solid #EBEBF0; }
+  .value-icon { background: #FF4C4C; width: 26px; height: 26px; border-radius: 30px; display: inline-flex; align-items: center; justify-content: center; color: white; font-size: 13px; }
+  .about-wrapper { max-width: 1100px; margin: 0 auto; }
+  .terminal-top { width: 100%; background: #0A0A0F; border-bottom: 2px solid rgba(255,76,76,0.4); }
+  .anim-panel { background: #0A0A0F; position: relative; }
+  .anim-topbar { display: flex; align-items: center; gap: 8px; padding: 0.8rem 1.5rem; background: rgba(20,20,28,0.98); border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .dot { width: 12px; height: 12px; border-radius: 50%; }
+  .dot-red { background: #FF5F5A; }
+  .dot-yellow { background: #FFBD2E; }
+  .dot-green { background: #2AC940; }
+  .anim-topbar span { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; margin-left: 0.6rem; color: rgba(255,255,255,0.55); }
+  .anim-stage { padding: 2rem 1.5rem; min-height: 200px; display: flex; align-items: center; justify-content: center; background: radial-gradient(ellipse at 30% 40%, rgba(255,76,76,0.03) 0%, #050508 100%); }
+  #about-hero { font-family: 'JetBrains Mono', monospace; font-size: clamp(1.6rem,6vw,2.5rem); font-weight: 800; text-transform: uppercase; color: #FF4C4C; text-align: center; white-space: nowrap; }
+  .hl { color: #FFAA44; }
+  .lgt { color: #ECECEC; }
+  .anim-footer { display: flex; justify-content: space-between; padding: 0.6rem 1.5rem; background: rgba(10,10,15,0.9); border-top: 1px solid rgba(255,76,76,0.2); font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; }
+  .badge-label { color: #9B9BB3; }
+  .corner { position: absolute; width: 20px; height: 20px; pointer-events: none; z-index: 5; }
+  .corner-tl { top: 12px; left: 12px; border-top: 2px solid #FF4C4C; border-left: 2px solid #FF4C4C; }
+  .corner-br { bottom: 12px; right: 12px; border-bottom: 2px solid #FFAA44; border-right: 2px solid #FFAA44; }
+  .about-text-content { padding: 2.2rem 2rem; background: #FFFFFF; }
+  .section-title { text-align: center; margin-bottom: 1.8rem; }
+  .section-title h2 { font-family: 'Montserrat', sans-serif; font-size: 1.9rem; font-weight: 800; background: linear-gradient(135deg, #0D0D0D 0%, #1F1F2F 100%); background-clip: text; -webkit-background-clip: text; color: transparent; }
+  .title-shape { width: 70px; margin: 0 auto; }
+  @media (max-width: 750px) { .about-text-content { padding: 1.6rem; } #about-hero { white-space: normal; font-size: 1.3rem; } .info-grid { grid-template-columns: 1fr; } }
 </style>
-
 <!-- /About Section -->
 
     <!-- Company Profile Section -->
