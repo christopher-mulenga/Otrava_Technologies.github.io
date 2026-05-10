@@ -173,19 +173,40 @@ html {
         <h1 class="text-2xl sm:text-4xl">OTRAVA TECHNOLOGIES</h1>
       </a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Profile</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <a href="#clients">Partners & Clients</a>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+      <!-- ===== CORRECTED NAVIGATION MENU ===== -->
+<nav id="navmenu" class="navmenu">
+  <ul>
+    <li><a href="#hero" class="active">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#team">Profile</a></li>
+    <li><a href="#clients">Partners & Clients</a></li>   <!-- FIXED: now inside <li> -->
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+</nav>
 
+<!-- ===== SMOOTH SCROLL SCRIPT (add before </body>) ===== -->
+<script>
+  (function() {
+    // Smooth scroll for all internal anchor links
+    document.querySelectorAll('.navmenu a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // Update active class (optional)
+          document.querySelectorAll('.navmenu a').forEach(a => a.classList.remove('active'));
+          this.classList.add('active');
+        }
+      });
+    });
+  })();
+</script>
       <div class="header-social-links">
         <a href="https://x.com/mulenga2905" class="twitter"><i class="bi bi-twitter-x"></i></a>
         <a href="https://www.facebook.com/otrava.technologies/" class="facebook"><i class="bi bi-facebook"></i></a>
