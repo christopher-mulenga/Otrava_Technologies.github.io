@@ -1540,6 +1540,27 @@ document.addEventListener('DOMContentLoaded', function() {
         <a href="https://x.com/mulenga2905" class="social-link" target="_blank"><i class="bi bi-twitter-x"></i></a>
         <a href="https://github.com/christopher-mulenga" class="social-link" target="_blank"><i class="bi bi-github"></i></a>
         <a href="mailto:otrava.it@gmail.com" class="social-link" target="_blank"><i class="bi bi-envelope-fill"></i></a>
+       <a href="mailto:otrava.it@gmail.com" class="social-link" id="emailLink">
+  <i class="bi bi-envelope-fill"></i>
+</a>
+
+<script>
+  // For desktop browsers that mess up mailto:
+  const emailLink = document.getElementById('emailLink');
+  const isDesktop = window.innerWidth > 768;
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  
+  emailLink.addEventListener('click', function(e) {
+    // Only intervene on desktop (not mobile)
+    if (isDesktop && !isMobile) {
+      e.preventDefault();
+      const email = 'otrava.it@gmail.com';
+      navigator.clipboard.writeText(email);
+      alert('✓ Email copied to clipboard!\n\nYou can now paste it into your email client.');
+    }
+    // On mobile, let mailto: work normally
+  });
+</script>
       </div>
       
       <!-- CTA Button -->
