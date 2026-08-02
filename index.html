@@ -260,360 +260,407 @@ html {
     </section><!-- /Hero Section -->
 
  
-   <!-- About Section -->
+ <!-- About Section -->
 <section id="about" class="about section">
-  <div class="about-wrapper">
-    <div class="about-card">
-      <div class="terminal-top">
-        <div class="anim-panel">
-          <div class="anim-topbar">
-            <span class="dot dot-red"></span>
-            <span class="dot dot-yellow"></span>
-            <span class="dot dot-green"></span>
-            <span>⚡ OTRV::TERMINAL // ACTIVE</span>
-          </div>
-          <div class="anim-stage">
-            <div id="about-hero">⚡ LOADING...</div>
-          </div>
-          <div class="anim-footer">
-            <span class="badge-label">⟫⟫ LIVE DYNAMIC SEQUENCE</span>
-            <span class="status-dot"></span>
-          </div>
+
+    <!-- ─── FULL-WIDTH VIDEO BANNER ─── -->
+    <div class="about-video-banner">
+        <video autoplay muted loop playsinline class="about-video" id="aboutVideo">
+            <source src="assets/img/netloop.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay">
+            <span class="video-badge">⚡ OTRAVA TECHNOLOGIES</span>
+            <h2 class="video-title">Innovation in Motion</h2>
+            <p class="video-sub">Engineering Africa's digital future — with velocity &amp; purpose.</p>
         </div>
-      </div>
-      <div class="about-text-content">
-        <div class="section-title">
-          <h2>About Otrava Technologies</h2>
-          <div class="title-shape">
-            <svg width="60" height="6" viewBox="0 0 60 6" fill="none">
-              <path d="M0 3 L15 1 L30 5 L45 1 L60 3" stroke="#FF4C4C" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <p>Real-world transformation through intelligent design & inclusive technology — bridging gaps, empowering communities.</p>
-        </div>
-        <div style="margin-bottom: 1rem;">
-          <span style="display: inline-block; font-size: 0.7rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #FF4C4C; background: rgba(255,76,76,0.08); border-left: 3px solid #FF4C4C; padding: 0.2rem 0.9rem; border-radius: 0 8px 8px 0;">Company DNA</span>
-          <h2 style="font-family: 'Montserrat', sans-serif; font-size: 1.6rem; font-weight: 800; line-height: 1.3; color: #101018; margin: 0.8rem 0 0.4rem 0;">Innovation-first, human-centric & relentlessly resilient</h2>
-          <p class="lead-text" style="font-size: 1rem; color: #2E2E42; line-height: 1.5; margin-bottom: 0.6rem;">Otrava Technologies is a Zambian-owned ICT company committed to delivering future-ready solutions — from software development to digital transformation. We serve businesses, startups, and public sectors with integrity and velocity.</p>
-        </div>
-        <div class="info-grid">
-          <div class="info-item"><span class="label">Established</span><span class="value">January 3, 2024</span></div>
-          <div class="info-item"><span class="label">HQ</span><span class="value">Lusaka, Zambia</span></div>
-          <div class="info-item"><span class="label">Reg. Body</span><span class="value">PACRA Certified</span></div>
-          <div class="info-item"><span class="label">Tax Status</span><span class="value">100% Compliant</span></div>
-        </div>
-        <div class="company-mission">
-          <p>🚀 <strong>Our mission:</strong> To engineer intelligent systems and inclusive digital ecosystems that unlock Africa's potential, delivering measurable impact with radical transparency and craft.</p>
-        </div>
-        <div class="values-title">✦ Core Pillars</div>
-        <div class="values-grid">
-          <div class="value-item"><div class="value-icon"><i class="bi bi-shield-check"></i></div><span class="value-text">Trust</span></div>
-          <div class="value-item"><div class="value-icon"><i class="bi bi-stars"></i></div><span class="value-text">Excellence</span></div>
-          <div class="value-item"><div class="value-icon"><i class="bi bi-lightbulb"></i></div><span class="value-text">Creativity</span></div>
-          <div class="value-item"><div class="value-icon"><i class="bi bi-people"></i></div><span class="value-text">Synergy</span></div>
-          <div class="value-item"><div class="value-icon"><i class="bi bi-code-slash"></i></div><span class="value-text">Resilience</span></div>
-        </div>
-        <div style="margin-top: 1.8rem; font-size: 0.75rem; border-top: 1px solid #EFEFF4; padding-top: 1rem; text-align: center; color: #7B7B93;">
-          <i class="bi bi-globe2"></i> Driving digital sovereignty · Member of Zambia ICT Association
-        </div>
-      </div>
     </div>
-  </div>
+
+    <!-- ─── TEXT CONTENT WRAPPER ─── -->
+    <div class="about-wrapper">
+        <div class="about-card">
+
+            <!-- text content (no terminal) -->
+            <div class="about-text-content">
+                <div class="section-title">
+                    <h2>About Otrava Technologies</h2>
+                    <div class="title-shape">
+                        <svg width="60" height="6" viewBox="0 0 60 6" fill="none">
+                            <path d="M0 3 L15 1 L30 5 L45 1 L60 3" stroke="#FF4C4C" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <p>Real-world transformation through intelligent design &amp; inclusive technology — bridging gaps, empowering communities.</p>
+                </div>
+
+                <div style="margin-bottom: 1rem;">
+                    <span style="display: inline-block; font-size: 0.7rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #FF4C4C; background: rgba(255,76,76,0.08); border-left: 3px solid #FF4C4C; padding: 0.2rem 0.9rem; border-radius: 0 8px 8px 0;">Company DNA</span>
+                    <h2 style="font-family: 'Montserrat', sans-serif; font-size: 1.6rem; font-weight: 800; line-height: 1.3; color: #101018; margin: 0.8rem 0 0.4rem 0;">Innovation-first, human-centric &amp; relentlessly resilient</h2>
+                    <p class="lead-text" style="font-size: 1rem; color: #2E2E42; line-height: 1.5; margin-bottom: 0.6rem;">Otrava Technologies is a Zambian-owned ICT company committed to delivering future-ready solutions — from software development to digital transformation. We serve businesses, startups, and public sectors with integrity and velocity.</p>
+                </div>
+
+                <div class="info-grid">
+                    <div class="info-item"><span class="label">Established</span><span class="value">January 3, 2024</span></div>
+                    <div class="info-item"><span class="label">HQ</span><span class="value">Lusaka, Zambia</span></div>
+                    <div class="info-item"><span class="label">Reg. Body</span><span class="value">PACRA Certified</span></div>
+                    <div class="info-item"><span class="label">Tax Status</span><span class="value">100% Compliant</span></div>
+                </div>
+
+                <div class="company-mission">
+                    <p>🚀 <strong>Our mission:</strong> To engineer intelligent systems and inclusive digital ecosystems that unlock Africa's potential, delivering measurable impact with radical transparency and craft.</p>
+                </div>
+
+                <div class="values-title">✦ Core Pillars</div>
+                <div class="values-grid">
+                    <div class="value-item"><div class="value-icon"><i class="bi bi-shield-check"></i></div><span class="value-text">Trust</span></div>
+                    <div class="value-item"><div class="value-icon"><i class="bi bi-stars"></i></div><span class="value-text">Excellence</span></div>
+                    <div class="value-item"><div class="value-icon"><i class="bi bi-lightbulb"></i></div><span class="value-text">Creativity</span></div>
+                    <div class="value-item"><div class="value-icon"><i class="bi bi-people"></i></div><span class="value-text">Synergy</span></div>
+                    <div class="value-item"><div class="value-icon"><i class="bi bi-code-slash"></i></div><span class="value-text">Resilience</span></div>
+                </div>
+
+                <div style="margin-top: 1.8rem; font-size: 0.75rem; border-top: 1px solid #EFEFF4; padding-top: 1rem; text-align: center; color: #7B7B93;">
+                    <i class="bi bi-globe2"></i> Driving digital sovereignty · Member of Zambia ICT Association
+                </div>
+            </div>
+
+        </div>
+    </div>
 </section>
 
-<script src="https://cdn.jsdelivr.net/npm/typeit@8.7.1/dist/index.umd.js"></script>
-<script>
-  (function() {
-    function initTerminal() {
-      const target = document.getElementById('about-hero');
-      if (!target) return;
-      if (typeof TypeIt === 'undefined') {
-        target.innerHTML = '⚡ OTRAVA // READY ⚡';
-        return;
-      }
-      target.innerHTML = '';
-      new TypeIt('#about-hero', {
-        speed: 58,
-        deleteSpeed: 40,
-        lifeLike: true,
-        loop: true,
-        breakLines: false,
-        waitUntilVisible: true,
-        cursorChar: '▮',
-        nextStringDelay: 190,
-        loopDelay: 1400,
-      })
-        .type('INNOVATE.', { delay: 620 }).pause(1200).delete(9, { speed: 42 })
-        .type('DESIGN.', { delay: 500 }).pause(1250).delete(7, { speed: 43 })
-        .type('EMPOWER WITH <span class="hl">TECHNOLOGY</span>', { delay: 480 }).pause(1550).delete(22, { speed: 46 })
-        .type('OTRAVA <span class="lgt">TECHNOLOGIES</span>', { delay: 540 }).pause(1650).delete(21, { speed: 45 })
-        .type('<span class="hl">BOLD</span> • FUTURE-READY', { delay: 520 }).pause(1400).delete(20, { speed: 44 })
-        .type('ZAMBIA <span class="lgt">BUILT</span>', { delay: 400 }).pause(1300).delete(13, { speed: 42 })
-        .type('OTRAVA', { delay: 300 }).pause(1000).delete(6, { speed: 38 })
-        .type('CYBER RESILIENCE', { delay: 560 }).pause(1400).delete(19, { speed: 47 })
-        .type('TECH FOR <span class="hl">GOOD</span>', { delay: 500 }).pause(1500).delete(13, { speed: 40 })
-        .type('OTRAVA TECHNOLOGIES', { delay: 480 }).pause(1800).delete(18, { speed: 44 })
-        .type('READY.', { delay: 500 }).pause(1200).delete(6, { speed: 40 })
-        .type('INNOVATE UNBOUND', { delay: 540 }).pause(1600).delete(18, { speed: 48 })
-        .type('OTRAVA ✓', { delay: 420 }).pause(1300).delete(8, { speed: 40 })
-        .type('BORDERLESS ▲', { delay: 500 }).pause(1500).delete(14, { speed: 42 })
-        .type('WE BUILD.', { delay: 380 }).pause(1300).delete(9, { speed: 40 })
-        .type('OTRAVA TECH', { delay: 460 }).pause(1400).delete(11, { speed: 42 })
-        .type('DEVOTED TO IMPACT', { delay: 540 }).pause(1500).delete(17, { speed: 44 })
-        .go();
-    }
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initTerminal);
-    } else {
-      initTerminal();
-    }
-  })();
-</script>
 
 <style>
-  /* Main container – adds side spacing and centers the card */
-  .about-wrapper {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
+    /* ─── reset / base ─── */
+    .about {
+        padding: 2rem 0 4rem 0;
+        background: #F8F8FC;
+    }
 
-  /* Card styling – no dark overlay, clean white */
-  .about-card {
-    background: #FFFFFF;
-    border-radius: 2rem;
-    box-shadow: 0 25px 40px -14px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.02);
-    overflow: hidden;
-    transition: transform 0.2s;
-  }
-  .about-card:hover {
-    transform: translateY(-2px);
-  }
+    /* ─── full-width video banner ─── */
+    .about-video-banner {
+        position: relative;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        height: 280px;
+        /* matches terminal height */
+        overflow: hidden;
+        background: #0A0A0E;
+    }
 
-  /* Terminal panel – no dark gradient, fresh look */
-  .terminal-top {
-    width: 100%;
-    background: #0F0F14;
-    border-bottom: 2px solid rgba(255, 76, 76, 0.5);
-  }
-  .anim-panel {
-    background: #0F0F14;
-    position: relative;
-  }
-  .anim-topbar {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 0.8rem 1.5rem;
-    background: #1A1A24;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-  }
-  .dot-red { background: #FF5F5A; }
-  .dot-yellow { background: #FFBD2E; }
-  .dot-green { background: #2AC940; }
-  .anim-topbar span {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.75rem;
-    margin-left: 0.6rem;
-    color: rgba(255, 255, 255, 0.7);
-  }
+    .about-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        /* subtle cinematic grade */
+        filter: brightness(0.75) saturate(1.05) contrast(1.1);
+        transition: filter 0.3s;
+    }
 
-  /* Stage – no dark radial gradient, just subtle glow */
-  .anim-stage {
-    padding: 2rem 1.5rem;
-    min-height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #0F0F14;
-    position: relative;
-  }
-  /* optional: a very faint grid pattern for interest */
-  .anim-stage::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: linear-gradient(#FF4C4C 1px, transparent 1px),
-                      linear-gradient(90deg, #FF4C4C 1px, transparent 1px);
-    background-size: 30px 30px;
-    opacity: 0.05;
-    pointer-events: none;
-  }
+    /* ─── video overlay ─── */
+    .video-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 1.5rem 2rem;
+        background: rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+        /* subtle gradient edges */
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0.55) 100%);
+        pointer-events: none;
+        user-select: none;
+    }
 
-  #about-hero {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: clamp(1.6rem, 6vw, 2.5rem);
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #FF4C4C;
-    text-align: center;
-    white-space: nowrap;
-    text-shadow: 0 0 8px rgba(255, 68, 68, 0.3);
-    position: relative;
-    z-index: 2;
-  }
+    .video-badge {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: clamp(0.65rem, 1.2vw, 0.9rem);
+        font-weight: 600;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #FF6B6B;
+        background: rgba(255, 76, 76, 0.15);
+        padding: 0.3rem 1.2rem;
+        border-radius: 40px;
+        border: 1px solid rgba(255, 76, 76, 0.25);
+        margin-bottom: 0.5rem;
+        display: inline-block;
+        backdrop-filter: blur(4px);
+    }
 
-  .hl {
-    color: #FFAA44;
-    text-shadow: 0 0 5px #FFAA44;
-  }
-  .lgt {
-    color: #ECECEC;
-    text-shadow: 0 0 3px rgba(255,255,200,0.7);
-  }
+    .video-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: clamp(1.8rem, 5.5vw, 3.4rem);
+        font-weight: 800;
+        color: #FFFFFF;
+        margin: 0.2rem 0 0.3rem 0;
+        line-height: 1.15;
+        text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        letter-spacing: -0.5px;
+    }
 
-  .anim-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.6rem 1.5rem;
-    background: #1A1A24;
-    border-top: 1px solid rgba(255, 76, 76, 0.2);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.65rem;
-  }
-  .badge-label {
-    color: #9B9BB3;
-    letter-spacing: 1px;
-  }
-  .status-dot {
-    width: 8px;
-    height: 8px;
-    background: #2AC940;
-    border-radius: 50%;
-    box-shadow: 0 0 6px #2AC940;
-    animation: pulseGreen 1.4s infinite alternate;
-  }
+    .video-title::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 3px;
+        background: #FF4C4C;
+        margin: 0.5rem auto 0.5rem auto;
+        border-radius: 4px;
+    }
 
-  @keyframes pulseGreen {
-    0% { opacity: 0.5; transform: scale(0.95); }
-    100% { opacity: 1; transform: scale(1.2); }
-  }
-  @keyframes blinkCursor {
-    0%, 100% { opacity: 1; text-shadow: 0 0 6px #FFAA44; }
-    50% { opacity: 0.3; text-shadow: 0 0 0px #FFAA44; }
-  }
-  .ti-cursor {
-    animation: blinkCursor 0.85s step-end infinite;
-    font-weight: 900;
-    font-size: 1.4rem !important;
-  }
+    .video-sub {
+        font-family: 'Inter', 'Segoe UI', sans-serif;
+        font-size: clamp(0.85rem, 1.4vw, 1.15rem);
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.85);
+        max-width: 640px;
+        margin: 0 auto;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+        letter-spacing: 0.3px;
+        line-height: 1.5;
+    }
 
-  /* Text content below terminal */
-  .about-text-content {
-    padding: 2.2rem 2rem;
-    background: #FFFFFF;
-  }
-  .section-title {
-    text-align: center;
-    margin-bottom: 1.8rem;
-  }
-  .section-title h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.9rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #0D0D0D 0%, #1F1F2F 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-  .title-shape {
-    width: 70px;
-    margin: 0 auto;
-  }
-  .info-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    margin: 1.5rem 0;
-  }
-  .info-item {
-    background: #F9F9FF;
-    border-radius: 18px;
-    padding: 0.9rem 1.1rem;
-    border: 1px solid #EDEDF2;
-  }
-  .info-item .label {
-    font-size: 0.7rem;
-    font-weight: 700;
-    color: #8A8AA3;
-    text-transform: uppercase;
-    display: block;
-  }
-  .info-item .value {
-    font-weight: 700;
-    font-size: 0.95rem;
-    color: #1E1E2C;
-  }
-  .company-mission {
-    background: #FEFAF5;
-    border-radius: 1.2rem;
-    padding: 1.2rem 1.4rem;
-    border-left: 4px solid #FF4C4C;
-    margin-bottom: 1.5rem;
-  }
-  .values-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 800;
-    margin: 0.8rem 0 1rem;
-  }
-  .values-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-  }
-  .value-item {
-    background: #F7F7FD;
-    border-radius: 60px;
-    padding: 0.45rem 1.2rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    border: 1px solid #EBEBF0;
-    transition: all 0.2s;
-  }
-  .value-item:hover {
-    background: rgba(255,76,76,0.05);
-    border-color: #FF8A8A;
-    transform: translateY(-2px);
-  }
-  .value-icon {
-    background: #FF4C4C;
-    width: 26px;
-    height: 26px;
-    border-radius: 30px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 13px;
-  }
+    /* ─── text content wrapper ─── */
+    .about-wrapper {
+        max-width: 1100px;
+        margin: -1.5rem auto 0 auto;
+        padding: 0 20px;
+        position: relative;
+        z-index: 2;
+    }
 
-  /* Responsive */
-  @media (max-width: 768px) {
-    .about-wrapper { padding: 0 16px; }
-  }
-  @media (max-width: 550px) {
-    .anim-stage { padding: 1rem; min-height: 130px; }
-    #about-hero { font-size: 1rem; white-space: normal; word-break: break-word; }
-  }
-  @media (max-width: 480px) {
-    .about-wrapper { padding: 0 12px; }
-    .info-grid { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 750px) {
-    .about-text-content { padding: 1.6rem; }
-    #about-hero { white-space: normal; font-size: 1.3rem; }
-  }
+    .about-card {
+        background: #FFFFFF;
+        border-radius: 2rem;
+        box-shadow: 0 25px 40px -14px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.02);
+        overflow: hidden;
+        transition: transform 0.2s;
+    }
+    .about-card:hover {
+        transform: translateY(-2px);
+    }
+
+    .about-text-content {
+        padding: 2.2rem 2rem;
+        background: #FFFFFF;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 1.8rem;
+    }
+    .section-title h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.9rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, #0D0D0D 0%, #1F1F2F 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    .title-shape {
+        width: 70px;
+        margin: 0 auto;
+    }
+
+    .info-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin: 1.5rem 0;
+    }
+    .info-item {
+        background: #F9F9FF;
+        border-radius: 18px;
+        padding: 0.9rem 1.1rem;
+        border: 1px solid #EDEDF2;
+    }
+    .info-item .label {
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: #8A8AA3;
+        text-transform: uppercase;
+        display: block;
+    }
+    .info-item .value {
+        font-weight: 700;
+        font-size: 0.95rem;
+        color: #1E1E2C;
+    }
+
+    .company-mission {
+        background: #FEFAF5;
+        border-radius: 1.2rem;
+        padding: 1.2rem 1.4rem;
+        border-left: 4px solid #FF4C4C;
+        margin-bottom: 1.5rem;
+    }
+
+    .values-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.1rem;
+        font-weight: 800;
+        margin: 0.8rem 0 1rem;
+    }
+
+    .values-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+    .value-item {
+        background: #F7F7FD;
+        border-radius: 60px;
+        padding: 0.45rem 1.2rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid #EBEBF0;
+        transition: all 0.2s;
+    }
+    .value-item:hover {
+        background: rgba(255, 76, 76, 0.05);
+        border-color: #FF8A8A;
+        transform: translateY(-2px);
+    }
+    .value-icon {
+        background: #FF4C4C;
+        width: 26px;
+        height: 26px;
+        border-radius: 30px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 13px;
+    }
+
+    /* ─── responsive ─── */
+    @media (max-width: 768px) {
+        .about {
+            padding: 0 0 3rem 0;
+        }
+        .about-video-banner {
+            height: 200px;
+        }
+        .about-wrapper {
+            padding: 0 16px;
+            margin-top: -1rem;
+        }
+        .about-text-content {
+            padding: 1.6rem 1.4rem;
+        }
+        .info-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 0.7rem;
+        }
+        .video-overlay {
+            padding: 1rem 1.2rem;
+        }
+        .video-badge {
+            font-size: 0.55rem;
+            padding: 0.2rem 0.9rem;
+            letter-spacing: 2px;
+        }
+        .video-title::after {
+            width: 40px;
+            margin: 0.3rem auto 0.3rem auto;
+        }
+    }
+
+    @media (max-width: 550px) {
+        .about-video-banner {
+            height: 160px;
+        }
+        .about-wrapper {
+            padding: 0 12px;
+            margin-top: -0.75rem;
+        }
+        .about-text-content {
+            padding: 1.2rem 1rem;
+        }
+        .info-grid {
+            grid-template-columns: 1fr;
+            gap: 0.6rem;
+        }
+        .video-title {
+            font-size: 1.3rem;
+        }
+        .video-sub {
+            font-size: 0.75rem;
+        }
+        .video-badge {
+            font-size: 0.5rem;
+            padding: 0.15rem 0.7rem;
+        }
+        .video-overlay {
+            padding: 0.8rem 0.8rem;
+        }
+        .value-item {
+            padding: 0.3rem 0.9rem;
+            font-size: 0.8rem;
+        }
+        .value-icon {
+            width: 22px;
+            height: 22px;
+            font-size: 11px;
+        }
+        .section-title h2 {
+            font-size: 1.4rem;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .about-video-banner {
+            height: 130px;
+        }
+        .video-title {
+            font-size: 1.1rem;
+        }
+        .video-sub {
+            font-size: 0.65rem;
+        }
+        .video-badge {
+            font-size: 0.45rem;
+            letter-spacing: 1px;
+            padding: 0.1rem 0.6rem;
+        }
+        .video-title::after {
+            width: 30px;
+            height: 2px;
+        }
+    }
+
+    /* ─── smooth video speed via JS ─── */
 </style>
-<!-- /About Section -->
+
+<script>
+    (function() {
+        // slow down video playback
+        const video = document.getElementById('aboutVideo');
+        if (video) {
+            // wait until metadata loaded to set rate
+            video.addEventListener('loadedmetadata', function() {
+                // 0.5x = half speed → smooth, cinematic
+                this.playbackRate = 0.5;
+            });
+            // fallback: if already loaded, set immediately
+            if (video.readyState >= 1) {
+                video.playbackRate = 0.5;
+            }
+            // ensure it stays slow if rate gets changed
+            video.addEventListener('ratechange', function() {
+                if (this.playbackRate !== 0.5) {
+                    this.playbackRate = 0.5;
+                }
+            });
+        }
+    })();
+</script>
 
    <!-- Company Profile Section -->
 <section class="company-profile-section" style="background: #ffffff; padding: 40px 0;">
@@ -2122,117 +2169,334 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- /formSubmit -->
 
   </main>
-  <!-- Footer Section -->
-  <!-- Footer Section – Compact Grid, No Scroll Needed -->
-<footer id="footer" class="footer" style="position: relative; background: #0A0A14; color: #EAEAEA; padding: 40px 0 20px; font-family: 'Inter', sans-serif; overflow: hidden;">
-  
-  <!-- Animated Background blobs (soft, no extra height) -->
-  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: 0;">
-    <div class="blob blob-1" style="position: absolute; width: 200px; height: 200px; background: rgba(255,76,76,0.12); border-radius: 50%; filter: blur(50px);"></div>
-    <div class="blob blob-2" style="position: absolute; width: 240px; height: 240px; background: rgba(255,120,80,0.1); border-radius: 50%; filter: blur(55px);"></div>
-  </div>
+  <!-- Footer Section – Lighter, lively, clean -->
+<footer id="footer" class="footer"
+        style="position: relative;
+               background: #16161E; /* lighter dark, less harsh */
+               color: #EAEAEA;
+               padding: 40px 0 20px;
+               font-family: 'Inter', sans-serif;
+               overflow: hidden;
+               border-top: 2px solid transparent;
+               border-image: linear-gradient(90deg, #FF4C4C, #FFAA66, #FF4C4C) 1;">
 
-  <div class="container" style="position: relative; z-index: 2;">
-    <!-- One row with three columns using grid -->
-    <div class="row" style="display: grid; grid-template-columns: 1.2fr 0.8fr 0.8fr 1fr; gap: 1.5rem;">
-      
-      <!-- Column 1: About & Social -->
-      <div>
-        <a href="index.html" class="logo d-inline-block mb-2" style="font-size: 1.2rem; font-weight: 800; letter-spacing: -0.3px; background: linear-gradient(135deg, #FF4C4C, #FFAA66); background-clip: text; -webkit-background-clip: text; color: transparent;">
-          OTRAVA TECHNOLOGIES
-        </a>
-        <p style="color: #B0B0C0; font-size: 0.8rem; line-height: 1.4; margin: 0.5rem 0 0.8rem; max-width: 90%;">Empowering businesses and individuals through innovative tech solutions.</p>
-        <div class="social-links d-flex gap-2">
-          <a href="https://x.com/mulenga2905" class="social-icon" target="_blank" style="width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.08); border-radius: 50%; color: #EAEAEA; transition: 0.25s; font-size: 0.8rem;"><i class="bi bi-twitter-x"></i></a>
-          <a href="https://www.facebook.com/otrava.technologies/" class="social-icon" target="_blank" style="width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.08); border-radius: 50%; color: #EAEAEA; transition: 0.25s; font-size: 0.8rem;"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/mulenga.ot/" class="social-icon" target="_blank" style="width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.08); border-radius: 50%; color: #EAEAEA; transition: 0.25s; font-size: 0.8rem;"><i class="bi bi-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/christopher-mulenga/" class="social-icon" target="_blank" style="width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.08); border-radius: 50%; color: #EAEAEA; transition: 0.25s; font-size: 0.8rem;"><i class="bi bi-linkedin"></i></a>
-          <a href="https://wa.me/260779955346" class="social-icon" target="_blank" style="width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.08); border-radius: 50%; color: #EAEAEA; transition: 0.25s; font-size: 0.8rem;"><i class="bi bi-whatsapp"></i></a>
+    <!-- Animated background blobs – more visible & colourful -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: 0; pointer-events: none;">
+        <div class="blob blob-1"
+             style="position: absolute;
+                    width: 280px; height: 280px;
+                    background: rgba(255,76,76,0.18);
+                    border-radius: 50%;
+                    filter: blur(60px);
+                    top: -10%; left: -5%;
+                    animation: moveBlob1 20s ease-in-out infinite alternate;">
         </div>
-      </div>
-
-      <!-- Column 2: Quick Links -->
-      <div>
-        <h4 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 0.8rem; color: #FFFFFF;">Quick Links</h4>
-        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.75rem;">
-          <li style="margin-bottom: 0.4rem;"><a href="#hero" style="color: #B0B0C0; text-decoration: none;">Home</a></li>
-          <li style="margin-bottom: 0.4rem;"><a href="#about" style="color: #B0B0C0; text-decoration: none;">About</a></li>
-          <li style="margin-bottom: 0.4rem;"><a href="#services" style="color: #B0B0C0; text-decoration: none;">Services</a></li>
-          <li style="margin-bottom: 0.4rem;"><a href="#portfolio" style="color: #B0B0C0; text-decoration: none;">Portfolio</a></li>
-          <li><a href="#contact" style="color: #B0B0C0; text-decoration: none;">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 3: Our Services -->
-      <div>
-        <h4 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 0.8rem; color: #FFFFFF;">Our Services</h4>
-        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.75rem;">
-          <li style="margin-bottom: 0.4rem;"><a href="#services" style="color: #B0B0C0; text-decoration: none;">Graphic Design</a></li>
-          <li style="margin-bottom: 0.4rem;"><a href="#services" style="color: #B0B0C0; text-decoration: none;">Web Development</a></li>
-          <li style="margin-bottom: 0.4rem;"><a href="#services" style="color: #B0B0C0; text-decoration: none;">IT Consulting</a></li>
-          <li style="margin-bottom: 0.4rem;"><a href="#services" style="color: #B0B0C0; text-decoration: none;">JAWS Training</a></li>
-          <li><a href="#services" style="color: #B0B0C0; text-decoration: none;">Resume Writing</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 4: Contact -->
-      <div>
-        <h4 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 0.8rem; color: #FFFFFF;">Contact</h4>
-        <address style="font-style: normal; color: #B0B0C0; line-height: 1.5; font-size: 0.75rem;">
-          <p style="margin-bottom: 0.3rem;"><i class="bi bi-geo-alt-fill me-1" style="color: #FF4C4C; font-size: 0.7rem;"></i> 46 Kaaze St, Lusaka, Zambia</p>
-          <p style="margin-bottom: 0.3rem;"><i class="bi bi-telephone-fill me-1" style="color: #FF4C4C; font-size: 0.7rem;"></i> +260 77 995 5346</p>
-          <p><i class="bi bi-envelope-fill me-1" style="color: #FF4C4C; font-size: 0.7rem;"></i>otrava.it@gmail.com</p>
-        </address>
-      </div>
+        <div class="blob blob-2"
+             style="position: absolute;
+                    width: 320px; height: 320px;
+                    background: rgba(255,120,80,0.14);
+                    border-radius: 50%;
+                    filter: blur(65px);
+                    bottom: -15%; right: -5%;
+                    animation: moveBlob2 24s ease-in-out infinite alternate;">
+        </div>
+        <div class="blob blob-3"
+             style="position: absolute;
+                    width: 200px; height: 200px;
+                    background: rgba(255,200,100,0.08);
+                    border-radius: 50%;
+                    filter: blur(50px);
+                    top: 40%; left: 50%;
+                    transform: translateX(-50%);
+                    animation: moveBlob3 18s ease-in-out infinite alternate;">
+        </div>
     </div>
 
-    <!-- Copyright – one slim line -->
-    <div class="copyright text-center mt-3 pt-2" style="border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.7rem; color: #8A8A9A;">
-      © <strong style="color: #FF4C4C;">Otrava Technologies</strong> All Rights Reserved. Designed with <i class="bi bi-heart-fill" style="color: #FF4C4C;"></i> by <a href="https://www.linkedin.com/company/otrava-technologies/" style="color: #FF4C4C; text-decoration: none;">Otrava Technologies</a>
+    <div class="container" style="position: relative; z-index: 2;">
+
+        <!-- One row with four columns using grid -->
+        <div class="row" style="display: grid; grid-template-columns: 1.2fr 0.8fr 0.8fr 1fr; gap: 1.8rem;">
+
+            <!-- Column 1: Brand & Social -->
+            <div>
+                <a href="index.html" class="logo d-inline-block mb-2"
+                   style="font-size: 1.3rem;
+                          font-weight: 800;
+                          letter-spacing: -0.3px;
+                          background: linear-gradient(135deg, #FF4C4C, #FFAA66);
+                          background-clip: text;
+                          -webkit-background-clip: text;
+                          color: transparent;
+                          transition: transform 0.3s ease;
+                          display: inline-block;">
+                    OTRAVA TECHNOLOGIES
+                </a>
+                <p style="color: #B0B0C0; font-size: 0.8rem; line-height: 1.5; margin: 0.5rem 0 0.9rem; max-width: 90%;">
+                    Empowering businesses and individuals through innovative tech solutions.
+                </p>
+                <div class="social-links d-flex gap-2" style="display: flex; gap: 8px; flex-wrap: wrap;">
+                    <a href="https://x.com/mulenga2905" class="social-icon" target="_blank"
+                       style="width: 34px; height: 34px;
+                              display: inline-flex; align-items: center; justify-content: center;
+                              background: rgba(255,255,255,0.07);
+                              border-radius: 50%;
+                              color: #EAEAEA;
+                              transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+                              font-size: 0.85rem;
+                              text-decoration: none;">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                    <a href="https://www.facebook.com/otrava.technologies/" class="social-icon" target="_blank"
+                       style="width: 34px; height: 34px;
+                              display: inline-flex; align-items: center; justify-content: center;
+                              background: rgba(255,255,255,0.07);
+                              border-radius: 50%;
+                              color: #EAEAEA;
+                              transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+                              font-size: 0.85rem;
+                              text-decoration: none;">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mulenga.ot/" class="social-icon" target="_blank"
+                       style="width: 34px; height: 34px;
+                              display: inline-flex; align-items: center; justify-content: center;
+                              background: rgba(255,255,255,0.07);
+                              border-radius: 50%;
+                              color: #EAEAEA;
+                              transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+                              font-size: 0.85rem;
+                              text-decoration: none;">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/christopher-mulenga/" class="social-icon" target="_blank"
+                       style="width: 34px; height: 34px;
+                              display: inline-flex; align-items: center; justify-content: center;
+                              background: rgba(255,255,255,0.07);
+                              border-radius: 50%;
+                              color: #EAEAEA;
+                              transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+                              font-size: 0.85rem;
+                              text-decoration: none;">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="https://wa.me/260779955346" class="social-icon" target="_blank"
+                       style="width: 34px; height: 34px;
+                              display: inline-flex; align-items: center; justify-content: center;
+                              background: rgba(255,255,255,0.07);
+                              border-radius: 50%;
+                              color: #EAEAEA;
+                              transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+                              font-size: 0.85rem;
+                              text-decoration: none;">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div>
+                <h4 style="font-size: 0.85rem; font-weight: 700; margin-bottom: 0.9rem; color: #FFFFFF; letter-spacing: 0.5px; position: relative; display: inline-block;">
+                    Quick Links
+                    <span style="position: absolute; bottom: -4px; left: 0; width: 28px; height: 2px; background: #FF4C4C; border-radius: 2px;"></span>
+                </h4>
+                <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8rem;">
+                    <li style="margin-bottom: 0.5rem;"><a href="#hero" style="color: #B0B0C0; text-decoration: none; transition: color 0.2s, padding-left 0.2s; display: inline-block;">Home</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="#about" style="color: #B0B0C0; text-decoration: none; transition: color 0.2s, padding-left 0.2s; display: inline-block;">About</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="#services" style="color: #B0B0C0; text-decoration: none; transition: color 0.2s, padding-left 0.2s; display: inline-block;">Services</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="#portfolio" style="color: #B0B0C0; text-decoration: none; transition: color 0.2s, padding-left 0.2s; display: inline-block;">Portfolio</a></li>
+                    <li><a href="#contact" style="color: #B0B0C0; text-decoration: none; transition: color 0.2s, padding-left 0.2s; display: inline-block;">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Our Services -->
+            <div>
+                <h4 style="font-size: 0.85rem; font-weight: 700; margin-bottom: 0.9rem; color: #FFFFFF; letter-spacing: 0.5px; position: relative; display: inline-block;">
+                    Our Services
+                    <span style="position: absolute; bottom: -4px; left: 0; width: 28px; height: 2px; background: #FF4C4C; border-radius: 2px;"></span>
+                </h4>
+                <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8rem;">
+                    <li style="margin-bottom: 0.5rem;"><a href="#services" style="color: #B0B0C0; text-decoration: none; transition: color 0.2s, padding-left 0.2s; display: inline-block;">Graphic Design</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="#services" style="color: #B0B0C0; text-decoration: none; transition: color 0.2s, padding-left 0.2s; display: inline-block;">Web Development</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="#services" style="color: #B0B0C0; text-decoration: none; transition: color 0.2s, padding-left 0.2s; display: inline-block;">IT Consulting</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="#services" style="color: #B0B0C0; text-decoration: none; transition: color 0.2s, padding-left 0.2s; display: inline-block;">JAWS Training</a></li>
+                    <li><a href="#services" style="color: #B0B0C0; text-decoration: none; transition: color 0.2s, padding-left 0.2s; display: inline-block;">Resume Writing</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact -->
+            <div>
+                <h4 style="font-size: 0.85rem; font-weight: 700; margin-bottom: 0.9rem; color: #FFFFFF; letter-spacing: 0.5px; position: relative; display: inline-block;">
+                    Contact
+                    <span style="position: absolute; bottom: -4px; left: 0; width: 28px; height: 2px; background: #FF4C4C; border-radius: 2px;"></span>
+                </h4>
+                <address style="font-style: normal; color: #B0B0C0; line-height: 1.6; font-size: 0.8rem;">
+                    <p style="margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+                        <i class="bi bi-geo-alt-fill" style="color: #FF4C4C; font-size: 0.8rem;"></i>
+                        46 Kaaze St, Lusaka, Zambia
+                    </p>
+                    <p style="margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+                        <i class="bi bi-telephone-fill" style="color: #FF4C4C; font-size: 0.8rem;"></i>
+                        +260 77 995 5346
+                    </p>
+                    <p style="display: flex; align-items: center; gap: 6px;">
+                        <i class="bi bi-envelope-fill" style="color: #FF4C4C; font-size: 0.8rem;"></i>
+                        otrava.it@gmail.com
+                    </p>
+                </address>
+            </div>
+        </div>
+
+        <!-- Copyright – with animated heart -->
+        <div class="copyright text-center mt-4 pt-3"
+             style="border-top: 1px solid rgba(255,255,255,0.06);
+                    font-size: 0.75rem;
+                    color: #8A8A9A;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 4px 8px;">
+            <span>© <strong style="color: #FF4C4C;">Otrava Technologies</strong> All Rights Reserved.</span>
+            <span>Designed with</span>
+            <i class="bi bi-heart-fill"
+               style="color: #FF4C4C;
+                      display: inline-block;
+                      animation: pulseHeart 1.6s ease-in-out infinite;
+                      font-size: 0.8rem;"></i>
+            <span>by</span>
+            <a href="https://www.linkedin.com/company/otrava-technologies/"
+               style="color: #FF4C4C; text-decoration: none; font-weight: 500; transition: color 0.2s;">
+                Otrava Technologies
+            </a>
+        </div>
     </div>
-  </div>
 </footer>
 
 <style>
-  /* Smaller blobs, smoother movement */
-  .blob-1 { animation: moveBlob1 18s ease-in-out infinite; top: 5%; left: -5%; }
-  .blob-2 { animation: moveBlob2 22s ease-in-out infinite; bottom: 5%; right: -5%; }
-  @keyframes moveBlob1 {
-    0% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(8%, 5%) scale(1.1); }
-    100% { transform: translate(0, 0) scale(1); }
-  }
-  @keyframes moveBlob2 {
-    0% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(-6%, -8%) scale(1.15); }
-    100% { transform: translate(0, 0) scale(1); }
-  }
-  .footer a:not(.social-icon):hover { color: #FF4C4C !important; text-decoration: underline; }
-  .social-icon:hover { background: #FF4C4C !important; color: white !important; transform: translateY(-2px); }
-  @media (max-width: 992px) {
-    .footer .row { grid-template-columns: repeat(2, 1fr) !important; gap: 1rem; }
-  }
-  @media (max-width: 576px) {
-    .footer .row { grid-template-columns: 1fr !important; text-align: center; }
-    .social-links { justify-content: center; }
-  }
+    /* ─── blob animations ─── */
+    .blob-1 {
+        animation: moveBlob1 20s ease-in-out infinite alternate;
+    }
+    .blob-2 {
+        animation: moveBlob2 24s ease-in-out infinite alternate;
+    }
+    .blob-3 {
+        animation: moveBlob3 18s ease-in-out infinite alternate;
+    }
+
+    @keyframes moveBlob1 {
+        0% { transform: translate(0, 0) scale(1); }
+        100% { transform: translate(10%, 6%) scale(1.15); }
+    }
+    @keyframes moveBlob2 {
+        0% { transform: translate(0, 0) scale(1); }
+        100% { transform: translate(-8%, -10%) scale(1.2); }
+    }
+    @keyframes moveBlob3 {
+        0% { transform: translate(-50%, 0) scale(1); }
+        100% { transform: translate(-50%, -8%) scale(1.1); }
+    }
+
+    /* ─── social icons hover ─── */
+    .social-icon:hover {
+        background: #FF4C4C !important;
+        color: #fff !important;
+        transform: translateY(-3px) scale(1.08);
+        box-shadow: 0 6px 20px rgba(255, 76, 76, 0.35);
+    }
+
+    /* ─── link hover (slide + color) ─── */
+    .footer ul li a {
+        position: relative;
+        transition: color 0.25s, padding-left 0.25s;
+    }
+    .footer ul li a:hover {
+        color: #FF4C4C !important;
+        padding-left: 6px;
+    }
+    .footer ul li a::before {
+        content: '▸';
+        position: absolute;
+        left: -12px;
+        opacity: 0;
+        color: #FF4C4C;
+        transition: opacity 0.25s, left 0.25s;
+        font-size: 0.7rem;
+    }
+    .footer ul li a:hover::before {
+        opacity: 1;
+        left: -18px;
+    }
+
+    /* ─── heart pulse ─── */
+    @keyframes pulseHeart {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.25); }
+        100% { transform: scale(1); }
+    }
+
+    /* ─── responsive ─── */
+    @media (max-width: 992px) {
+        .footer .row {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 1.5rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .footer .row {
+            grid-template-columns: 1fr !important;
+            text-align: center;
+        }
+        .social-links {
+            justify-content: center;
+        }
+        .footer ul li a::before {
+            display: none;
+        }
+        .footer ul li a:hover {
+            padding-left: 0;
+        }
+        .copyright {
+            flex-direction: column;
+            gap: 4px;
+        }
+        .footer .row > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .footer .row > div p {
+            max-width: 100% !important;
+            text-align: center;
+        }
+        .footer .row > div h4 {
+            display: inline-block;
+        }
+        .footer .row > div h4 span {
+            left: 50% !important;
+            transform: translateX(-50%);
+        }
+        .blob-1, .blob-2, .blob-3 {
+            opacity: 0.5;
+        }
+    }
 </style>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
- 
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+<!-- Main JS File -->
+<script src="assets/js/main.js"></script>
 
 </body>
 </html
