@@ -1,0 +1,217 @@
+/* =========================================
+   OTRAVA TECHNOLOGIES AI ASSISTANT - TECH EDGE
+   Position: Left edge, vertical center
+   Aesthetic: Glassmorphism, subtle glow, inviting pulse
+   ========================================= */
+
+#ot-ai-chat {
+    --ot-coral: #FF4C4C;
+    --ot-black: #0D0D0D;
+    --ot-light-gray: #EAEAEA;
+    --ot-steel-gray: #4A4A4A;
+    --ot-orange: #FF6F00;
+
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999;
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+/* Floating AI button - Tech Pill with Glow */
+.ot-ai-toggle {
+    width: auto;
+    height: auto;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 50px;
+    background: var(--ot-coral);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255, 76, 76, 0.4), 0 8px 25px rgba(13, 13, 13, 0.2);
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.ot-ai-toggle:hover {
+    background: var(--ot-orange);
+    transform: scale(1.05) translateX(5px);
+    box-shadow: 0 0 35px rgba(255, 111, 0, 0.6), 0 8px 25px rgba(13, 13, 13, 0.3);
+}
+
+/* Inviting pulse animation */
+@keyframes ot-pulse {
+    0% { box-shadow: 0 0 20px rgba(255, 76, 76, 0.4); }
+    50% { box-shadow: 0 0 40px rgba(255, 76, 76, 0.8), 0 0 60px rgba(255, 76, 76, 0.2); }
+    100% { box-shadow: 0 0 20px rgba(255, 76, 76, 0.4); }
+}
+.ot-ai-toggle {
+    animation: ot-pulse 2.5s infinite ease-in-out;
+}
+
+/* Chat window - Glassmorphism Tech */
+.ot-ai-window {
+    width: 380px;
+    height: 480px;
+    margin-bottom: 0;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 76, 76, 0.15);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 50px rgba(13, 13, 13, 0.15), inset 0 1px 0 rgba(255,255,255,0.6);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+/* Header - Minimal Tech */
+.ot-ai-header {
+    background: var(--ot-black);
+    color: white;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--ot-coral);
+}
+.ot-ai-header strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+}
+.ot-ai-header small {
+    display: block;
+    margin-top: 2px;
+    color: var(--ot-light-gray);
+    font-size: 11px;
+    opacity: 0.8;
+}
+#ot-ai-close {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    line-height: 1;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+#ot-ai-close:hover {
+    opacity: 1;
+}
+
+/* Messages - Soft, airy */
+.ot-ai-messages {
+    flex: 1;
+    padding: 16px 18px;
+    overflow-y: auto;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.ot-ai-messages::-webkit-scrollbar {
+    width: 4px;
+}
+.ot-ai-messages::-webkit-scrollbar-thumb {
+    background: var(--ot-coral);
+    border-radius: 10px;
+}
+
+.ot-ai-message {
+    max-width: 88%;
+    padding: 10px 14px;
+    border-radius: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    border: none;
+}
+.ot-ai-bot {
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--ot-black);
+    border: 1px solid rgba(0,0,0,0.03);
+    margin-right: auto;
+    border-bottom-left-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+.ot-ai-user {
+    background: var(--ot-coral);
+    color: white;
+    margin-left: auto;
+    border-bottom-right-radius: 4px;
+}
+
+/* Input - Sleek, barely visible border */
+.ot-ai-form {
+    display: flex;
+    gap: 8px;
+    padding: 12px 16px 16px 16px;
+    background: transparent;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+#ot-ai-input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 14px;
+    border: 1px solid rgba(74, 74, 74, 0.15);
+    border-radius: 50px;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.6);
+    transition: border 0.2s, box-shadow 0.2s;
+}
+#ot-ai-input:focus {
+    border-color: var(--ot-coral);
+    box-shadow: 0 0 0 3px rgba(255, 76, 76, 0.1);
+}
+.ot-ai-form button {
+    border: none;
+    padding: 0 20px;
+    border-radius: 50px;
+    background: var(--ot-coral);
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.ot-ai-form button:hover {
+    background: var(--ot-orange);
+    transform: scale(1.02);
+}
+
+/* Mobile adjustment */
+@media (max-width: 600px) {
+    #ot-ai-chat {
+        left: 10px;
+        top: auto;
+        bottom: 80px;
+        transform: none;
+        width: calc(100% - 20px);
+    }
+    .ot-ai-window {
+        width: 100%;
+        height: 60vh;
+        max-height: 450px;
+    }
+    .ot-ai-toggle {
+        padding: 12px 18px;
+        font-size: 14px;
+    }
+}

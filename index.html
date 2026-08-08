@@ -8,6 +8,8 @@
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
           }
+</style>
+
 <style>
 html, body {
   background-color: #FFFFFF !important;
@@ -93,10 +95,10 @@ html {
       color: var(--primary);
     }
   </style>
-  <link rel="stylesheet" href="chatbot.css">
-  <script src="chatbot.js"></script>
- <meta name="google-site-verification" content="OX9_jqDCiAzvGW9l5Q-6h_1t789a52W0_KCHZijqjtE" /> 
-</head>
+   <meta name="google-site-verification" content="OX9_jqDCiAzvGW9l5Q-6h_1t789a52W0_KCHZijqjtE" /> 
+
+    <link rel="stylesheet" href="chatai/chatai.css">
+  </head>
 <!-- WhatsApp Floating Button - Left Side Version -->
 <div class="whatsapp-container">
   <a href="#" class="whatsapp-float" onclick="openWhatsApp()" aria-label="Chat on WhatsApp">
@@ -162,6 +164,7 @@ html {
     }, 600);
   }, 10000);
 </script>
+
 
 <body class="index-page">
 
@@ -1588,8 +1591,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <a href="https://www.linkedin.com/in/christopher-mulenga/" class="social-link" target="_blank"><i class="bi bi-linkedin"></i></a>
         <a href="https://x.com/mulenga2905" class="social-link" target="_blank"><i class="bi bi-twitter-x"></i></a>
         <a href="https://github.com/christopher-mulenga" class="social-link" target="_blank"><i class="bi bi-github"></i></a>
-        <a href="mailto:otrava.it@gmail.com" class="social-link" target="_blank"><i class="bi bi-envelope-fill"></i></a>
-  
+        <a href="mailto:otrava.it@gmail.com" class="social-link" target="_blank" id="emailLink"><i class="bi bi-envelope-fill"></i></a>  
 
 
 <script>
@@ -2495,8 +2497,42 @@ document.addEventListener('DOMContentLoaded', function() {
 <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-<!-- Main JS File -->
-<script src="assets/js/main.js"></script>
+<!-- Otrava AI Assistant -->
+<div id="ot-ai-chat" class="ot-ai-chat">
+    <button id="ot-ai-toggle" class="ot-ai-toggle" aria-label="Open Otrava AI Assistant">
+        AI
+    </button>
 
+    <div id="ot-ai-window" class="ot-ai-window" hidden>
+        <div class="ot-ai-header">
+            <div>
+                <strong>Otrava AI Assistant</strong>
+                <small>Ask about Otrava Technologies</small>
+            </div>
+            <button id="ot-ai-close" aria-label="Close chat">&times;</button>
+        </div>
+
+        <div id="ot-ai-messages" class="ot-ai-messages">
+            <div class="ot-ai-message ot-ai-bot">
+                Hello. I am the Otrava Technologies AI Assistant.
+                How can I help you?
+            </div>
+        </div>
+
+        <form id="ot-ai-form" class="ot-ai-form">
+            <input
+                type="text"
+                id="ot-ai-input"
+                placeholder="Ask about Otrava Technologies..."
+                autocomplete="off"
+                required
+            >
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</div>
+
+<script src="chatai/chatai.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html
