@@ -308,10 +308,10 @@ html {
                 </div>
 
                 <div class="company-mission">
-                    <p>🚀 <strong>Our mission:</strong> To engineer intelligent systems and inclusive digital ecosystems that unlock Africa's potential, delivering measurable impact with radical transparency and craft.</p>
+                    <p><strong>Our mission:</strong> To engineer intelligent systems and inclusive digital ecosystems that unlock Africa's potential, delivering measurable impact with radical transparency and craft.</p>
                 </div>
 
-                <div class="values-title">✦ Core Pillars</div>
+                <div class="values-title">Core Pillars</div>
                 <div class="values-grid">
                     <div class="value-item"><div class="value-icon"><i class="bi bi-shield-check"></i></div><span class="value-text">Trust</span></div>
                     <div class="value-item"><div class="value-icon"><i class="bi bi-stars"></i></div><span class="value-text">Excellence</span></div>
@@ -666,64 +666,158 @@ html {
 </script>
 
    <!-- Company Profile Section -->
-<section class="company-profile-section" style="background: #ffffff; padding: 40px 0;">
-  <div class="container">
-    <div class="text-center mb-4" data-aos="fade-up">
-      <h2 class="section-heading" style="font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 2rem; color: #1a1a1a;">Company Profile</h2>
-      <div class="heading-accent" style="width: 60px; height: 3px; background: #FF4C4C; margin: 10px auto 15px;"></div>
-      <p style="color: #666; max-width: 600px; margin: 0 auto;">Explore our complete corporate overview — mission, capabilities, and transformative solutions.</p>
-    </div>
-
-    <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
-      <div class="col-md-8 col-lg-6">
-        <div class="card border-0 shadow-sm text-center p-4" style="border-radius: 24px; background: #f8f9fa;">
-          <div class="document-icon mb-3" style="width: 70px; height: 70px; background: linear-gradient(145deg, #FF4C4C, #FF7A32); border-radius: 20px; display: inline-flex; align-items: center; justify-content: center; margin: 0 auto;">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="32" height="32">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11zm-5-7v5.5l2.5-2.5 2.5 2.5 1.5-1.5L16.5 16l2.5-2.5-1.5-1.5-2.5 2.5-2.5-2.5-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5z"/>
-            </svg>
-          </div>
-          <h3 class="h5 fw-bold mb-2">Otrava Technologies Corporate Profile</h3>
-          <p class="text-muted small mb-3">PDF Document · 24 Pages · Updated: March 2026</p>
-          <a href="#" class="btn btn-primary rounded-pill px-4 py-2" id="smartDownloadBtn" style="background: #FF4C4C; border: none;">
-            <i class="bi bi-download me-2"></i>Download PDF
-          </a>
-          <p class="text-muted small mt-3 mb-0">⚡ Secure PDF · No email required · Instant download</p>
-        </div>
+<!-- ===== CARD ===== -->
+<div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+  <div class="col-md-8 col-lg-6">
+    <div class="card border-0 shadow-sm text-center p-4" style="border-radius: 24px; background: #f8f9fa;">
+      
+      <div class="document-icon mb-3" style="width: 70px; height: 70px; background: linear-gradient(145deg, #FF4C4C, #FF7A32); border-radius: 20px; display: inline-flex; align-items: center; justify-content: center; margin: 0 auto;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="32" height="32">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11zm-5-7v5.5l2.5-2.5 2.5 2.5 1.5-1.5L16.5 16l2.5-2.5-1.5-1.5-2.5 2.5-2.5-2.5-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5z"/>
+        </svg>
       </div>
+      
+      <h3 class="h5 fw-bold mb-2">Otrava Technologies Corporate Profile</h3>
+      <p class="text-muted small mb-3">PowerPoint · 24 Slides · Updated: Up-to-date</p>
+      
+      <!-- Two buttons -->
+      <div class="d-flex flex-wrap justify-content-center gap-2">
+        <button class="btn btn-primary rounded-pill px-4 py-2" id="viewPresentationBtn" style="background: #FF4C4C; border: none;">
+          <i class="bi bi-play-circle me-2"></i>View Presentation
+        </button>
+        <a href="#" class="btn btn-outline-secondary rounded-pill px-4 py-2" id="downloadPdfBtn" style="border-color: #ccc; color: #333;">
+          <i class="bi bi-download me-2"></i>Download PDF
+        </a>
+      </div>
+      
+      <p class="text-muted small mt-3 mb-0">View slides online · PDF download also available</p>
     </div>
   </div>
-</section>
+</div>
 
+<!-- ===== MODAL (full‑screen viewer) ===== -->
+<div class="modal fade" id="presentationModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content" style="background: #0D0D0D; border: none; border-radius: 0;">
+      
+      <!-- Toolbar -->
+      <div class="modal-header border-0 pb-0" style="background: rgba(13,13,13,0.9); backdrop-filter: blur(6px); z-index: 10;">
+        <div class="d-flex align-items-center gap-2">
+          <button type="button" class="btn btn-outline-light btn-sm rounded-pill px-3" id="closeViewerBtn">
+            <i class="bi bi-x-lg me-1"></i>Exit
+          </button>
+          <button type="button" class="btn btn-outline-light btn-sm rounded-pill px-3" id="downloadFromViewerBtn">
+            <i class="bi bi-download me-1"></i>Download PDF
+          </button>
+        </div>
+        <span class="text-light small opacity-50">Otrava Technologies · Corporate Profile</span>
+      </div>
+      
+      <!-- Viewer area -->
+      <div class="modal-body p-0 d-flex align-items-center justify-content-center" id="viewerContainer">
+        <!-- The iframe will be injected here, OR a fallback message -->
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- ===== JAVASCRIPT ===== -->
 <script>
   (function() {
-    const downloadBtn = document.querySelector('#smartDownloadBtn');
-    if (!downloadBtn) return;
-    let isProcessing = false;
-    const resetButton = (btn, originalText) => {
-      btn.innerHTML = originalText;
-      isProcessing = false;
-      btn.style.pointerEvents = 'auto';
-    };
+    // --- UPDATE THESE TWO LINES WITH YOUR EXACT FILE NAMES ---
+    const PPTX_PATH = 'assets/Otrava_Technologies_Company_Profile_presentation.pptx';
+    const PDF_PATH  = 'assets/Otrava_Technologies_Company_Profile_document.pdf';
+    // ----------------------------------------------------------
+
+    // DOM refs
+    const viewBtn = document.getElementById('viewPresentationBtn');
+    const downloadBtn = document.getElementById('downloadPdfBtn');
+    const modal = document.getElementById('presentationModal');
+    const modalBody = document.getElementById('viewerContainer');
+    const closeBtn = document.getElementById('closeViewerBtn');
+    const downloadFromViewer = document.getElementById('downloadFromViewerBtn');
+
+    // ----- Helper: Download PDF -----
+    function downloadPdf() {
+      const link = document.createElement('a');
+      link.href = PDF_PATH;
+      link.download = 'Otrava_Technologies_Company_Profile_document.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // ----- Helper: Build viewer URL (ONLY works on http/https) -----
+    function getViewerUrl(pptxPath) {
+      const fullPptxUrl = window.location.origin + '/' + pptxPath;
+      const encoded = encodeURIComponent(fullPptxUrl);
+      return `https://view.officeapps.live.com/op/embed.aspx?src=${encoded}`;
+    }
+
+    // ----- View Button Logic -----
+    viewBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      // Check if we are running locally (file://)
+      if (window.location.protocol === 'file:') {
+        // Fallback for local testing: offer a direct link to the file
+        modalBody.innerHTML = `
+          <div class="text-center text-white p-5">
+            <i class="bi bi-exclamation-triangle-fill" style="font-size: 3rem; color: #FFD700;"></i>
+            <h4 class="mt-3">Cannot preview locally</h4>
+            <p class="text-light opacity-75">The online viewer requires a web server (http://).</p>
+            <p class="text-light opacity-75 mb-3">You can open the PowerPoint file directly:</p>
+            <a href="${PPTX_PATH}" target="_blank" class="btn btn-light rounded-pill px-4">
+              <i class="bi bi-file-earmark-ppt me-2"></i>Open PPTX File
+            </a>
+            <p class="text-light opacity-50 small mt-3">(Your browser will download or ask to open with PowerPoint)</p>
+          </div>
+        `;
+        // Show the modal anyway so they see the fallback
+        const modalInstance = new bootstrap.Modal(modal, { backdrop: 'static', keyboard: true });
+        modalInstance.show();
+        return;
+      }
+
+      // --- Normal flow (http/https) ---
+      // Insert the iframe
+      modalBody.innerHTML = `
+        <iframe id="pptViewerIframe" 
+                style="width: 100%; height: 100%; border: none; background: #1a1a1a;"
+                allowfullscreen>
+        </iframe>
+      `;
+      
+      const iframe = document.getElementById('pptViewerIframe');
+      iframe.src = getViewerUrl(PPTX_PATH);
+      
+      const modalInstance = new bootstrap.Modal(modal, { backdrop: 'static', keyboard: true });
+      modalInstance.show();
+    });
+
+    // ----- Close / Exit -----
+    closeBtn.addEventListener('click', function() {
+      const modalInstance = bootstrap.Modal.getInstance(modal);
+      if (modalInstance) modalInstance.hide();
+      // Reset the body (clears iframe or fallback)
+      modalBody.innerHTML = '';
+    });
+
+    // ----- Download buttons (Card + Viewer) -----
     downloadBtn.addEventListener('click', function(e) {
       e.preventDefault();
-      if (isProcessing) return;
-      const originalHTML = this.innerHTML;
-      isProcessing = true;
-      this.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Preparing...';
-      this.style.pointerEvents = 'none';
-      setTimeout(() => {
-        const blob = new Blob(["Otrava Technologies - Corporate Profile Demo\n\nReplace with actual PDF path.\n\n© Otrava Technologies"], {type: "application/pdf"});
-        const link = document.createElement('a');
-        const url = URL.createObjectURL(blob);
-        link.href = url;
-        link.download = "Otrava_Technologies_Corporate_Profile.pdf";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        URL.revokeObjectURL(url);
-        setTimeout(() => resetButton(downloadBtn, originalHTML), 800);
-      }, 800);
+      downloadPdf();
     });
+    downloadFromViewer.addEventListener('click', function() {
+      downloadPdf();
+    });
+
+    // ----- On modal hidden, clear content -----
+    modal.addEventListener('hidden.bs.modal', function() {
+      modalBody.innerHTML = '';
+    });
+
   })();
 </script>
 ``` <!-- Company Profile Section -->
@@ -1335,7 +1429,37 @@ html {
         <div class="testimonial-card">
           <h3>Natolitech Solutions Limited</h3>
           <p>"i love the work. Great company profile!"</p>
+        </div> 
+        <!--
+        <div class="testimonial-card">
+          <h3>Natolitech Solutions Limited</h3>
+          <p>"i love the work. Great company profile!"</p>
         </div>
+        <div class="testimonial-card">
+          <h3>Natolitech Solutions Limited</h3>
+          <p>"i love the work. Great company profile!"</p>
+        </div>
+        <div class="testimonial-card">
+          <h3>Natolitech Solutions Limited</h3>
+          <p>"i love the work. Great company profile!"</p>
+        </div>
+        <div class="testimonial-card">
+          <h3>Natolitech Solutions Limited</h3>
+          <p>"i love the work. Great company profile!"</p>
+        </div>
+        <div class="testimonial-card">
+          <h3>Natolitech Solutions Limited</h3>
+          <p>"i love the work. Great company profile!"</p>
+        </div>
+        <div class="testimonial-card">
+          <h3>Natolitech Solutions Limited</h3>
+          <p>"i love the work. Great company profile!"</p>
+        </div>
+        <div class="testimonial-card">
+          <h3>Natolitech Solutions Limited</h3>
+          <p>"i love the work. Great company profile!"</p>
+        </div> 
+      -->
       </div>
     </div>
   </div>
@@ -1510,8 +1634,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
    
-    <!-- Team Section -->
-    <!-- /About Me Section -->
 <!-- ================================================
      ABOUT ME SECTION - Otrava Technologies
      ================================================ -->
@@ -1624,20 +1746,30 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 
 <!-- ================================================
-     STYLES - Copy these into your CSS file
+     STYLES
      ================================================ -->
 
 <style>
 /* About Me Section - Professional & Relaxed */
+/*
 .about-me-section {
   background: linear-gradient(135deg, #FAFAFC 0%, #FFFFFF 100%);
   padding: 100px 0;
   position: relative;
-  overflow: hidden;
+  overflow: hidden;*/
+  .about-me-section {
+  background: linear-gradient(135deg, #FAFAFC 0%, #FFFFFF 100%);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 24px;
+  box-shadow: 0 12px 48px -12px rgba(0, 0, 0, 0.12);
+  margin: 40px auto;
+  max-width: 1280px; /* optional – to make it "boxed" within the page */
+}
 }
 
 /* Subtle background texture */
-.about-me-section::before {
+
+  .about-me-section::before {
   content: '';
   position: absolute;
   top: 0;
@@ -1645,10 +1777,11 @@ document.addEventListener('DOMContentLoaded', function() {
   right: 0;
   bottom: 0;
   background-image: linear-gradient(#0D0D0D 1px, transparent 1px),
-                    linear-gradient(90deg, #0D0D0D 1px, transparent 1px);
+                    linear-gradient(90deg, #faf9f9 1px, transparent 1px);
   background-size: 50px 50px;
   opacity: 0.02;
   pointer-events: none;
+
 }
 
 .about-me-container {
